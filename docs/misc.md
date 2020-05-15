@@ -1165,7 +1165,6 @@ Response contents:
 
 ```
 
-
 ### EstimateActionGasConsumption
 ```
 Usage:
@@ -1235,7 +1234,6 @@ Response contents:
   "gas": "10000"
 }
 ```
-
 
 ### GetLogs
 ```
@@ -1317,7 +1315,6 @@ Response contents:
 }
 
 ```
-
 
 ### GetEvmTransfersByActionHash
 ```

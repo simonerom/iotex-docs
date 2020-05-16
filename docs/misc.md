@@ -1132,11 +1132,11 @@ Usage:
   Get Logs filtered by contract address and Topics in stream
 Request:
   Filter: LogsFilter
-  -Address: List of Address 
-  -Topics: List of Topics 
+    -Address: List of Addresses
+    -Topics: List of Topics 
 
 Response:
-  Logs: List of Log
+  Logs: List of Logs
 ```
 
 Demo:
@@ -1171,9 +1171,9 @@ Usage:
   Get Estimated Action Gas Consumption By Transfer 
 Request:
   Transfer: iotextypes.Transfer 
-  -Amount: Transfer Amount 
-  -Recipient: Recipient Address  
-  -Payload: Payload 
+    -Amount: Transfer Amount 
+    -Recipient: Recipient Address  
+    -Payload: Payload 
   CallerAddress: Address of Caller 
 
 Response:
@@ -1206,9 +1206,9 @@ Usage:
   Get Estimated Action Gas Consumption By Execution 
 Request:
   Execution: iotextypes.Execution 
-  -Amount: Execution Amount 
-  -Contract: Contract Address  
-  -Data: Data
+    -Amount: Execution Amount 
+    -Contract: Contract Address  
+    -Data: Data
   CallerAddress: Address of Caller 
 
 Response:
@@ -1241,13 +1241,13 @@ Usage:
   Get Logs filtered by contract address and Topics with given Block hash
 Request:
   Filter: LogsFilter
-  -Address: List of Address 
-  -Topics: List of Topics 
+    -Address: List of Addresses 
+    -Topics: List of Topics 
   ByBlock: GetLogsByBlock 
-  -BlockHash: blockhash
+    -BlockHash: blockhash
 
 Response:
-  Logs: List of Log
+  Logs: List of Logs
 ```
 
 Demo:
@@ -1272,14 +1272,14 @@ Usage:
   Get Logs filtered by contract address and Topics with given Range
 Request:
   Filter: LogsFilter
-  -Address: List of Address 
-  -Topics: List of Topics 
+    -Address: List of Addresses
+    -Topics: List of Topics 
   ByRange: GetLogsByRange 
-  -FromBlock: Start Block Height 
-  -Count: Count of Blocks s
+    -FromBlock: Start Block Height 
+    -Count: Count of Blocks 
 
 Response:
-  Logs: List of Log
+  Logs: List of Logs
 ```
 
 Demo:

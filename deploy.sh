@@ -4,7 +4,7 @@
 set -e
 
 # build
-NODE_ENV=development npm run build
+NODE_ENV=production npm run build
 
 # navigate into the build output directory
 cd .vuepress/dist

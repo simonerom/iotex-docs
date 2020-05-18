@@ -56,7 +56,6 @@ module.exports = {
                 "",
                 "docs/libraries-and-tools",
                 "docs/ioctl",
-                "docs/vita-bot",
                 "docs/misc"
               ]
             }

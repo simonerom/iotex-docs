@@ -4,7 +4,7 @@ title: Libraries and Tools
 
 ## SDK Overview
 
-`iotex-antenna` is our SDK allowing you to interact with a local or remote iotex blockchain node, using a gRPC connection.
+`iotex-antenna` is our SDK allowing you to interact with a local or remote IoTeX blockchain node, using a gRPC connection.
 
 | Features      | [antenna](https://github.com/iotexproject/iotex-antenna) | [antenna-java](https://github.com/iotexproject/iotex-antenna-java) | [antenna-go](https://github.com/iotexproject/iotex-antenna-go) | [antenna-swift](https://github.com/iotexproject/iotex-antenna-swift) |
 | ------------- | -------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -184,7 +184,7 @@ Please see more detailed specs in [IIP-7](https://github.com/iotexproject/iips/b
 
 ## Transfer
 
-`antenna.iotx.accounts` create, sign, and send a transaction of transfer to iotex blockchain network.
+`antenna.iotx.accounts` create, sign, and send a transaction of transfer to IoTeX blockchain network.
 
 :::: tabs
 
@@ -300,7 +300,7 @@ action, err := wallet.Iotx.GetActions(&iotexapi.GetActionsRequest{
 
 ## Smart Contract
 
-The `iotx.Contract` class makes it easy to interact with smart contracts on the iotex blockchain. When you create a new contract object, you give it the json interface of the respective smart contract, and it will auto converts all calls into low-level ABI calls over RPC for you.
+The `iotx.Contract` class makes it easy to interact with smart contracts on the IoTeX blockchain. When you create a new contract object, you give it the JSON interface of the respective smart contract, and it will auto converts all calls into low-level ABI calls over RPC for you.
 
 This allows you to interact with smart contracts as if they were JavaScript objects.
 
@@ -340,7 +340,7 @@ const bytecode = output.contracts[contractName].bytecode;
 
 ### Deploying Contract
 
-Once you get the abi and bytecode from the step above, then you can deploy it by sending the execution to the iotex blockchain network.
+Once you get the ABI and bytecode from the step above, then you can deploy it by sending the execution to the IoTeX blockchain network.
 
 :::: tabs
 
@@ -804,7 +804,7 @@ func main() {
 
 ## XRC20
 
-The XRC20 package provide facility api for XEC20 contract to Iotex blockchain.
+The XRC20 package provides facility api for XRC20 contracts to IoTeX blockchain.
 
 :::: tabs
 

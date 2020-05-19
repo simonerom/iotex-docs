@@ -642,6 +642,7 @@ Request:
   ProtocolID: Protocol ID
   MethodName: Method To Be Invoked To Read State
   Arguments: List of Method Arguments
+  Height: BlockHeight of Request // optional, if empty, read from tip 
 Response:
   Data: State Result
 ```
@@ -1124,6 +1125,223 @@ Response contents:
   }
 }
 ```
+
+### StreamLogs
+```
+Usage:
+  Get Logs filtered by contract address and Topics in stream
+Request:
+  Filter: LogsFilter
+    -Address: List of Addresses
+    -Topics: List of Topics 
+
+Response:
+  Logs: List of Logs
+```
+
+Demo:
+
+```
+➜  ~ grpcurl -v -plaintext -d '{"filter": {}}'  127.0.0.1:14014 iotexapi.APIService.StreamLogs
+
+Resolved method descriptor:
+rpc StreamLogs ( .iotexapi.StreamLogsRequest ) returns ( stream .iotexapi.StreamLogsResponse );
+
+Request metadata to send:
+(empty)
+
+Response headers received:
+content-type: application/grpc
+
+Response contents:
+{
+  "log": {
+    "contractAddress": "io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v",
+    "data": "EilpbzEybWd0dG1mYTJmZm45dXF2bjB5bjM3ZjRuejQzZDI0OGwyZ2E4NRoTODAwMDAwMDAwMDAwMDAwMDAwMA==",
+    "blkHeight": "4861831",
+    "actHash": "f4P6zde4DcxSG+zLP8LsBXR/gwsXA8ZzMsrDI38swkw="
+  }
+}
+
+```
+
+### EstimateActionGasConsumption
+```
+Usage:
+  Get Estimated Action Gas Consumption By Transfer 
+Request:
+  Transfer: iotextypes.Transfer 
+    -Amount: Transfer Amount 
+    -Recipient: Recipient Address  
+    -Payload: Payload 
+  CallerAddress: Address of Caller 
+
+Response:
+  Gas: Estimated Gas Amount 
+```
+
+Demo:
+
+```
+➜  ~ grpcurl -v -plaintext -d '{"transfer": {"amount":"100000", "recipient":"io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}'  127.0.0.1:14014 iotexapi.APIService.EstimateActionGasConsumption
+
+Resolved method descriptor:
+rpc EstimateActionGasConsumption ( .iotexapi.EstimateActionGasConsumptionRequest ) returns ( .iotexapi.EstimateActionGasConsumptionResponse );
+
+Request metadata to send:
+(empty)
+
+Response headers received:
+content-type: application/grpc
+
+Response contents:
+{
+  "gas": "10000"
+}
+```
+
+### EstimateActionGasConsumption
+```
+Usage:
+  Get Estimated Action Gas Consumption By Execution 
+Request:
+  Execution: iotextypes.Execution 
+    -Amount: Execution Amount 
+    -Contract: Contract Address  
+    -Data: Data
+  CallerAddress: Address of Caller 
+
+Response:
+  Gas: Estimated Gas Amount 
+```
+
+Demo:
+
+```
+➜  ~ grpcurl -v -plaintext -d '{"execution": {"amount":"0", "contract":"io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}' 127.0.0.1:14014 iotexapi.APIService.EstimateActionGasConsumption
+
+Resolved method descriptor:
+rpc EstimateActionGasConsumption ( .iotexapi.EstimateActionGasConsumptionRequest ) returns ( .iotexapi.EstimateActionGasConsumptionResponse );
+
+Request metadata to send:
+(empty)
+
+Response headers received:
+content-type: application/grpc
+
+Response contents:
+{
+  "gas": "10000"
+}
+```
+
+### GetLogs
+```
+Usage:
+  Get Logs filtered by contract address and Topics with given Block hash
+Request:
+  Filter: LogsFilter
+    -Address: List of Addresses 
+    -Topics: List of Topics 
+  ByBlock: GetLogsByBlock 
+    -BlockHash: blockhash
+
+Response:
+  Logs: List of Logs
+```
+
+Demo:
+
+```
+➜  ~ grpcurl -v -plaintext -d '{"filter": {}, "byBlock": {"blockHash": "221e7f14dddd57a739975b943bfffb1cbfcffa1ee043cf693b92af987e42ed93"}}' 127.0.0.1:14014 iotexapi.APIService.GetLogs
+
+Resolved method descriptor:
+rpc GetLogs ( .iotexapi.GetLogsRequest ) returns ( .iotexapi.GetLogsResponse );
+
+Request metadata to send:
+(empty)
+
+Response headers received:
+(empty)
+
+```
+
+### GetLogs
+```
+Usage:
+  Get Logs filtered by contract address and Topics with given Range
+Request:
+  Filter: LogsFilter
+    -Address: List of Addresses
+    -Topics: List of Topics 
+  ByRange: GetLogsByRange 
+    -FromBlock: Start Block Height 
+    -Count: Count of Blocks 
+
+Response:
+  Logs: List of Logs
+```
+
+Demo:
+
+```
+➜  ~ grpcurl -v -plaintext -d '{"filter": {}, "byRange": {"fromBlock": "12000", "count": "2"}}' 127.0.0.1:14014 iotexapi.APIService.GetLogs
+
+Resolved method descriptor:
+rpc GetLogs ( .iotexapi.GetLogsRequest ) returns ( .iotexapi.GetLogsResponse );
+
+Request metadata to send:
+(empty)
+
+Response headers received:
+content-type: application/grpc
+
+Response contents:
+{
+  "logs": [
+    {
+      "contractAddress": "io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v",
+      "data": "EilpbzFjNXp3aDI0cGM0ejg3dHF3NG02ejZjNHk1NDRwd3N2OG5ycm02NhoUMTYwMDAwMDAwMDAwMDAwMDAwMDA=",
+      "blkHeight": "12000",
+      "actHash": "NDSsKbgjqU5jP4LWr2xoq/kpu9s8g0C4tpF/PiDTFkI="
+    },
+    {
+      "contractAddress": "io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v",
+      "data": "EilpbzFjNXp3aDI0cGM0ejg3dHF3NG02ejZjNHk1NDRwd3N2OG5ycm02NhoUMTYwMDAwMDAwMDAwMDAwMDAwMDA=",
+      "blkHeight": "12001",
+      "actHash": "6+RK0qv5kZ3nJ014NqLlEadmnMaMS1KPWkE5mZLmSGA="
+    }
+  ]
+}
+
+```
+
+### GetEvmTransfersByActionHash
+```
+Usage:
+  Get EVM Transfer By Action Hash  
+Request:
+  ActionHash: Action Hash 
+
+Response:
+  ActionEvmTransfers: Action EVM transfer 
+```
+
+Demo: TBD (will deploy soon)
+
+### GetEvmTransfersByBlockHeight
+```
+Usage:
+  Get EVM Transfer By Block Height   
+Request:
+  BlockHeight: Block Height  
+
+Response:
+  BlockEvmTransfers: Block EVM transfer 
+```
+
+Demo: TBD (will deploy soon)
+
 
 ## Analytics
 

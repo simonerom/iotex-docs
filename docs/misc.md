@@ -48,6 +48,13 @@ curl --silent https://raw.githubusercontent.com/iotexproject/iotex-core/master/i
 curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-injector.sh | sh -s "unstable"
 ```
 
+Note that is you encounter issues such as "action is not found", check for following reasons:
+
+1. incorrect nonce (too small or too large)
+2. too low gas price
+3. too small gas limit
+4. account balance insufficient (amount + gas price \* gas limit)
+
 ## Bookkeeping
 
 Bookkeeping is a GraphQL web interface for reward distributions, which collects voting status and calculates corresponding voters' reward for a given delegate within a certain epoch range.
@@ -66,13 +73,3 @@ ioctl action invoke io1sesxdghz93f4sadhu6a7242m22gphmc2aucz4g <total-amount> -l 
 
 Note that `io1sesxdghz93f4sadhu6a7242m22gphmc2aucz4g` is the pre-deployed contract for sending IOTX coins to multiple addresses.
 
-## FAQ
-
-### Action is always not-found
-
-Action is always not-found because of below reasons:
-
-1. incorrect nonce (too small or too large)
-2. too low gas price
-3. too small gas limit
-4. account balance insufficient (amount + gas price \* gas limit)

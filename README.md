@@ -3,7 +3,7 @@ id: guides
 title: Get Started
 ---
 
-## Introduction
+## :sparkler: Introduction
 
 Founded as an open-source project in 2017, IoTeX envisions bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform. 
 
@@ -12,7 +12,7 @@ Over the past 2+ years, the IoTeX blockchain was built from scratch with our mis
 IoTeX core team is continuously working hard to bring the community more cool features.
 
 
-### The Architecture
+### :milky_way: The Architecture
 IoTeX blockchain consists of the four-layered components:
 - Networking layer enables the peer-to-peer communication between IoTex nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to other applications and users
 - Consensus layer runs Roll-DPoS to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
@@ -22,7 +22,7 @@ IoTeX blockchain consists of the four-layered components:
 ![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 
 
-### Subprotocols and Actions
+### :flags: Sub-Protocols and Actions
 
 The state transition layer of the chain is flexible enough that any subprotocol can be plugged in without hustling.
 
@@ -35,7 +35,7 @@ The state transition layer of the chain is flexible enough that any subprotocol 
 
 In the IoTeX network, transactions (the atomic operation unit to interact with the blockchain data) are referred to as "actions", and there are six types of actions corresponding to the six subprotocols as described. More information can be found [here](https://github.com/iotexproject/iotex-proto/blob/master/proto/types/action.proto).
 
-## Build and Run
+## :runner: Build and Run
 
 ### Standalone Mode
 The simplest way to get started is to run it in stand-alone mode for demonstration and testing purposes. "Stand-alone" indicates a single node comprises the entire blockchain by itself, which generates a new block, validates the block, and adds the block to the blockchain. This simple mode allows user to quickly launch and test a blockchain with a single computer/node, without requiring much hardware resources.
@@ -58,36 +58,25 @@ The simplest way to get started is to run it in stand-alone mode for demonstrati
 
 Please follow instructions [here](https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md) to run a full node on the testnet or mainnet. 
 
-## Explorer
+## :snowman: Explorer
 IoTeX users can easily track their transactions using the explorer.
 - [Source Code](https://github.com/iotexproject/iotex-explorer)
 - [Mainnnet](https://iotexscan.io)
 - [Testnet](https://testnet.iotexscan.io)
 
-## Wallet
+## :whale: Wallet
 [ioPay](https://iopay.iotex.io/) is the wallet built by core-dev for our users to manage their digital assets.
 
-## Get Started for Dapp Development
+## :globe_with_meridians: Dapp Development
 
 If you are interested in developing applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
-## Chat With Us
+## :octocat: Chat With Us
 
-We are radically open-minded and value open-mindedness and transparency. 
+**We are radically open-minded and value open-mindedness and transparency.**
 
-If you found bugs and places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
+- If you found bugs and places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
 
-If you have ideas/proposals to make IoTeX better, please do not hesitate to let us know through [Halo Program](http://iotex.io/halo)
+- If you have ideas/proposals to make IoTeX better, please do not hesitate to let us know through [Halo Program](http://iotex.io/halo)
 
-If you have feedback/suggestion, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol) or [email](support@iotex.io). 
-
-
-## Glossary
-
-- Delegate: the blockchain node which is elected to propose and validate new blocks, a.k.a. block producer.
-
-- [Solidity](https://en.wikipedia.org/wiki/Solidity): the contract oriented programming language.
-
-- Epoch: an epoch is composed of 720 blocks, these blocks are produced by the same group of delegates.
-
-- Block period: the interval in seconds that blocks are produced. During the launch of the mainnet, the block period is 5 seconds, which will be reduced as the protocol gets stabilized.
+- If you have feedback/suggestion, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol) or [email](support@iotex.io). 

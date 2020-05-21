@@ -65,13 +65,19 @@ IoTeX users can easily track their transactions using the explorer.
 - [Testnet](https://testnet.iotexscan.io)
 
 
-## Get Started for Application Development
+## Get Started for Dapp Development
 
 If you are interested in develop applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
-## Talk to us
+## Chat With Us
 
-If you encounter any technical problem when connecting to the testnet, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol). In addition to this, please file issues under https://github.com/iotexproject/iotex-core/issues and we will investigate.
+We are radically open-mnded and value open-mindedness and  transparency. 
+
+If you found bugs and places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
+
+If you have ideas/proposals to make IoTeX better, please do not hesitate to let us know through [Halo Program](http://iotex.io/halo)
+
+If you have feedback/suggestion, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol) or [email](support@iotex.io). 
 
 
 ## Glossary

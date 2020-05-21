@@ -12,7 +12,7 @@ Over the past 2+ years, the IoTeX blockchain was built from scratch with our mis
 IoTeX core team is continuously working hard to bring the community more cool features.
 
 
-### :milky_way: The Architecture
+### The Architecture
 IoTeX blockchain consists of the four-layered components:
 - Networking layer enables the peer-to-peer communication between IoTex nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to other applications and users
 - Consensus layer runs Roll-DPoS to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
@@ -22,7 +22,7 @@ IoTeX blockchain consists of the four-layered components:
 ![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 
 
-### :flags: Sub-Protocols and Actions
+### Sub-Protocols and Actions
 
 The state transition layer of the chain is flexible enough that any subprotocol can be plugged in without hustling.
 

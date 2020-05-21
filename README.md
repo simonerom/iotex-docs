@@ -5,37 +5,22 @@ title: Get Started
 
 ## Introduction
 
-Founded as an open-source project in 2017, IoTeX envisions to bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform.
+Founded as an open-source project in 2017, IoTeX envisions to bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform. 
 
-IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper). 
+Over the past 2+ years, the IoTeX blockchain was built from scratch with our mission in mind. What started as a few lines of code has now blossomed into one of the most secure, performant, and decentralized blockchains in the world. IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper). 
 
 IoTeX core team is continuously working hard to bring the community more cool features.
 
 
-### Grand Design
-
-The overall design of IoTeX Network employs Separation of Powers, a term coined by Charles-Louis de Secondat which states that democratic political authority should be divided into legislative, executive, and judicial powers. Generally speaking, IoTeX Network is a decentralized trust fabric consisting of multiple blockchains to connect humans, machines, applications, arranged hierarchically, and serving different purposes.
-![IoTeX Rootchain Architecture](https://cdn-images-1.medium.com/max/2600/1*D6GiPlh9TdikW82c8j1jrA.png)
-
-- Governance layer, instantiated by the Gravity Chain is the layer that acts as a decentralized government for the IoTeX network. It exclusively focuses on decentralization and security, a liveness-oriented consensus scheme (e.g., PoS variant) to facilitate tasks such as staking, voting, slashing, protocol-related proposals, and more. Before the launch of the gravity chain Q3/Q4 2019, Ethereum mainnet will be used as the governance layer.
-- Orchestration layer, instantiated by the Root Chain, is the general manager and coordinator for all subchains. It is powered by our safety-oriented Roll-DPoS consensus mechanism and aims for reasonable throughput, reliability, and transparency. It is being launched in April 2019 (a.k.a, Mainnet Alpha) as the first blockchain within IoTeX Network.
-- Operational layer, instantiated by various layer2 subchains, is the concrete unit that handles business logic related to specific use cases/applications. Different subchains can interoperate with each other via cross-chain communication. The first IoTeX subchain is expected to be launched in Q2/Q3 2019 focusing on trusted computing.
-- Execution layer is an optional layer to which specific subchains can offload concrete computation/storage tasks. The segregation of verification & ordering of states from the generation of states is extremely helpful to improve the scalability, functionality, and usability of a decentralized system.
-
-In our design, all blockchains share the same pool of delegate resource which produces consensus to secure the entire network and is the cornerstone of the collective trust. With the collective trusted being provided, one can easily spin up a subchain as effortlessly as spinning up an EC2 instance on AWS Cloud. Thanks to the abstraction of EDR, subchains running within IoTeX Network can have dramatically different state transition and execution layers as well as the underlying crypto-economics.
-
-The reason why we separate duties across multiple blockchain layers we firmly believe in decentralized governance. Many DPoS blockchains manage governance tasks (i.e., staking/voting) on the core operational layer blockchain - IoTeX believes governance tasks should not be grouped with operational tasks on the same chain. For example, elected Delegates, as a vested interest group, may disregard staking/voting transactions in the block production process to mitigate being de-elected (i.e., conflict of interest). Furthermore, elected Delegates may enforce protocol upgrades (by upgrading their software without consent from other users) that are not favorable to the rest of the ecosystem.
-
-### Root Chain
-
-The root chain has been launched in Q1 2019 (a.k.a, Mainnet Alpha), which is consisted of the four-layered components:
-
+### The Architecture
+IoTeX blockchain is consisted of the four-layered components:
 - Networking layer enables the peer-to-peer communication between IoTex nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to other applications and users
 - Consensus layer runs Roll-DPoS to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
 - State transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain from one to the other.
 - Programing layer implements the business logic for state transition. Currently, it supports Ethereum virtual machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it.
 
 ![IoTeX Rootchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
+
 
 ### Subprotocols and Actions
 
@@ -52,15 +37,16 @@ In the IoTeX network, transactions (the atomic operation unit to interact with t
 
 ## Build and Run
 
+### Standalone Mode
 The simplest way to get started with IoTeX software package is to run it in stand-alone mode for demonstration and testing purposes. "Stand-alone" indicates a single node comprises the entire blockchain by itself, which generates a new block, validates the block, and adds the block to the blockchain. This simple mode allows user to quickly launch and test a blockchain with a single computer/node, without requiring much hardware resources.
 
-### From the source
+#### From the Source
 
 1. setup golang environment, e.g., [on Linux](https://medium.com/@RidhamTarpara/install-go-1-11-on-ubuntu-18-04-16-04-lts-8c098c503c5f), [on MacOS](https://medium.com/golang-learn/quick-go-setup-guide-on-mac-os-x-956b327222b8)
 2. `git clone git@github.com:iotexproject/iotex-core.git`
 3. `make run`
 
-### Use docker image
+#### Use Docker Image
 
 1. Install docker on your host machine at https://docs.docker.com/install/. Once docker is properly installed and started, download the IoTeX docker image: `docker pull iotex/iotex-core:latest`
 
@@ -68,30 +54,25 @@ The simplest way to get started with IoTeX software package is to run it in stan
 
 3. `sudo docker run -d -p 30100:14004 --mount type=bind,source=$PWD/standalone-config.yaml,target=/etc/iotex/config_local_delegate.yaml iotex/iotex-core:latest iotex-server -config-path=/etc/iotex/config_local_delegate.yaml`
 
+### Run A Full Node on Testnet/Maiinet
+
+Please follow instructions [here](https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md) to run a full node on the testnet or mainnet. 
+
 ## Explorer
+IoTeX users can easily track their transactions using the explorer.
+- [Source Code](https://github.com/iotexproject/iotex-explorer)
+- [Mainnnet](https://iotexscan.io)
+- [Testnet](https://testnet.iotexscan.io)
 
-- [Github Repository](https://github.com/iotexproject/iotex-explorer)
-- Demo Sites:
-  - [Mainnnet](https://iotexscan.io)
-  - [Testnet](https://testnet.iotexscan.io)
 
-## Testnet
+## Get Started for Application Development
 
-The IoTeX Testnet is now fully open for community and developers! Join our Testnet and interact with IoTeX network today!
+If you are interested in develop applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
-### Set up the node
-
-Our complete software is packaged in the form of a docker image plus a config file for the convenience of set-up and deployment. You can easily set up and run a node by following instructions at https://github.com/iotexproject/iotex-bootstrap.
-
-As of now, your node will be joining as a full node to IoTeX network. Once we open the staking/voting on the testnet, you could promote your full node to a delegate and participate in block production. Expect that in the next few weeks.
-
-### Talk to us
+## Talk to us
 
 If you encounter any technical problem when connecting to the testnet, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol). In addition to this, please file issues under https://github.com/iotexproject/iotex-core/issues and we will investigate.
 
-## Write a Smart Contract
-
-TBD
 
 ## Glossary
 

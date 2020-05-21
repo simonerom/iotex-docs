@@ -1733,3 +1733,9 @@ Sample Response:
   }
 }
 ```
+
+## Tool Chain
+
+Analytics is an application built upon IoTeX core API. Similarly, there are other applications built upon the core API and analytics. The following diagram shows the dependency relationships between the major components of IoTeX tool chain:
+
+![WechatIMG23](https://user-images.githubusercontent.com/15241597/82530507-50685780-9af2-11ea-9bf6-d03f7577c258.jpeg)

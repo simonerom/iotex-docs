@@ -19,12 +19,13 @@ Available Commands:
   alias       Manage aliases of IoTeX addresses
   bc          Deal with block chain of IoTeX blockchain
   config      Get, set, or reset configuration for ioctl
+  contract    Deal with smart contract of IoTeX blockchain
   help        Help about any command
   node        Deal with nodes of IoTeX blockchain
-  stake       Support native staking from ioctl
+  stake2      Support native staking of IoTeX blockchain
   update      Update ioctl with latest version
   version     Print the version of ioctl and node
-  xrc20       Support ERC20 standard command-line from ioctl
+  xrc20       Support ERC20 standard command-line
 
 Flags:
   -h, --help                   help for ioctl
@@ -52,7 +53,7 @@ Documentation of all ioctl commands with examples.
 
 ## Config
 
-`Variables: [endpoint, wallet, explorer, defaultacc]`\
+`Variables: [endpoint, wallet, explorer, defaultacc, language, nsv2height]`\
 `Explorers: [iotexscan (default), iotxplorer, custom]`
 
 #### Set Config
@@ -234,6 +235,37 @@ io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - 0xAA260324ad0DA6FA2231f0FfEC916A99bb
 io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - 0xAA260324ad0DA6FA2231f0FfEC916A99bb00dd34
 ```
 
+#### Export Public Key From Account
+
+`Usage: ioctl account exportpublic (ALIAS|ADDRESS)`
+
+```
+➜  ioctl account exportpublic tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+#### Sign Message With Private key 
+
+`Usage: ioctl account sign MESSAGE [-s SIGNER]`
+
+```
+➜  ioctl account sign "abcd" -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+ec280f9f95ed5774fb042e69d92bfb685443dc99350d5460ecf1067d1cb539150903ff0d18cdd5072ce72765996e80c96df7ed86c2b887ce4d41aa8cc2dd0b0001
+```
+
+#### Verify Public Key And Address By Private Key
+
+`Usage: ioctl account verify`
+
+```
+➜  ioctl account verify
+Enter private key:
+Address:  io1gh439pm67d4cwxt882xpylj75klys6esepml60
+Public Key: 04ac93d2fffdf488659c3f58890f6ddc55818d50f884e515aa90b2b1ca1e0fc223f85c5a0dc8b9a55b9a282a1ba8a269a3426f168591b60c921380f7d6d34c1f4f
+```
+
 #### Update Password Of An Account
 
 `Usage: ioctl account update (ALIAS|ADDRESS)`
@@ -275,6 +307,25 @@ frank is removed
 io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt - IOsenser
 io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg - test
 io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - whale
+```
+
+#### Export Aliases To Either Json Or Yaml Format
+
+`Usage: ioctl alias export`
+
+```
+➜  ioctl alias export
+{"aliases":[{"name":"gas-test","address":"io15kqxz7a0r72akrgy6p7fuu88llg7cxn9rlfjdj"},{"name":"public-length","address":"io15cg78lnv54r8m8vrkrv9ktq4uyngp5aenmj5wa"},{"name":"test","address":"io1v9r84ckmccqczl00r0sdepvaunsk456pcw9rvq"},{"name":"tmp2","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"daddypig","address":"io1gh439pm67d4cwxt882xpylj75klys6esepml60"},{"name":"dorothy","address":"io1x0e9jwx7yv7sk2p4lj4vt4czydwtlwkhaaczt7"},{"name":"infinite-loop","address":"io14cu7qpseelx0zg8lm2tl4a927lqmfl7dgr886q"},{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"},{"name":"tmp","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"cashier","address":"io1paxfkzr5kpgxjxckfydhttcg3vqtug5ehlrvrx"}]}
+```
+
+#### Import Aliases
+
+`Usage: ioctl alias import 'DATA'`
+
+```
+➜  ioctl alias import '{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"}'
+0/0 aliases imported
+Existed aliases:
 ```
 
 ## Action
@@ -391,6 +442,15 @@ Wait for several seconds and query this action by hash:
 58fc6465bd3b7e33b1508064b0342dc786247b4e18859be72fea57c993dc4950
 ```
 
+#### Read Smart Contract 
+
+`ioctl action read (ALIAS|CONTRACT_ADDRESS) -b BYTE_CODE [-s SIGNER]`
+
+```
+➜ ioctl action read io1vqzcl56vlfspyaadyxhqy07jrmalx73vdaklzn -b 60fe47b10000000000000000000000000000000000000000000000000000000000000001
+
+```
+
 #### Claim Reward
 
 `Usage: ioctl action claim AMOUNT_IOTX [DATA] -s SIGNER [-l GAS_LIMIT] [-p GASPRICE]`
@@ -420,53 +480,187 @@ Wait for several seconds and query this action by hash:
 59a73e24a41385005519d1d1e7f164b36b98717f2c5649785b43c2588245502d
 ```
 
+#### Deposit To Rewarding Pool 
+
+`ioctl action deposit AMOUNT_IOTX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
+
+```
+➜ ioctl action deposit 10 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 419  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp2)
+version: 1
+nonce: 419
+gasLimit: 10000
+gasPrice: "1000000000000"
+depositToRewardingFund: <
+  amount: "10000000000000000000"
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: a3c46bae8324e5bcc498de67510b8e8dffe3d8474b7bd1f1cef7a1e01aff6722210df22a5b5c796e1820c5d091c8e49b7a7ee36d2951f90a6f8538bbcfd8f17100
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:23aee3e08f084d5090329d47e27afa8c08358967ca8d6f2b2dc26803b7491d4e
+```
+
 ## Native Staking
 
 #### Create Bucket for Voting
 
-`Usage: ioctl stake create AMOUNT_IOTX CANDIDATE_NAME STAKE_DURATION [DATA] [--auto-restake] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
+`Usage: ioctl stake2 create AMOUNT_IOTX CANDIDATE_NAME STAKE_DURATION [DATA] [--auto-stake] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASP_RICE] [-P PASSWORD] [-y]`
 
 ```
-➜   ioctl stake create 100 frank 35 VotingForFrank --auto-restake
-Enter password #ioxxx...xxx:
-...
-...
+➜  ioctl stake2 create 130 robotbp00000 7 --auto-stake -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 420  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp)
+version: 1
+nonce: 420
+gasLimit: 10000
+gasPrice: "1000000000000"
+stakeCreate: <
+  candidateName: "robotbp00000"
+  stakedAmount: "130000000000000000000"
+  stakedDuration: 7
+  autoStake: true
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: 64cb75de95732ab1f3bf04fbfa8449d05a4d7a1115f8aad07b369316dbff75c54ba1d3c66ead9ac26e57c9212f73c9009eba11260d5c2f89ed51ff68b56e54b000
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
 Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+Wait for several seconds and query this action by hash:30aa10f565f425b0d7b34b57cbf4b22a164b8eb391c1c24bcdc012cabc09a513
 ```
 
 #### Add IOTX to Certain Bucket
 
-`Usage: ioctl stake add IOTX_AMOUNT BUCKET_INDEX [DATA] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
+`Usage: ioctl stake2 add BUCKET_INDEX AMOUNT_IOTX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 
 ```
-➜   ioctl stake add 100 1
-Enter password #ioxxx...xxx:
-...
-...
+➜  ioctl stake2 add 56 102 -s tmp2 -y
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
 Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+Wait for several seconds and query this action by hash:a51805dbca3046c62f3dd14366594bdd9aabdbe02aa394712556c801bc206359
 ```
 
 #### Renew a Bucket
 
-`Usage: ioctl stake renew BUCKET_INDEX STAKE_DURATION [DATA] [--auto-restake] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
+`Usage: ioctl stake2 renew BUCKET_INDEX STAKE_DURATION [DATA] [--auto-stake] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y] `
 
 ```
-➜   ioctl stake renew 1 14
-Enter password #ioxxx...xxx:
-...
-...
+➜   ioctl stake2 renew 56 7 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 424  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp)
+version: 1
+nonce: 424
+gasLimit: 10000
+gasPrice: "1000000000000"
+stakeRestake: <
+  bucketIndex: 56
+  stakedDuration: 7
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: 1e8683119f9ccb041f53f4da8cdc16681fc1e542825e44a0e576f6783600176a1eb106b1eed500694cc3bff88b19fbd8cfd6c921faabb99440c15dc0272a09d400
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
 Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+Wait for several seconds and query this action by hash:c6acfec04e0a6a623713f928bdbe94eb573a6d52227241e0595509cea44728ab
+```
+
+#### Change Candidate Of Bucket 
+
+`Usage: ioctl stake2 change CANDIDATE_NAME BUCKET_INDEX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y] `
+
+```
+➜   ioctl stake2 change robotbp00001 56 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 425  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp2)
+version: 1
+nonce: 425
+gasLimit: 10000
+gasPrice: "1000000000000"
+stakeChangeCandidate: <
+  bucketIndex: 56
+  candidateName: "robotbp00001"
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: 03cd6ccc8c7adf739ea34666ef87cde19d35f3a1938d3aba921a713f8d7b26a90f7e07c3557aec67cc81c82ddf2b2e5d316016da4fcda46e4c93920e53a5ca5701
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:2ee5a6bb764c502d9a8a016d71d83e8b610f4bade1bb0207ec97108a2934a1f6
+```
+
+#### Transfer Ownership Of Bucket 
+
+`Usage: ioctl stake2 transfer (ALIAS|VOTE_ADDRESS) BUCKET_INDEX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
+
+```
+➜  ioctl stake2 transfer daddypig 56 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 426  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp)
+version: 1
+nonce: 426
+gasLimit: 10000
+gasPrice: "1000000000000"
+stakeTransferOwnership: <
+  bucketIndex: 56
+  voterAddress: "io1gh439pm67d4cwxt882xpylj75klys6esepml60"
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: 7ff14a55d71307b221675f8c5b21ca0a3390bace47c855cdaa5d8fca00287601714d2076a270e74fcef235571bd2bd97d85e06ee3cc46473ca94c7ad34702cc200
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:f23774c081a0a66c3f3830ca64e1efe669bb0cc7ea7815774294824f9c1b4c15
 ```
 
 #### Release a Over-Time Bucket
 
-`Usage: ioctl stake release BUCKET_INDEX [DATA] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
+`Usage: ioctl stake2 release BUCKET_INDEX [DATA] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
 
 ```
-➜   ioctl stake release 1
+➜   ioctl stake2 release 1
 Enter password #ioxxx...xxx:
 ...
 ...
@@ -476,10 +670,10 @@ Wait for several seconds and query this action by hash:iotexscan.io/action/xxx..
 
 #### Withdraw IOTX From a Released Bucket
 
-`Usage: ioctl stake withdraw BUCKET_INDEX [DATA] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
+`Usage: ioctl stake2 withdraw BUCKET_INDEX [DATA] [-c ALIAS|CONTRACT_ADDRESS] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GASPRICE] [-P PASSWORD] [-y]`
 
 ```
-➜   ioctl stake withdraw 1
+➜   ioctl stake2 withdraw 1
 Enter password #ioxxx...xxx:
 ...
 ...
@@ -487,7 +681,76 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
 ```
 
-####
+#### Register Candidate
+
+`Usage: ioctl stake2 register NAME (ALIAS|OPERATO_ADDRESS) (ALIAS|REWARD_ADDRESS) (ALIAS|OWNER_ADDRESS) AMOUNT_IOTX STAKE_DURATION [DATA] [--auto-stake] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
+
+```
+➜   ioctl stake2 register pig tmp2 tmp2 tmp2 1000000 7 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 428  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp)
+version: 1
+nonce: 428
+gasLimit: 10000
+gasPrice: "1000000000000"
+candidateRegister: <
+  candidate: <
+    name: "pig"
+    operatorAddress: "io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"
+    rewardAddress: "io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"
+  >
+  stakedAmount: "1000000000000000000000000"
+  stakedDuration: 7
+  ownerAddress: "io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: 3839e559a155e34900e2fc7b9cb45c772c1eac16ce9b2a84d4c033de054c8841062825fe368c984c1a367c1e16c16cfe4518335db346b3ab47277378fc0aa29c00
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:9571ad35b0184ad75eaabe539d57513f37fac74b9f605c172fbc28b760d256df
+```
+
+#### Update Candidate Information 
+
+`Usage: ioctl stake2 update NAME (ALIAS|OPERATOR_ADDRESS) (ALIAS|REWARD_ADDRESS) [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
+
+```
+➜   ioctl stake2 update pig tmp2 tmp2 -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+
+
+version: 1  nonce: 429  gasLimit: 10000  gasPrice: 0.000001 IOTX
+senderAddress: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4 (tmp)
+version: 1
+nonce: 429
+gasLimit: 10000
+gasPrice: "1000000000000"
+candidateUpdate: <
+  name: "pig"
+  operatorAddress: "io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"
+  rewardAddress: "io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"
+>
+senderPubKey: 0422346c407294b5e37487395f193faa48dabfc2225ab33fe47b335299f46505b1689f0d96fd53bd19971fe47f310669cf6260dcdc23318454814a4fe904f4d384
+signature: e403da0e9c928cbedbbba4ab97d9cc57a1f207a4c72c8e44bbfdf0a90a3ee01e48a2ca1d9e6bc15f6d9b4230d592f1577bb8ad8a1c9529ada986edfec6662c1801
+
+Please confirm your action.
+
+
+Options: yes
+Quit for anything else.
+yes
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:c6daaedee325d339e2eba15b76646329c940c0f07ebe9c13cd1f3288ee319a5d
+```
 
 ## XRC20
 
@@ -615,11 +878,82 @@ Delta State Digest: 999003ad9f4ea85f45a8a3ebafcb8ad03c43852fbe8cce14aaf86bed9aed
 Hash: c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
 ```
 
+#### Query Staking Bucket Information
+
+`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
+
+```
+➜  ioctl bc bucketlist daddypig
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 56
+owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
+candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
+stakedAmount: 232 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-21T13:10:10Z
+stakeStartTime: 2020-05-21T13:28:25Z
+unstakeStartTime: none
+}
+```
+
+#### Query Staking BucketList By Address
+
+`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
+
+```
+➜  ioctl bc bucketlist tmp2
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 34
+owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
+candidate: io1t56twy23yjuqscljpjc869hyqw3gpswwj0g228
+stakedAmount: 100 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-11T06:41:20Z
+stakeStartTime: 2020-05-11T06:41:20Z
+unstakeStartTime: none
+}
+{
+index: 43
+owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
+candidate: io1l40dc4q95fsjdprhcga5qrpdsj46q3wpzr27n9
+stakedAmount: 170 IOTX
+stakedDuration: 14 days
+autoStake: false
+createTime: 2020-05-14T02:42:15Z
+stakeStartTime: 2020-05-14T02:42:15Z
+unstakeStartTime: none
+}
+```
+
+#### Query Staking Bucket By Index 
+
+`Usage: ioctl bc bucket [BUCKET_INDEX]`
+
+```
+➜  ioctl bc bucketlist daddypig
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 56
+owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
+candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
+stakedAmount: 232 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-21T13:10:10Z
+stakeStartTime: 2020-05-21T13:28:25Z
+unstakeStartTime: none
+}
+```
+
 ## Node
 
 #### Query Delegates
 
-`Usage: ioctl node delegate [-e epoch-num|-n]`
+`Usage: ioctl node delegate [-e epoch-num]`
 
 ```
 ➜  ioctl node delegate
@@ -649,6 +983,28 @@ io1wl83n3up9w8nedf30lnyxzple0gu5pme0dyrds      5           active   15       385
 io1qqaswtu7rcevahucpfxc0zxx088pylwtxnkrrl      6           active   16       32953849.701042695805874862
 io1nf0rvzgq3tqym6n3trttsrt7d4gqqsmqfzy0da      7           active   15       29482829.876487336517790368
 ...
+```
+
+#### Query ProbationList By Epoch Number
+
+`Usage: ioctl node probationlist [-e epoch-num]`
+
+```
+➜  ioctl node probationlist
+EpochNumber : 4985, IntensityRate : 90%
+ProbationList : [
+  "io1gh439pm67d4cwxt882xpylj75klys6esepml60"
+]
+
+```
+
+```
+➜  ioctl node probationlist -e 4500
+EpochNumber : 4500, IntensityRate : 90%
+ProbationList : [
+  "io13n3382cjhaawmqfk4vmvvgllnryw4tf56qdtks",
+  "io1gh439pm67d4cwxt882xpylj75klys6esepml60"
+]
 ```
 
 #### Query Reward

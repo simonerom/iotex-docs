@@ -56,6 +56,8 @@ module.exports = {
                 "",
                 "docs/libraries-and-tools",
                 "docs/ioctl",
+                "docs/api",
+                "docs/analytics",
                 "docs/misc"
               ]
             }

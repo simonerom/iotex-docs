@@ -5,7 +5,7 @@ title: Get Started
 
 ## Introduction
 
-Founded as an open-source project in 2017, IoTeX envisions to bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform. 
+Founded as an open-source project in 2017, IoTeX envisions bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform. 
 
 Over the past 2+ years, the IoTeX blockchain was built from scratch with our mission in mind. What started as a few lines of code has now blossomed into one of the most secure, performant, and decentralized blockchains in the world. IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper). 
 
@@ -13,22 +13,22 @@ IoTeX core team is continuously working hard to bring the community more cool fe
 
 
 ### The Architecture
-IoTeX blockchain is consisted of the four-layered components:
+IoTeX blockchain consists of the four-layered components:
 - Networking layer enables the peer-to-peer communication between IoTex nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to other applications and users
 - Consensus layer runs Roll-DPoS to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
-- State transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain from one to the other.
-- Programing layer implements the business logic for state transition. Currently, it supports Ethereum virtual machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it.
+- The state transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain from one to the other.
+- The programing layer implements the business logic for state transition. Currently, it supports Ethereum virtual machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it.
 
-![IoTeX Rootchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
+![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 
 
 ### Subprotocols and Actions
 
-The state transition layer of IoTeX root chain is flexible enough that any subprotocol can be plugged in without hustling.
+The state transition layer of the chain is flexible enough that any subprotocol can be plugged in without hustling.
 
 - Account subprotocol provides the functionality for bookkeeping balances of accounts living on this blockchain.
 - Execution subprotocol manages the execution of smart contracts and roll forward/back of the states.
-- Poll subprotocol syncs with staking subprotocol and instructs the delegates promotion/demotion on IoTeX root chain.
+- Poll subprotocol syncs with staking subprotocol and instructs the delegates promotion/demotion on the chain.
 - Rewarding subprotocol is responsible for distributing block rewards and epoch rewards to eligible delegates and candidates.
 - Staking subprotocol manages voting and candidate registration services using bucket data units.
 - Multichain subprotocol manages sub-chain management and cross-chain communication which is a work-in-progress.
@@ -38,7 +38,7 @@ In the IoTeX network, transactions (the atomic operation unit to interact with t
 ## Build and Run
 
 ### Standalone Mode
-The simplest way to get started with IoTeX software package is to run it in stand-alone mode for demonstration and testing purposes. "Stand-alone" indicates a single node comprises the entire blockchain by itself, which generates a new block, validates the block, and adds the block to the blockchain. This simple mode allows user to quickly launch and test a blockchain with a single computer/node, without requiring much hardware resources.
+The simplest way to get started is to run it in stand-alone mode for demonstration and testing purposes. "Stand-alone" indicates a single node comprises the entire blockchain by itself, which generates a new block, validates the block, and adds the block to the blockchain. This simple mode allows user to quickly launch and test a blockchain with a single computer/node, without requiring much hardware resources.
 
 #### From the Source
 
@@ -54,7 +54,7 @@ The simplest way to get started with IoTeX software package is to run it in stan
 
 3. `sudo docker run -d -p 30100:14004 --mount type=bind,source=$PWD/standalone-config.yaml,target=/etc/iotex/config_local_delegate.yaml iotex/iotex-core:latest iotex-server -config-path=/etc/iotex/config_local_delegate.yaml`
 
-### Run A Full Node on Testnet/Maiinet
+### Run A Full Node on Testnet/Mainnet
 
 Please follow instructions [here](https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md) to run a full node on the testnet or mainnet. 
 
@@ -64,14 +64,16 @@ IoTeX users can easily track their transactions using the explorer.
 - [Mainnnet](https://iotexscan.io)
 - [Testnet](https://testnet.iotexscan.io)
 
+## Wallet
+[ioPay](https://iopay.iotex.io/) is the wallet built by core-dev for our users to manage their digital assets.
 
 ## Get Started for Dapp Development
 
-If you are interested in develop applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
+If you are interested in developing applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
 ## Chat With Us
 
-We are radically open-mnded and value open-mindedness and  transparency. 
+We are radically open-minded and value open-mindedness and transparency. 
 
 If you found bugs and places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
 

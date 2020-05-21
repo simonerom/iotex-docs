@@ -74,7 +74,7 @@ IoTeX users can easily track their transactions using the explorer.
 [Member portal](https://member.iotex.io/) is the portal for staking of IOTX, voting for delegates, and governance of the operation of IoTeX blockchain. You will need to install ioPay to use it.
 
 ### Hermes
-Hermes (https://hermes.to/) is an [open-source](https://github.com/iotexproject/web-hermes) staking/voting rewards manager. The IoTeX Network utilizes Roll-DPoS consensus, where community-elected delegates manage consensus on behalf of the network. Delegates receive IOTX rewards for producing blocks, which are usually shared with their voters. With Hermes, delegates can auto-distribute rewards every day, while their voters can easily track their reward payments. Delegates that currently use Hermes have a ‘Hermes’ badge on the member portal.
+[Hermes](https://hermes.to/) is an [open-source](https://github.com/iotexproject/web-hermes) staking/voting rewards manager. The IoTeX Network utilizes Roll-DPoS consensus, where community-elected delegates manage consensus on behalf of the network. Delegates receive IOTX rewards for producing blocks, which are usually shared with their voters. With Hermes, delegates can auto-distribute rewards every day, while their voters can easily track their reward payments. Delegates that currently use Hermes have a ‘Hermes’ badge on the member portal.
 
 ### Analytics
 IoTeX analytics is an [open-source](https://github.com/iotexproject/iotex-analytics) microservice that analyzes data from IoTeX blockchain to better serve applications. Currently, analytics registers five index protocols: accounts, blocks, actions, rewards, and votings, where each protocol keeps track of its relevant data and writes it into the corresponding database tables.

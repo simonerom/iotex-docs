@@ -71,7 +71,7 @@ IoTeX users can easily track their transactions using the explorer.
 
 If you are interested in developing applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
-## :octocat: Chat With Us
+## :woman: Chat With Us
 
 **We are radically open-minded and value open-mindedness and transparency.**
 

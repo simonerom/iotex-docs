@@ -59,7 +59,7 @@ The simplest way to get started is to run it in stand-alone mode for demonstrati
 Please follow instructions [here](https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md) to run a full node on the testnet or mainnet. 
 
 ## :globe_with_meridians: IoTeX Ecosystem
-IoTeX Ecosystem consists of several services and applications, built around IoTeX blockchain.
+IoTeX Ecosystem consists of an increasing number of services and applications, built around IoTeX blockchain.
 
 ### Explorer
 IoTeX users can easily track their transactions using the explorer.
@@ -79,9 +79,10 @@ Hermes (https://hermes.to/) is an [open-source](https://github.com/iotexproject/
 ### Analytics
 IoTeX analytics is an [open-source](https://github.com/iotexproject/iotex-analytics) microservice that analyzes data from IoTeX blockchain to better serve applications. Currently, analytics registers five index protocols: accounts, blocks, actions, rewards, and votings, where each protocol keeps track of its relevant data and writes it into the corresponding database tables.
 
-### Dapps
+### DApps
+Some of the DApps built on top of IoTeX can be found [here](https://iotex.io/developers/). 
 
-If you are interested in developing applications on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
+If you are interested in developing DApps on top of IoTeX blockchain, [codelab](http://codelabs.iotex.io/) is the best starting point for developers!
 
 ## :woman: Chat With Us
 

@@ -61,7 +61,7 @@ Please follow instructions [here](https://github.com/iotexproject/iotex-bootstra
 ## :globe_with_meridians: IoTeX Ecosystem
 IoTeX Ecosystem consists of an increasing number of services and applications, built around IoTeX blockchain.
 
-<img src="ecosystem.jpeg" height="600" />
+<img src="https://raw.githubusercontent.com/iotexproject/iotex-docs/master/ecosystem.jpeg" height="600" />
 
 
 ### Explorer

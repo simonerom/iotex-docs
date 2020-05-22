@@ -5,17 +5,16 @@ title: Guides
 # Guides
 
 ## State management
+
 We use redux to manage state in onefx.js. To pass the state from the server to the initial page during the server-side rendering, in the server use `ctx.setState(path, val)` to set the state:
 
 ```js
-server.get('SPA', '/*', function onRoute(ctx) {
-  ctx.setState('base.sampleState', 'this is a sample initial state');
+server.get("SPA", "/*", function onRoute(ctx) {
+  ctx.setState("base.sampleState", "this is a sample initial state");
   ctx.body = ctx.isoReactRender({
-    VDom: (
-      <AppContainer/>
-    ),
+    VDom: <AppContainer />,
     reducer: noopReducer,
-    clientScript: '/main.js',
+    clientScript: "/main.js"
   });
 });
 ```
@@ -23,47 +22,47 @@ server.get('SPA', '/*', function onRoute(ctx) {
 And use the state in the react component:
 
 ```js
-const SampleStateContainer = connect(
-  state => ({text: state.base.sampleState})
-)(function SampleState({text}) {
-  return (
-    <div>{text}</div>
-  );
+const SampleStateContainer = connect(state => ({
+  text: state.base.sampleState
+}))(function SampleState({ text }) {
+  return <div>{text}</div>;
 });
 ```
 
 ## Styling
+
 We support both global styles with [sass](https://sass-lang.com/guide) in `./src/client/stylesheets/main.scss` and modular styles with [styletron-react](https://github.com/styletron/styletron/blob/master/packages/styletron-react/README.md):
 
 ```js
-import react from 'react';
-import {styled} from 'onefx/lib/styletron-react';
+import react from "react";
+import { styled } from "onefx/lib/styletron-react";
 
-const Panel = styled('div', {
-  backgroundColor: 'silver',
+const Panel = styled("div", {
+  backgroundColor: "silver"
 });
 
 export default <Panel>Hello</Panel>;
 ```
 
 ## Routing
+
 server-side routing is using [koa-router](https://github.com/alexmingoia/koa-router) and located in `./src/server/server-routes.js`. The basic usage is:
 
 ```js
 server
-  .get('/', (ctx, next) => {
-    ctx.body = 'Hello World!';
+  .get("/", (ctx, next) => {
+    ctx.body = "Hello World!";
   })
-  .post('/users', (ctx, next) => {
+  .post("/users", (ctx, next) => {
     // ...
   })
-  .put('/users/:id', (ctx, next) => {
+  .put("/users/:id", (ctx, next) => {
     // ...
   })
-  .del('/users/:id', (ctx, next) => {
+  .del("/users/:id", (ctx, next) => {
     // ...
   })
-  .all('/users/:id', (ctx, next) => {
+  .all("/users/:id", (ctx, next) => {
     // ...
   });
 ```
@@ -72,12 +71,95 @@ client-side routing is using [react-router v4](https://reacttraining.com/react-r
 
 ```js
 <Switch>
-  <Route exact path='/' component={Home}/>
-  <Route component={NotFound}/>
+  <Route exact path="/" component={Home} />
+  <Route component={NotFound} />
 </Switch>
 ```
 
+## Fetching data
+
+We use Apollo Graphql and TypeGraphQL for universal rendering with React. For detailed documentation, please visit:
+
+1. [Define GraphQL schemas in TypeScript](https://typegraphql.ml/docs/getting-started.html)
+2. [Learn how to fetch data with the Apollo Query component](https://www.apollographql.com/docs/tutorial/queries/)
+
+### Make a query
+
+In `src/api-gateway/resolvers/`, define a new resolver and method. Take the meta data endpoint of the server health for example.
+
+```js
+import { Query, Resolver, ResolverInterface } from "type-graphql";
+
+@Resolver(_ => String)
+export class MetaResolver implements ResolverInterface<() => String> {
+  @Query(_ => String, { description: "is the server healthy?" })
+  public async health(): Promise<string> {
+    return "OK";
+  }
+}
+```
+
+and then in `api-gateway.ts`, mount the resolver.
+
+```js
+const resolvers = [MetaResolver];
+```
+
+Now the server is ready and you can call the `health` endpoint at [https://localhost:5000/api-gateway/](https://localhost:5000/api-gateway/).
+
+The next step is to call it from the React component.
+
+```js
+const GET_HEALTH = gql`
+  {
+    health
+  }
+`;
+```
+
+```<js></js>
+<Query query={GET_HEALTH} ssr={false} fetchPolicy="network-only">
+   {({
+     loading,
+     error,
+     data
+   }: QueryResult<{ health: string }>) => {
+     if (loading) {
+       return (
+         <div>
+           <Icon type="loading" /> Checking Status
+         </div>
+       );
+     }
+     if (error) {
+       return (
+         <div>
+           <Icon
+             type="close-circle"
+             theme="twoTone"
+             twoToneColor={colors.error}
+           />{" "}
+           Not OK
+         </div>
+       );
+     }
+
+     return (
+       <div>
+         <Icon
+           type="check-circle"
+           theme="twoTone"
+           twoToneColor={colors.success}
+         />{" "}
+         {data && data.health}
+       </div>
+     );
+   }}
+</Query>
+```
+
 ## Internationalization
+
 Onefx reads translations from `./translations` directory. Please create a file there named with a corresponding locale, for example, `en.yaml`. And then add an entry
 
 ```yaml
@@ -87,30 +169,29 @@ homepage.hello: hello, ${userName}!
 and then in the react view file
 
 ```js
-import {t} from 'onefx/lib/iso-i18n';
+import { t } from "onefx/lib/iso-i18n";
 
 function Greetings() {
-  return (
-    <div>{t('homepage.hello', {userName: 'John'})}</div>
-  );
+  return <div>{t("homepage.hello", { userName: "John" })}</div>;
 }
 ```
 
 When users visit this site with `accept-language: en` in the header, which is set by the browser, then they will see translated greetings. If you want to explicitly set the locale, then visit the page with a query string `?locale=en` then it will memorize this in the cookie.
 
 ## Testing
+
 test files are supposed to be placed in any module like `./__test__/example.test.js` in [ava test utils](https://github.com/avajs/ava/tree/master/docs).
 
 ```js
-import test from 'ava';
+import test from "ava";
 
-test('testname', async t => {
+test("testname", async t => {
   // ...
 });
-
 ```
 
 ## Security
+
 Onefx enables secure web app development with
 
 1. CSRF protection that can be exempted at `./config/default.js` (`config.server.noCsrfRoutes`)
@@ -136,21 +217,21 @@ for example, in `default.js`,
 ```
 
 ## Static assets
+
 Static assets are placed in `./client/static/` and loaded into the root directory of the website. Take `./client/static/favicon.png` for example, you can get it at [http://localhost:4100/favicon.png](http://localhost:4100/favicon.png), or use it in the react component:
 
 ```js
-import {assetURL} from 'onefx/lib/asset-url';
+import { assetURL } from "onefx/lib/asset-url";
 
 function ImgExample() {
-  return (
-    <img src={assetURL('/favicon.png')}/>
-  );
+  return <img src={assetURL("/favicon.png")} />;
 }
 ```
 
 ## Configuration
 
 ### Environment variables
+
 The environment variable is read from commandline as well as `.env` file. Take `PORT` for example,
 
 ```bash
@@ -166,75 +247,77 @@ PORT=4004
 In the js file, you can read the value by `process.env.PORT`.
 
 ### Static configuration
+
 The static configuration is located in `./config` and can be read according to the environment variable `NODE_ENV`.
 
 ## References
+
 Tech Stack
 
-* [react - view](https://reactjs.org/)
-	* [styletron - local style in JS](https://github.com/rtsao/styletron)
-	* sass - global style in sass
-	* [flexbox - view layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [react - view](https://reactjs.org/)
+  _ [styletron - local style in JS](https://github.com/rtsao/styletron)
+  _ sass - global style in sass \* [flexbox - view layout](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-* [redux - state management](https://redux.js.org/)
+- [redux - state management](https://redux.js.org/)
 
-* [Koa.js - server](http://koajs.com/)
+- [Koa.js - server](http://koajs.com/)
 
-* [graphql apollo - api gateway](https://www.apollographql.com/)
+- [graphql apollo - api gateway](https://www.apollographql.com/)
 
-* [MongoDB mongoose - database ODM](https://mongoosejs.com/)
+- [MongoDB mongoose - database ODM](https://mongoosejs.com/)
 
-* [MySQL sequalize - database ORM](http://docs.sequelizejs.com/)
+- [MySQL sequalize - database ORM](http://docs.sequelizejs.com/)
 
 Design Resources
 
-* [Carbon Design System](http://carbondesignsystem.com/)
-* [Font Awesome](http://fontawesome.io/)
-* [flaticon - icons and graphics](https://www.flaticon.com/)
+- [Carbon Design System](http://carbondesignsystem.com/)
+- [Font Awesome](http://fontawesome.io/)
+- [flaticon - icons and graphics](https://www.flaticon.com/)
 
 ## Roadmap
+
 Vision: Onefx = fusionjs-like presentation layer + django-like admin portal + react-native-made mobile app + minimalist (SRE infra + data pipeline)
 
 1. MVP
-	1. Getting started
-		1. Create a project
-		2. Run your project
-		3. Framework Comparison
-		4. Coding Styles
-	2. Guides
-		1. State management
-		2. styling
-			1. import styles
-			2. modular styles (now we have global root provider dependency on styletron)
-		3. Routing
-		4. Fetching data
-		5. Forms
-		6. Internationalization
-		7. testing
-		8. typing
-		9. security
-		10. Universal rendering
-		11. Server code
-		12. Performance
-		13. automatic code splitting
-		14. debugging
-		15. Static assets
-		16. Configuration
-		17. Working with Secrets
+   1. Getting started
+      1. [x] Create a project
+      2. [x] Run your project
+      3. Framework Comparison
+      4. [x] Coding Styles
+   2. Guides
+      1. [x] State management
+      2. [x] styling
+         1. [x] import styles
+         2. [x] modular styles (now we have global root provider dependency on styletron)
+      3. [x] Routing
+      4. Fetching data
+      5. Forms
+      6. [x] Internationalization
+      7. [x] testing
+      8. typing
+      9. [x] security
+      10. Universal rendering
+      11. Server code
+      12. Performance
+      13. automatic code splitting
+      14. debugging
+      15. [x] Static assets
+      16. [x] Configuration
+      17. Working with Secrets
 2. ver 1.0.0 Web
-	1. yarn create
-	2. Auth: Sign in / sign up / forgot-password
-	3. Admin Site
-	4. Boilerplates
+   1. yarn create
+   2. Auth: Sign in / sign up / forgot-password
+   3. Admin Site
+   4. Boilerplates
 3. Ver 2.0.0 Mobile
-	1. React native, Apollo graphql
+   1. React native, Apollo graphql
 4. Ver 3.0.0 Infra
-	1. Kubernetes
-	2. metrics
-	3. logging
+   1. Kubernetes
+   2. metrics
+   3. logging
 5. Ver 4.0.0 Data Pipeline
-	1. ELK
-	2. BI platform
+   1. ELK
+   2. BI platform
 
 ## Run on Windows
 
@@ -256,7 +339,32 @@ nvm use lts/dubnium
 
 ```bash
 cd /mnt/c/
-https://github.com/puncsky/web-onefx-boilerplate.git
+git clone https://github.com/puncsky/web-onefx-boilerplate.git
 ```
 
 4. install [VS Code](https://code.visualstudio.com/) and open WSL terminal with ctrl + ` . Not sure about WSL terminal? Go to [this post](https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/).
+
+## Mobile
+
+### Create a project
+
+```bash
+git clone https://github.com/puncsky/mobile-onefx-boilerplate.git my-awesome-mobile-project
+```
+
+### Run your project
+
+```bash
+cd my-awesome-mobile-project
+
+nvm use 10.15.0
+npm install
+```
+
+#### Development mode
+
+To run your project in development mode, run:
+
+```bash
+npm run start
+```

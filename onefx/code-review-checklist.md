@@ -13,8 +13,7 @@ title: OneFx Code Review Checklist
 ```js
 try {
   const resp = await submitForm(values);
-} catch (err) {
-}
+} catch (err) {}
 ```
 
 ✅ Good
@@ -23,7 +22,7 @@ try {
 try {
   const resp = await submitForm(values);
 } catch (err) {
-  notification.error({message: `failed to submitForm: ${err}`});
+  notification.error({ message: `failed to submitForm: ${err}` });
 }
 ```
 
@@ -33,7 +32,7 @@ try {
 
 ```js
 function submitForm(values, cb) {
-  validateForm(values, (err) => {
+  validateForm(values, err => {
     if (err) {
       return cb(err, null);
     }
@@ -49,11 +48,10 @@ function submitForm(values, cb) {
         }
 
         return cb(null, wrapResult(anotherResp));
-      })
-    })
-  })
+      });
+    });
+  });
 }
-
 ```
 
 ✅ Good
@@ -86,7 +84,7 @@ Make sure it works on both mobile and desktop devices.
 ```jsx harmony
 function someFunction(someCondition) {
   if (someCondition) {
-      // Do Something
+    // Do Something
   }
 }
 ```
@@ -96,7 +94,7 @@ function someFunction(someCondition) {
 ```jsx harmony
 function someFunction(someCondition) {
   if (!someCondition) {
-      return;
+    return;
   }
   // Do Something
 }
@@ -106,8 +104,6 @@ function someFunction(someCondition) {
 
 ### Avoid circular dependency
 
-
-
 ### Avoid complicated code
 
 #### Avoid complicated tertiary operation
@@ -116,7 +112,7 @@ function someFunction(someCondition) {
 
 ```jsx harmony
 const sampleComponent = () => {
-  return isTrue ? <p>True!</p> : null
+  return isTrue ? <p>True!</p> : null;
 };
 ```
 
@@ -124,7 +120,7 @@ const sampleComponent = () => {
 
 ```jsx harmony
 const sampleComponent = () => {
-  return isTrue && <p>True!</p>
+  return isTrue && <p>True!</p>;
 };
 ```
 
@@ -135,16 +131,19 @@ const sampleComponent = () => {
 const sampleComponent = () => {
   return (
     <div>
-      {flag && flag2 && !flag3
-        ? flag4
-        ? <p>Blah</p>
-        : flag5
-        ? <p>Meh</p>
-        : <p>Herp</p>
-        : <p>Derp</p>
-      }
+      {flag && flag2 && !flag3 ? (
+        flag4 ? (
+          <p>Blah</p>
+        ) : flag5 ? (
+          <p>Meh</p>
+        ) : (
+          <p>Herp</p>
+        )
+      ) : (
+        <p>Derp</p>
+      )}
     </div>
-  )
+  );
 };
 ```
 
@@ -154,23 +153,21 @@ const sampleComponent = () => {
 const sampleComponent = () => {
   return (
     <div>
-      {
-        (() => {
-          if (flag && flag2 && !flag3) {
-            if (flag4) {
-              return <p>Blah</p>
-            } else if (flag5) {
-              return <p>Meh</p>
-            } else {
-              return <p>Herp</p>
-            }
+      {(() => {
+        if (flag && flag2 && !flag3) {
+          if (flag4) {
+            return <p>Blah</p>;
+          } else if (flag5) {
+            return <p>Meh</p>;
           } else {
-            return <p>Derp</p>
+            return <p>Herp</p>;
           }
-        })()
-      }
+        } else {
+          return <p>Derp</p>;
+        }
+      })()}
     </div>
-  )
+  );
 };
 ```
 
@@ -186,6 +183,7 @@ const sampleComponent = () => {
 ```
 
 ✅ Good
+
 ```jsx harmony
 <h1>{t('home.my_awesome_project')}</h1>
 <p>{t('home.my_awesome_project_desc')}</p>
@@ -196,9 +194,11 @@ const sampleComponent = () => {
 ❌ Bad
 
 ```jsx harmony
-function Greeting({username}) {
+function Greeting({ username }) {
   return (
-    <h1>{t('home.hello')}, {username}!</h1>
+    <h1>
+      {t("home.hello")}, {username}!
+    </h1>
   );
 }
 
@@ -208,10 +208,13 @@ function Greeting({username}) {
 ```
 
 ✅ Good
+
 ```jsx harmony
-function Greeting({username}) {
+function Greeting({ username }) {
   return (
-    <h1>{t('hello')}, {username}</h1>
+    <h1>
+      {t("hello")}, {username}
+    </h1>
   );
 }
 
@@ -240,16 +243,17 @@ Local JS styles have better "deleteability".
 ```jsx harmony
 import { styled } from "onefx/lib/styletron-react";
 const Td = styled("div", {
-  "textAlign":"right !important",
-  "wordBreak":"normal !important",
-  "color":"#73fbe0 !important",
-  "width":"20%"
-})
+  textAlign: "right !important",
+  wordBreak: "normal !important",
+  color: "#73fbe0 !important",
+  width: "20%"
+});
 ```
 
 ### DRY: don't repeat yourself
 
 ### Avoid simple copy-and-paste. Prefer using libraries directly understanding the code and remove unused places.
+
 ### Avoid unreasonable comments. Update or remove confusing comments.
 
 ## Use Consistent Project Structure
@@ -260,16 +264,34 @@ The `index.js` should always export the main component. This file should also be
 
 ### 2. Use lowercase kebab-case filenames
 
-| ❌ Bad | ✅ Good |
-| ---      | ---      |
-| `MyAwesomeComponent.js` <br/> `My-Awesome-Component.js` <br/>`my_awesome_component.js` | `my-awesome-component.js` |
+❌ Bad
+
+```txt
+MyAwesomeComponent.js
+My-Awesome-Component.js
+my_awesome_component.js
+```
+
+✅ Good
+
+```txt
+my-awesome-component.js
+```
 
 ### 3. Prefer named exports over default exports
 
-| ❌ Bad | ✅ Good |
-| ---      | ---      |
-| `export default function() {}` | `// exports a function declared earlier` <br/> `export { myFunction };` <br/>`// exports a constant` <br/> `export const foo = "bar";` |
+❌ Bad
 
+`export default function() {}`
+
+✅ Good
+
+```jsx
+// exports a function declared earlier
+export { myFunction };
+// exports a constant
+export const foo = "bar";
+```
 
 ## Effective refactoring
 
@@ -287,5 +309,14 @@ Let styles be consistent. Let linters lint.
 
 Use `px`.
 
-- Avoid using `pt`. 
+- Avoid using `pt`.
 - Avoid using `rem`. In most cases, users want to see more contents instead of larger fonts with larger screens.
+
+## UX Design Principles
+
+- Empathy / Perspective-taking is the most important.
+- Keep elements consistent.
+- Insist on the Highest Standards.
+- Detail-oriented
+  - Check i18n.
+  - Check accessibility.

@@ -17,13 +17,13 @@ Available Commands:
   account     Manage accounts of IoTeX blockchain
   action      Manage actions of IoTeX blockchain
   alias       Manage aliases of IoTeX addresses
-  bc          Deal with block chain of IoTeX blockchain
+  bc          Deal with blockchain of IoTeX blockchain
   config      Get, set, or reset configuration for ioctl
-  contract    Deal with smart contract of IoTeX blockchain
+  contract    Deal with a smart contract of IoTeX blockchain
   help        Help about any command
   node        Deal with nodes of IoTeX blockchain
   stake2      Support native staking of IoTeX blockchain
-  update      Update ioctl with latest version
+  update      Update ioctl with the latest version
   version     Print the version of ioctl and node
   xrc20       Support ERC20 standard command-line
 
@@ -134,7 +134,7 @@ Config reset to default values
 #IOsenser: Set password
 #IOsenser: Enter password again
 New account "IOsenser" is created.
-Please Keep your password, or your will lose your private key.
+Please Keep your password, or you will lose your private key.
 ```
 
 #### Import An Account With Private Key

@@ -1143,6 +1143,26 @@ execution: <
 ...
 ```
 
+#### Test smart contract by bytecode
+`Usage:
+  ioctl contract test bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]
+`
+```
+→  ioctl contract test bytecode io1a0... 2
+Output:
+return ...
+```
+
+#### Test smart contract by function
+`
+Usage:
+  ioctl contract test function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]
+`
+```
+→  ioctl contract test function io1a0... a.abi sendCoin 2 --with-arguments '{"recipients":["io1h8zxmdacge966wp6t90a02ncghaa6eptnftfqr","io14fmlh7zedcx7tn3k9k744v54nxnv8zky86tjhj"],"amounts":["312","123"],"payload":"PLEASE!!!"}'
+Output:
+return ...
+```
 ## Update tools
 
 #### Version

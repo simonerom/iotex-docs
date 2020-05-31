@@ -1143,6 +1143,26 @@ execution: <
 ...
 ```
 
+#### Test smart contract by bytecode
+`Usage:
+  ioctl contract test bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]
+`
+```
+→  ioctl contract test bytecode io18qq... a4d66daf
+Output:
+return 0000000000000000000000000000000000000000000000000000000000000000
+```
+
+#### Test smart contract by function
+`
+Usage:
+  ioctl contract test function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]
+`
+```
+→  ioctl contract test function io18qq... a.abi owner
+Output:
+return 000000000000000000000000c7f43fab2ca353d29ce0da04851ab74f45b09593
+```
 ## Update tools
 
 #### Version

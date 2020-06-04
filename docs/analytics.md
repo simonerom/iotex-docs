@@ -526,6 +526,40 @@ Sample Response:
 }
 ```
 
+Demo:
+
+```
+Sample Request:
+
+query{
+	voting(startEpoch: 9760, epochCount: 1){
+    votingMeta{
+      candidateMeta{
+        votedTokens
+        totalWeightedVotes
+      }
+    }
+  }
+}
+
+Sample Response:
+
+{
+  "data": {
+    "voting": {
+      "votingMeta": {
+        "candidateMeta": [
+          {
+            "votedTokens": "2238183641136247164314750007",
+            "totalWeightedVotes": "2540055496482100272999904251"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
 ### Account
 
 #### ActiveAccounts

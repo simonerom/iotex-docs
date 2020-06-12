@@ -1018,7 +1018,7 @@ ProbationList : [
 io1t54nfdnpldaxkpm35f2gzh3rx6cakypmp5xfz5: 45819 IOTX
 ```
 
-## Contract
+## Smart Contract
 
 #### Prepare solidity compiler
 `Usage:

@@ -49,42 +49,6 @@ curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-cl
 curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-cli.sh | sh -s "unstable"
 ```
 
-## Usage and Examples
-
-Documentation of all ioctl commands with examples.
-
-## Config
-
-`Variables: [endpoint, wallet, explorer, defaultacc, language, nsv2height]`\
-`Explorers: [iotexscan (default), iotxplorer, custom]`
-
-#### Set Config
-
-`Usage: ioctl config set VARIABLE VALUE`
-
-```
-➜  ioctl config set endpoint api.iotex.one:443
-endpoint is set to api.iotex.one:443
-```
-
-#### Get Config
-
-`Usage: ioctl config get VARIABLE | all`
-
-```
-➜  ioctl config get wallet
-/Users/IoTeX/.config/ioctl/default
-```
-
-#### Reset Config
-
-`Usage: ioctl config reset`
-
-```
-➜  ioctl config reset
-Config reset to default values
-```
-
 ## Account
 
 #### Create Account(s)
@@ -513,7 +477,39 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:23aee3e08f084d5090329d47e27afa8c08358967ca8d6f2b2dc26803b7491d4e
 ```
 
-## Native Staking
+## Config
+
+`Variables: [endpoint, wallet, explorer, defaultacc, language, nsv2height]`\
+`Explorers: [iotexscan (default), iotxplorer, custom]`
+
+#### Set Config
+
+`Usage: ioctl config set VARIABLE VALUE`
+
+```
+➜  ioctl config set endpoint api.iotex.one:443
+endpoint is set to api.iotex.one:443
+```
+
+#### Get Config
+
+`Usage: ioctl config get VARIABLE | all`
+
+```
+➜  ioctl config get wallet
+/Users/IoTeX/.config/ioctl/default
+```
+
+#### Reset Config
+
+`Usage: ioctl config reset`
+
+```
+➜  ioctl config reset
+Config reset to default values
+```
+
+## Stake and Vote
 
 #### Create Bucket for Voting
 

@@ -35,7 +35,8 @@ module.exports = {
         },
         collapsable: false,
         nav: [
-          { text: "Blockchain", link: "/" },
+          { text: "Core", link: "/" },
+          { text: "Middleware", link: "/middleware/did" },
           { text: "OneFx", link: "/onefx/get-started" }
         ],
         sidebar: {
@@ -46,6 +47,14 @@ module.exports = {
                 "onefx/get-started",
                 "onefx/guides",
                 "onefx/code-review-checklist"
+              ]
+            }
+          ],
+          "/middleware": [
+            {
+              collapsable: false,
+              children: [
+                "middleware/did"
               ]
             }
           ],

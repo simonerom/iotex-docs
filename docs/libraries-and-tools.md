@@ -802,7 +802,7 @@ func main() {
 
 ::::
 
-## XRC20
+## XRC20 Tokens
 
 The XRC20 package provides facility api for XRC20 contracts to IoTeX blockchain.
 

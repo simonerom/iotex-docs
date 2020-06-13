@@ -2,7 +2,7 @@
 title: Core API
 ---
 
-## Introduction
+## Overview
 
 If you are accessing a non-TLS endpoint, make sure add `-plaintext` in your `grpcurl` commnad.
 

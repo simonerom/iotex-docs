@@ -2,7 +2,7 @@
 title: Libraries and Tools
 ---
 
-## SDK Overview
+## Overview
 
 `iotex-antenna` is our SDK allowing you to interact with a local or remote IoTeX blockchain node, using a gRPC connection.
 

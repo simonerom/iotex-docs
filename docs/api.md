@@ -2,11 +2,11 @@
 title: Core API
 ---
 
-## IoTeX Chain Core API
+## Introduction
 
 If you are accessing a non-TLS endpoint, make sure add `-plaintext` in your `grpcurl` commnad.
 
-### GetAccount
+## GetAccount
 
 ```
 Usage:
@@ -17,7 +17,7 @@ Response:
   AccountMeta: Account Metadata
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetAccount
@@ -33,7 +33,7 @@ Demo:
 }
 ```
 
-### GetActionsByIndex
+## GetActionsByIndex
 
 ```
 Usage:
@@ -46,7 +46,7 @@ Response:
   ActionInfo: List of Action Info
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byIndex": {"start": 0, "count": 2}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
@@ -99,7 +99,7 @@ Demo:
 }
 ```
 
-### GetActionByHash
+## GetActionByHash
 
 ```
 Usage:
@@ -112,7 +112,7 @@ Response:
   ActionInfo: Action Info
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byHash": {"actionHash": "b7024bc52f315fafb9cc7677e730aec79767b28fbaa6bdd1f37c1861dd699aba", "checkPending": false}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
@@ -146,7 +146,7 @@ Demo:
 }
 ```
 
-### GetActionsByAddress
+## GetActionsByAddress
 
 ```
 Usage:
@@ -160,7 +160,7 @@ Resposne:
   ActionInfo: List of Action Info
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byAddr": {"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
@@ -200,7 +200,7 @@ Response contents:
 }
 ```
 
-### GetUnconfirmedActionsByAddress
+## GetUnconfirmedActionsByAddress
 
 ```
 Usage:
@@ -214,7 +214,7 @@ Resposne:
   ActionInfo: List of Action Info
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"unconfirmedByAddr": {"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
@@ -224,7 +224,7 @@ Demo:
 }
 ```
 
-### GetActionsByBlock
+## GetActionsByBlock
 
 ```
 Usage:
@@ -238,7 +238,7 @@ Resposne:
   ActionInfo: List of ActionInfo
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byBlk": {"blkHash": "6344115bcd43b7315ffdf5338d0f97b26caed7734efea034a27208f64670f5e9", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
@@ -268,7 +268,7 @@ Demo:
 }
 ```
 
-### GetBlockMetasByIndex
+## GetBlockMetasByIndex
 
 ```
 Usage:
@@ -281,7 +281,7 @@ Response:
   BlkMetas: List of Block Metadata
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byIndex": {"start": 1, "count": 2}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetBlockMetas
@@ -314,7 +314,7 @@ Demo:
 }
 ```
 
-### GetBlockMetasByHash
+## GetBlockMetasByHash
 
 ```
 Usage:
@@ -326,7 +326,7 @@ Response:
   BlkMetas: Block Metadata
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"byHash": {"blkHash": "230ba8095d5a505e355652f9dcc2b13605419a8fa3d3fd5ddc6d24fd6a902641"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetBlockMetas
@@ -349,7 +349,7 @@ Demo:
 }
 ```
 
-### GetChainMeta
+## GetChainMeta
 
 ```
 Usage:
@@ -360,7 +360,7 @@ Response:
   ChainMeta: Blockchain Metadata
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.GetChainMeta
@@ -378,7 +378,7 @@ Demo:
 }
 ```
 
-### GetServerMeta
+## GetServerMeta
 
 ```
 Usage:
@@ -389,7 +389,7 @@ Reponse:
   ServerMeta: Server Metadata
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.GetServerMeta
@@ -405,7 +405,7 @@ Demo:
 }
 ```
 
-### SendAction
+## SendAction
 
 ```
 Usage:
@@ -416,7 +416,7 @@ Response:
   ActionHash: Hash of Action
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -plaintext -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "transfer": {"amount": "100", "recipient": "io1sxm6zl56um2c3ntq5fwqjar4za5ka560x53muy"}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' 127.0.0.1:14014 iotexapi.APIService.SendAction
@@ -426,7 +426,7 @@ Demo:
 }
 ```
 
-### GetReceiptByAction
+## GetReceiptByAction
 
 ```
 Usage:
@@ -437,7 +437,7 @@ Response:
   Receipt: Action Receipt
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"actionHash": "dd2e83336f1ff219b1e54558f0627e1f556ed2caeedb44b758b0e107aa246531"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetReceiptByAction
@@ -462,7 +462,7 @@ Demo:
 }
 ```
 
-### ReadContract
+## ReadContract
 
 ```
 Usage:
@@ -473,7 +473,7 @@ Response:
   Data: Return Value in Execution Receipt
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -plaintext -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "execution": {"amount": "0", "contract": ""}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' 127.0.0.1:14014 iotexapi.APIService.ReadContract
@@ -489,7 +489,7 @@ Demo:
 }
 ```
 
-### ReadState
+## ReadState
 
 ```
 Usage:
@@ -503,7 +503,7 @@ Response:
   Data: State Result
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"protocolID": "cmV3YXJkaW5n", "methodName": "VW5jbGFpbWVkQmFsYW5jZQ==", "arguments": "aW8xanV2eDVnMDYzZXU0dHM4MzJudWtwNHZnY3drMmduYzVjdTlheWQ="}' api.iotex.one:443 iotexapi.APIService.ReadState
@@ -513,7 +513,7 @@ Demo:
 }
 ```
 
-### SuggestGasPrice
+## SuggestGasPrice
 
 ```
 Usage:
@@ -524,7 +524,7 @@ Response:
   GasPrice: Gas Price
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.SuggestGasPrice
@@ -534,7 +534,7 @@ Demo:
 }
 ```
 
-### EstimateGasForAction
+## EstimateGasForAction
 
 ```
 Usage:
@@ -545,7 +545,7 @@ Response:
   Gas: Gas
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "execution": {"amount": "0", "contract": ""}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' api.iotex.one:443 iotexapi.APIService.EstimateGasForAction
@@ -555,7 +555,7 @@ Demo:
 }
 ```
 
-### GetEpochMeta
+## GetEpochMeta
 
 ```
 Usage:
@@ -568,7 +568,7 @@ Response:
   BlockProducersInfo: List of Block Producer Information
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"epochNumber": 1}' api.iotex.one:443 iotexapi.APIService.GetEpochMeta
@@ -729,7 +729,7 @@ Demo:
 }
 ```
 
-### GetRawBlocks
+## GetRawBlocks
 
 ```
 Usage:
@@ -742,7 +742,7 @@ Response:
   Blocks: A List of Raw Block Data
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"startHeight": 1, "count": 2, "withReceipts": true}' api.mainnet.iotex.one:443 iotexapi.APIService.GetRawBlocks
@@ -837,7 +837,7 @@ Demo:
 }
 ```
 
-### StreamBlocks
+## StreamBlocks
 
 ```
 Usage:
@@ -848,7 +848,7 @@ Response:
   Block: Newly Created Block Data
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl api.mainnet.iotex.one:443 iotexapi.APIService.StreamBlocks
@@ -899,7 +899,7 @@ Demo:
 }
 ```
 
-### StreamLogs
+## StreamLogs
 
 ```
 Usage:
@@ -913,7 +913,7 @@ Response:
   Logs: List of Logs
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"filter": {}}'  api.mainnet.iotex.one:443 iotexapi.APIService.StreamLogs
@@ -929,7 +929,7 @@ Demo:
 
 ```
 
-### EstimateActionGasConsumptionByTransfer
+## EstimateActionGasConsumptionByTransfer
 
 ```
 Usage:
@@ -945,7 +945,7 @@ Response:
   Gas: Estimated Gas Amount
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"transfer": {"amount":"100000", "recipient":"io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}'  api.mainnet.iotex.one:443 iotexapi.APIService.EstimateActionGasConsumption
@@ -955,7 +955,7 @@ Demo:
 }
 ```
 
-### EstimateActionGasConsumptionByExecution
+## EstimateActionGasConsumptionByExecution
 
 ```
 Usage:
@@ -971,7 +971,7 @@ Response:
   Gas: Estimated Gas Amount
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"execution": {"amount":"0", "contract":"io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}' api.mainnet.iotex.one:443 iotexapi.APIService.EstimateActionGasConsumption
@@ -981,7 +981,7 @@ Demo:
 }
 ```
 
-### GetLogsByBlock
+## GetLogsByBlock
 
 ```
 Usage:
@@ -997,7 +997,7 @@ Response:
   Logs: List of Logs
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -v -plaintext -d '{"filter": {}, "byBlock": {"blockHash": "221e7f14dddd57a739975b943bfffb1cbfcffa1ee043cf693b92af987e42ed93"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetLogs
@@ -1005,7 +1005,7 @@ Demo:
 
 ```
 
-### GetLogsByRange
+## GetLogsByRange
 
 ```
 Usage:
@@ -1022,7 +1022,7 @@ Response:
   Logs: List of Logs
 ```
 
-Demo:
+Example:
 
 ```
 ➜  ~ grpcurl -d '{"filter": {}, "byRange": {"fromBlock": "12000", "count": "2"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetLogs
@@ -1046,7 +1046,7 @@ Demo:
 
 ```
 
-### GetEvmTransfersByActionHash
+## GetEvmTransfersByActionHash
 
 ```
 Usage:
@@ -1058,9 +1058,9 @@ Response:
   ActionEvmTransfers: Action EVM transfer
 ```
 
-Demo: TBD (will deploy soon)
+Example: TBD (will deploy soon)
 
-### GetEvmTransfersByBlockHeight
+## GetEvmTransfersByBlockHeight
 
 ```
 Usage:
@@ -1072,4 +1072,4 @@ Response:
   BlockEvmTransfers: Block EVM transfer
 ```
 
-Demo: TBD (will deploy soon)
+Example: TBD (will deploy soon)

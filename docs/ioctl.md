@@ -2,7 +2,7 @@
 title: Command-line Interface
 ---
 
-## Introduction 
+## Overview 
 
 ioctl is a command-line interface for interacting with IoTeX blockchains.
 

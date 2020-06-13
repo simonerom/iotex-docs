@@ -244,56 +244,6 @@ Public Key: 04ac93d2fffdf488659c3f58890f6ddc55818d50f884e515aa90b2b1ca1e0fc223f8
 Account #IOsenser has been updated.
 ```
 
-## Alias
-
-#### Set Alias
-
-`Usage: ioctl alias set ALIAS ADDRESS`
-
-```
-➜  ioctl alias set test io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg
-set
-```
-
-#### Remove Alias
-
-`Usage: ioctl alias remove ALIAS`
-
-```
-➜  ioctl alias remove frank
-frank is removed
-```
-
-#### List Alias
-
-`Usage: ioctl alias list`
-
-```
-➜  ioctl alias list
-io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt - IOsenser
-io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg - test
-io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - whale
-```
-
-#### Export Aliases To Either Json Or Yaml Format
-
-`Usage: ioctl alias export`
-
-```
-➜  ioctl alias export
-{"aliases":[{"name":"gas-test","address":"io15kqxz7a0r72akrgy6p7fuu88llg7cxn9rlfjdj"},{"name":"public-length","address":"io15cg78lnv54r8m8vrkrv9ktq4uyngp5aenmj5wa"},{"name":"test","address":"io1v9r84ckmccqczl00r0sdepvaunsk456pcw9rvq"},{"name":"tmp2","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"daddypig","address":"io1gh439pm67d4cwxt882xpylj75klys6esepml60"},{"name":"dorothy","address":"io1x0e9jwx7yv7sk2p4lj4vt4czydwtlwkhaaczt7"},{"name":"infinite-loop","address":"io14cu7qpseelx0zg8lm2tl4a927lqmfl7dgr886q"},{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"},{"name":"tmp","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"cashier","address":"io1paxfkzr5kpgxjxckfydhttcg3vqtug5ehlrvrx"}]}
-```
-
-#### Import Aliases
-
-`Usage: ioctl alias import 'DATA'`
-
-```
-➜  ioctl alias import '{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"}'
-0/0 aliases imported
-Existed aliases:
-```
-
 ## Action
 
 #### Transfer Tokens
@@ -477,6 +427,182 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:23aee3e08f084d5090329d47e27afa8c08358967ca8d6f2b2dc26803b7491d4e
 ```
 
+## Alias
+
+#### Set Alias
+
+`Usage: ioctl alias set ALIAS ADDRESS`
+
+```
+➜  ioctl alias set test io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg
+set
+```
+
+#### Remove Alias
+
+`Usage: ioctl alias remove ALIAS`
+
+```
+➜  ioctl alias remove frank
+frank is removed
+```
+
+#### List Alias
+
+`Usage: ioctl alias list`
+
+```
+➜  ioctl alias list
+io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt - IOsenser
+io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg - test
+io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - whale
+```
+
+#### Export Aliases To Either Json Or Yaml Format
+
+`Usage: ioctl alias export`
+
+```
+➜  ioctl alias export
+{"aliases":[{"name":"gas-test","address":"io15kqxz7a0r72akrgy6p7fuu88llg7cxn9rlfjdj"},{"name":"public-length","address":"io15cg78lnv54r8m8vrkrv9ktq4uyngp5aenmj5wa"},{"name":"test","address":"io1v9r84ckmccqczl00r0sdepvaunsk456pcw9rvq"},{"name":"tmp2","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"daddypig","address":"io1gh439pm67d4cwxt882xpylj75klys6esepml60"},{"name":"dorothy","address":"io1x0e9jwx7yv7sk2p4lj4vt4czydwtlwkhaaczt7"},{"name":"infinite-loop","address":"io14cu7qpseelx0zg8lm2tl4a927lqmfl7dgr886q"},{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"},{"name":"tmp","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"cashier","address":"io1paxfkzr5kpgxjxckfydhttcg3vqtug5ehlrvrx"}]}
+```
+
+#### Import Aliases
+
+`Usage: ioctl alias import 'DATA'`
+
+```
+➜  ioctl alias import '{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"}'
+0/0 aliases imported
+Existed aliases:
+```
+
+## Blockchain
+
+#### Query Blockchain Information
+
+`Usage: ioctl bc info`
+
+```
+➜  ioctl bc info
+height:50268  numActions:50852  tps:0
+epochNum:140  epochStartHeight:50041  gravityChainStartHeight:7485100
+```
+
+#### Query Block
+
+`Usage: ioctl bc block [HEIGHT|HASH]`
+
+```
+➜  ioctl bc block
+Transactions: 1
+Height: 122
+Total Amount: 0
+Timestamp: 1553238923
+Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
+Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
+Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
+Delta State Digest: 82286c69c59aaff815bb888b876eed7228ea51065027dc07ac1c04e5e082ea6b
+Hash: 87f73c3a6e3312075a9aae70660656a9209bb11fb4d5fb1a2f21e020e20d3365
+```
+
+```
+➜  ioctl bc block 101
+Transactions: 1
+Height: 101
+Total Amount: 0
+Timestamp: 1553238713
+Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
+Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
+Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
+Delta State Digest: 999003ad9f4ea85f45a8a3ebafcb8ad03c43852fbe8cce14aaf86bed9aed8895
+Hash: c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
+```
+
+```
+➜  ioctl bc block c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
+Transactions: 1
+Height: 101
+Total Amount: 0
+Timestamp: 1553238713
+Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
+Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
+Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
+Delta State Digest: 999003ad9f4ea85f45a8a3ebafcb8ad03c43852fbe8cce14aaf86bed9aed8895
+Hash: c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
+```
+
+#### Query Staking Bucket Information
+
+`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
+
+```
+➜  ioctl bc bucketlist daddypig
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 56
+owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
+candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
+stakedAmount: 232 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-21T13:10:10Z
+stakeStartTime: 2020-05-21T13:28:25Z
+unstakeStartTime: none
+}
+```
+
+#### Query Staking BucketList By Address
+
+`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
+
+```
+➜  ioctl bc bucketlist tmp2
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 34
+owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
+candidate: io1t56twy23yjuqscljpjc869hyqw3gpswwj0g228
+stakedAmount: 100 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-11T06:41:20Z
+stakeStartTime: 2020-05-11T06:41:20Z
+unstakeStartTime: none
+}
+{
+index: 43
+owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
+candidate: io1l40dc4q95fsjdprhcga5qrpdsj46q3wpzr27n9
+stakedAmount: 170 IOTX
+stakedDuration: 14 days
+autoStake: false
+createTime: 2020-05-14T02:42:15Z
+stakeStartTime: 2020-05-14T02:42:15Z
+unstakeStartTime: none
+}
+```
+
+#### Query Staking Bucket By Index 
+
+`Usage: ioctl bc bucket [BUCKET_INDEX]`
+
+```
+➜  ioctl bc bucketlist daddypig
+Blockchain Node: api.testnet.iotex.one:443
+{
+index: 56
+owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
+candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
+stakedAmount: 232 IOTX
+stakedDuration: 7 days
+autoStake: false
+createTime: 2020-05-21T13:10:10Z
+stakeStartTime: 2020-05-21T13:28:25Z
+unstakeStartTime: none
+}
+```
+
 ## Config
 
 `Variables: [endpoint, wallet, explorer, defaultacc, language, nsv2height]`\
@@ -509,7 +635,7 @@ endpoint is set to api.iotex.one:443
 Config reset to default values
 ```
 
-## Stake and Vote
+## Stake/Vote
 
 #### Create Bucket for Voting
 
@@ -750,203 +876,6 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:c6daaedee325d339e2eba15b76646329c940c0f07ebe9c13cd1f3288ee319a5d
 ```
 
-## XRC20
-
-#### Query Total Token Supply On Erc20 Contract
-
-`Usage: ioctl xrc20 totalSupply -c ALIAS|CONTRACT_ADDRESS`
-
-```
-➜   ioctl xrc20 totalSupply -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
-Raw output: 0000000000000000000000000000000000000000010f73e141e95768f6bfacac
-Output in decimal: 328166124527934490560933036
-```
-
-#### Query Account Balance On Erc20 Contract
-
-`Usage: ioctl xrc20 balanceOf ALIAS|ACCOUNT_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
-
-```
-➜   ioctl xrc20 balanceOf io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
-Raw output: 000000000000000000000000000000000000000000000000b469471f80170d33
-Output in decimal: 13000000000000199987
-```
-
-#### Transfer Token On Erc20 Contract
-
-`Usage: ioctl xrc20 transfer ALIAS|TARGET_ADDRESS AMOUNT -c ALIAS|CONTRACT_ADDRESS [-l GAS_LIMIT] -s SIGNER [-p GAS_PRICE]`
-
-```
-➜   ioctl xrc20 transfer io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
-Enter password #ioxxx...xxx:
-...
-...
-Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
-```
-
-#### Transfer Token From Another Address On Erc20 Contract
-
-`Usage: ioctl xrc20 transferFrom ALIAS|OWNER_ADDRESS ALIAS|TARGET_ADDRESS AMOUNT -c ALIAS|CONTRACT_ADDRESS [-l GAS_LIMIT] -s SIGNER [-p GAS_PRICE]`
-
-```
-➜   ioctl xrc20 transferFrom io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
-Enter password #ioxxx...xxx:
-...
-...
-Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
-```
-
-#### Allow Spender Withdraw From Account With Limitation
-
-`Usage: ioctl approve ALIAS|SPENDER_ADDRESS XRC20_AMOUNT -c ALIAS|CONTRACT_ADDRESS -s SIGNER [-l GAS_LIMIT]`
-
-```
-➜   ioctl xrc20 approve io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
-Enter password #ioxxx...xxx:
-...
-...
-Action has been sent to blockchain.
-Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
-```
-
-#### Query Remaining Withdraw Amount For Spender
-
-`Usage: ioctl allowance ALIAS|OWNER_ADDRESS ALIAS|SPENDER_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
-
-```
-➜   ioctl xrc20 allowance io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
-Raw output: 0000000000000000000000000000000000000000000000000000000000000004
-Output in decimal: 4
-```
-
-## Blockchain
-
-#### Query Blockchain Information
-
-`Usage: ioctl bc info`
-
-```
-➜  ioctl bc info
-height:50268  numActions:50852  tps:0
-epochNum:140  epochStartHeight:50041  gravityChainStartHeight:7485100
-```
-
-#### Query Block
-
-`Usage: ioctl bc block [HEIGHT|HASH]`
-
-```
-➜  ioctl bc block
-Transactions: 1
-Height: 122
-Total Amount: 0
-Timestamp: 1553238923
-Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
-Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
-Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
-Delta State Digest: 82286c69c59aaff815bb888b876eed7228ea51065027dc07ac1c04e5e082ea6b
-Hash: 87f73c3a6e3312075a9aae70660656a9209bb11fb4d5fb1a2f21e020e20d3365
-```
-
-```
-➜  ioctl bc block 101
-Transactions: 1
-Height: 101
-Total Amount: 0
-Timestamp: 1553238713
-Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
-Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
-Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
-Delta State Digest: 999003ad9f4ea85f45a8a3ebafcb8ad03c43852fbe8cce14aaf86bed9aed8895
-Hash: c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
-```
-
-```
-➜  ioctl bc block c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
-Transactions: 1
-Height: 101
-Total Amount: 0
-Timestamp: 1553238713
-Producer Public Key: io1urumju6laya40h25rx2cdseql9xm2gm8auepac
-Transactions Root: 8a4e41d5a183a4e12784872da4d76c32ac8d1cf11ed1543859e98000dbdf2620
-Receipt Root: e8e28a529d99a70b7dab8dd6d491bdb0c20818defac307780c919a610e552d6a
-Delta State Digest: 999003ad9f4ea85f45a8a3ebafcb8ad03c43852fbe8cce14aaf86bed9aed8895
-Hash: c9cac24ed4a782583526132cc266f3def121e34ad4c4244f8b045fdd2d82d4cc
-```
-
-#### Query Staking Bucket Information
-
-`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
-
-```
-➜  ioctl bc bucketlist daddypig
-Blockchain Node: api.testnet.iotex.one:443
-{
-index: 56
-owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
-candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
-stakedAmount: 232 IOTX
-stakedDuration: 7 days
-autoStake: false
-createTime: 2020-05-21T13:10:10Z
-stakeStartTime: 2020-05-21T13:28:25Z
-unstakeStartTime: none
-}
-```
-
-#### Query Staking BucketList By Address
-
-`Usage: ioctl bc bucketlist [ALIAS|ADDRESS]`
-
-```
-➜  ioctl bc bucketlist tmp2
-Blockchain Node: api.testnet.iotex.one:443
-{
-index: 34
-owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
-candidate: io1t56twy23yjuqscljpjc869hyqw3gpswwj0g228
-stakedAmount: 100 IOTX
-stakedDuration: 7 days
-autoStake: false
-createTime: 2020-05-11T06:41:20Z
-stakeStartTime: 2020-05-11T06:41:20Z
-unstakeStartTime: none
-}
-{
-index: 43
-owner: io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4
-candidate: io1l40dc4q95fsjdprhcga5qrpdsj46q3wpzr27n9
-stakedAmount: 170 IOTX
-stakedDuration: 14 days
-autoStake: false
-createTime: 2020-05-14T02:42:15Z
-stakeStartTime: 2020-05-14T02:42:15Z
-unstakeStartTime: none
-}
-```
-
-#### Query Staking Bucket By Index 
-
-`Usage: ioctl bc bucket [BUCKET_INDEX]`
-
-```
-➜  ioctl bc bucketlist daddypig
-Blockchain Node: api.testnet.iotex.one:443
-{
-index: 56
-owner: io1gh439pm67d4cwxt882xpylj75klys6esepml60
-candidate: io1q2whygmmzphr22fh5703l04jz5kh9thj9dgs99
-stakedAmount: 232 IOTX
-stakedDuration: 7 days
-autoStake: false
-createTime: 2020-05-21T13:10:10Z
-stakeStartTime: 2020-05-21T13:28:25Z
-unstakeStartTime: none
-}
-```
-
 ## Node
 
 #### Query Delegates
@@ -1161,7 +1090,7 @@ Usage:
 Output:
 return 000000000000000000000000c7f43fab2ca353d29ce0da04851ab74f45b09593
 ```
-## Update tools
+## Version/Update
 
 #### Version
 
@@ -1192,4 +1121,75 @@ ioctl is up-to-date now.
 Downloading the latest unstable version ...
 Password:
 ioctl is up-to-date now.
+```
+
+## XRC20
+
+#### Query Total Token Supply On Erc20 Contract
+
+`Usage: ioctl xrc20 totalSupply -c ALIAS|CONTRACT_ADDRESS`
+
+```
+➜   ioctl xrc20 totalSupply -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
+Raw output: 0000000000000000000000000000000000000000010f73e141e95768f6bfacac
+Output in decimal: 328166124527934490560933036
+```
+
+#### Query Account Balance On Erc20 Contract
+
+`Usage: ioctl xrc20 balanceOf ALIAS|ACCOUNT_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
+
+```
+➜   ioctl xrc20 balanceOf io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
+Raw output: 000000000000000000000000000000000000000000000000b469471f80170d33
+Output in decimal: 13000000000000199987
+```
+
+#### Transfer Token On Erc20 Contract
+
+`Usage: ioctl xrc20 transfer ALIAS|TARGET_ADDRESS AMOUNT -c ALIAS|CONTRACT_ADDRESS [-l GAS_LIMIT] -s SIGNER [-p GAS_PRICE]`
+
+```
+➜   ioctl xrc20 transfer io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
+Enter password #ioxxx...xxx:
+...
+...
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+```
+
+#### Transfer Token From Another Address On Erc20 Contract
+
+`Usage: ioctl xrc20 transferFrom ALIAS|OWNER_ADDRESS ALIAS|TARGET_ADDRESS AMOUNT -c ALIAS|CONTRACT_ADDRESS [-l GAS_LIMIT] -s SIGNER [-p GAS_PRICE]`
+
+```
+➜   ioctl xrc20 transferFrom io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
+Enter password #ioxxx...xxx:
+...
+...
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+```
+
+#### Allow Spender Withdraw From Account With Limitation
+
+`Usage: ioctl approve ALIAS|SPENDER_ADDRESS XRC20_AMOUNT -c ALIAS|CONTRACT_ADDRESS -s SIGNER [-l GAS_LIMIT]`
+
+```
+➜   ioctl xrc20 approve io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd 4 -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw -s ALIAS -l 50000
+Enter password #ioxxx...xxx:
+...
+...
+Action has been sent to blockchain.
+Wait for several seconds and query this action by hash:iotexscan.io/action/xxx...xxx
+```
+
+#### Query Remaining Withdraw Amount For Spender
+
+`Usage: ioctl allowance ALIAS|OWNER_ADDRESS ALIAS|SPENDER_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
+
+```
+➜   ioctl xrc20 allowance io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
+Raw output: 0000000000000000000000000000000000000000000000000000000000000004
+Output in decimal: 4
 ```

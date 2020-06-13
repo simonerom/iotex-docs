@@ -2,7 +2,7 @@
 title: Analytics
 ---
 
-## IoTeX Analytics API
+## Overview
 
 Analytics is a GraphQL web interface for reading the analyzed blockchain data. You can try it [here](https://analytics.iotexscan.io).
 

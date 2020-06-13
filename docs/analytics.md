@@ -4,7 +4,7 @@ title: Analytics
 
 ## Overview
 
-Analytics is a GraphQL web interface for reading the analyzed blockchain data. You can try it [here](https://analytics.iotexscan.io).
+Analytics is an application built upon IoTeX core API which extracts data from IoTeX blockchain and reindexes them for applications to use via a GraphQL web interface. You can use the playground [here](https://analytics.iotexscan.io).
 
 ## Delegate
 
@@ -1767,9 +1767,3 @@ Sample Response:
   }
 }
 ```
-
-## Tool Chain
-
-Analytics is an application built upon IoTeX core API. Similarly, there are other applications built upon the core API and analytics. The following diagram shows the dependency relationships between the major components of IoTeX tool chain:
-
-![WechatIMG28](https://user-images.githubusercontent.com/15241597/82630660-38530f80-9ba8-11ea-87e1-2a36cfe4753a.jpeg)

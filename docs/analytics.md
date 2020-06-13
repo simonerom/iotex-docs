@@ -6,9 +6,9 @@ title: Analytics
 
 Analytics is a GraphQL web interface for reading the analyzed blockchain data. You can try it [here](https://analytics.iotexscan.io).
 
-### Delegate
+## Delegate
 
-#### Bookkeeping
+### Bookkeeping
 
 ```
 Usage:
@@ -33,7 +33,7 @@ Response:
   count:  total number of reward distributions
 ```
 
-#### Productivity
+### Productivity
 
 ```
 Usage:
@@ -50,7 +50,7 @@ Response:
   expectedProduction: number of expected block productions
 ```
 
-#### Reward
+### Reward
 
 ```
 Usage:
@@ -68,7 +68,7 @@ Response:
   foundationBonus: amount of foundation bonus
 ```
 
-#### BucketInfo
+### BucketInfo
 
 ```
 Usage:
@@ -98,7 +98,7 @@ Response:
     count: total number of buckets in the given epoch for the given delegate
 ```
 
-#### Staking
+### Staking
 
 ```
 Usage:
@@ -117,7 +117,7 @@ Response:
     totalStaking: total staking amount
 ```
 
-#### ProbationHistoricalRate
+### ProbationHistoricalRate
 
 ```
 Usage:
@@ -289,9 +289,9 @@ Sample Response:
 }
 ```
 
-### Chain
+## Chain
 
-#### MostRecentEpoch
+### MostRecentEpoch
 
 ```
 Usage:
@@ -304,7 +304,7 @@ Response:
   mostRecentEpoch: latest epoch number
 ```
 
-#### MostRecentBlockHeight
+### MostRecentBlockHeight
 
 ```
 Usage:
@@ -317,7 +317,7 @@ Response:
   mostRecentBlockHeight: latest block height
 ```
 
-#### MostRecentTPS
+### MostRecentTPS
 
 ```
 Usage:
@@ -330,7 +330,7 @@ Response:
   mostRecentTPS: latest transactions per second
 ```
 
-#### NumberOfActions
+### NumberOfActions
 
 ```
 Usage:
@@ -346,7 +346,7 @@ Response:
   count: number of actions
 ```
 
-#### VotingResultMeta
+### VotingResultMeta
 
 ```
 Usage:
@@ -361,7 +361,7 @@ Response:
   votedTokens: total voted tokens
 ```
 
-#### TotalTransferredTokens
+### TotalTransferredTokens
 
 ```
 Usage:
@@ -412,9 +412,9 @@ Sample Response:
 }
 ```
 
-### Voting
+## Voting
 
-#### VotingMeta
+### VotingMeta
 
 ```
 Usage:
@@ -434,7 +434,7 @@ Reponse:
     votedTokens: total voted tokens in the epoch
 ```
 
-#### CandidateInfo
+### CandidateInfo
 
 ```
 Usage:
@@ -456,7 +456,7 @@ Reponse:
       rewardAddress: candidate reward address
 ```
 
-#### RewardSources
+### RewardSources
 
 ```
 Usage:
@@ -560,9 +560,9 @@ Sample Response:
 }
 ```
 
-### Account
+## Account
 
-#### ActiveAccounts
+### ActiveAccounts
 
 ```
 Usage:
@@ -575,7 +575,7 @@ Response:
   activeAccounts: list of account addresses
 ```
 
-#### OperatorAddress
+### OperatorAddress
 
 ```
 Usage:
@@ -589,7 +589,7 @@ Response:
   operatorAddress:  operator address associated with the given alias name
 ```
 
-#### Alias
+### Alias
 
 ```
 Usage:
@@ -603,7 +603,7 @@ Response:
   aliasName: alias name associated with the given operator address
 ```
 
-#### TotalNumberOfHolders
+### TotalNumberOfHolders
 
 ```
 Usage:
@@ -614,7 +614,7 @@ Response:
   totalNumberOfHolders: total number of IOTX holders so far
 ```
 
-#### TotalAccountSupply
+### TotalAccountSupply
 
 ```
 Usage:
@@ -673,9 +673,9 @@ Sample Response:
 }
 ```
 
-### Action
+## Action
 
-#### ByDates
+### ByDates
 
 ```
 Usage:
@@ -702,7 +702,7 @@ Response:
   count: total number of actions within the time frame
 ```
 
-#### ByHash
+### ByHash
 
 ```
 Usage:
@@ -727,7 +727,7 @@ Response:
     quantity: amount transferred
 ```
 
-#### ByAddress
+### ByAddress
 
 ```
 Usage:
@@ -753,7 +753,7 @@ Response:
   count: total number of actions for the given address
 ```
 
-#### EvmTransfersByAddress
+### EvmTransfersByAddress
 
 ```
 Usage:
@@ -777,7 +777,7 @@ Response:
   count: total number of EVM transfers for the given address
 ```
 
-#### ByType
+### ByType
 
 ```
 Usage:
@@ -1001,9 +1001,9 @@ Sample Response:
 }
 ```
 
-### Xrc20
+## XRC20 Tokens
 
-#### ByContractAddress
+### ByContractAddress
 
 ```
 Usage:
@@ -1026,7 +1026,7 @@ Response:
   count: total number of Xrc20 actions
 ```
 
-#### ByAddress
+### ByAddress
 
 ```
 Usage:
@@ -1049,7 +1049,7 @@ Response:
   count: total number of Xrc20 actions
 ```
 
-#### ByPage
+### ByPage
 
 ```
 Usage:
@@ -1072,7 +1072,7 @@ Response:
   count: total number of Xrc20 actions
 ```
 
-#### Xrc20Addresses
+### Xrc20Addresses
 
 ```
 Usage:
@@ -1089,7 +1089,7 @@ Response:
   count: total number of Xrc20 contract addresses
 ```
 
-#### TokenHolderAddresses
+### TokenHolderAddresses
 
 ```
 Usage:
@@ -1235,9 +1235,9 @@ Sample Response:
 }
 ```
 
-### Xrc721
+## XRC721 Tokens
 
-#### ByContractAddress
+### ByContractAddress
 
 ```
 Usage:
@@ -1260,7 +1260,7 @@ Response:
   count: total number of Xrc721 actions
 ```
 
-#### ByAddress
+### ByAddress
 
 ```
 Usage:
@@ -1283,7 +1283,7 @@ Response:
   count: total number of Xrc721 actions
 ```
 
-#### ByPage
+### ByPage
 
 ```
 Usage:
@@ -1306,7 +1306,7 @@ Response:
   count: total number of Xrc721 actions
 ```
 
-#### Xrc721Addresses
+### Xrc721Addresses
 
 ```
 Usage:
@@ -1323,7 +1323,7 @@ Response:
   count: total number of Xrc721 contract addresses
 ```
 
-#### TokenHolderAddresses
+### TokenHolderAddresses
 
 ```
 Usage:
@@ -1342,7 +1342,7 @@ Response:
 
 TODO: When there are Xrc721 actions on the chain, add a demo here.
 
-### TopHolders
+## TopHolders
 
 ```
 Usage:
@@ -1401,7 +1401,7 @@ Sample Response:
 }
 ```
 
-### Hermes
+## Hermes
 
 ```
 Usage:
@@ -1572,9 +1572,9 @@ Sample Response:
 }
 ```
 
-### Hermes2
+## Hermes2
 
-#### ByDelegate
+### ByDelegate
 
 ```
 Usage:
@@ -1606,7 +1606,7 @@ Response:
     foundationBonusRatio: ratio of foundation bonus being distributed
 ```
 
-#### ByVoter
+### ByVoter
 
 ```
 Usage:
@@ -1633,7 +1633,7 @@ Response:
   totalRewardReceived: total reward amount received
 ```
 
-#### HermesMeta
+### HermesMeta
 
 ```
 Usage:

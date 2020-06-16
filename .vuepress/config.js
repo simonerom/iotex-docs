@@ -37,6 +37,7 @@ module.exports = {
         nav: [
           { text: "Core", link: "/" },
           { text: "Middleware", link: "/middleware/did" },
+          { text: "Hardware", link: "/hardware/pebble" },
           { text: "OneFx", link: "/onefx/get-started" }
         ],
         sidebar: {
@@ -55,6 +56,14 @@ module.exports = {
               collapsable: false,
               children: [
                 "middleware/did"
+              ]
+            }
+          ],
+          "/hardware": [
+            {
+              collapsable: false,
+              children: [
+                "hardware/pebble"
               ]
             }
           ],

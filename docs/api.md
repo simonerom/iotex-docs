@@ -1058,7 +1058,28 @@ Response:
   ActionEvmTransfers: Action EVM transfer
 ```
 
-Example: TBD (will deploy soon)
+Example:
+
+```
+➜  ~ grpcurl -d '{"actionHash":"b0a0af2b5b33dcf58a41e6c3edfee9c0352ada249f242c1024d920895c446e69"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetEvmTransfersByActionHash
+
+{
+  "actionEvmTransfers": [
+    {
+      "actionHash": "2bAgDlDdF84K+XNCW95wdjMpmQqVP2b04ghyMXoN6J4=",
+      "numEvmTransfers": 1,
+      "evmTransfers": [
+        {
+          "amount": "cmNxZ2pzeGZkeHpzenp0cHlkemx6YSFJIVG5KdXU5OD=",
+          "from": "io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng",
+          "to": "ioaa77fbf8596e0de5ce362dbd5ab29599a6c38ac"
+        }
+      ]
+    }
+  ]
+}
+
+```
 
 ## GetEvmTransfersByBlockHeight
 
@@ -1072,4 +1093,31 @@ Response:
   BlockEvmTransfers: Block EVM transfer
 ```
 
-Example: TBD (will deploy soon)
+Example:
+
+```
+➜  ~ grpcurl -d '{"blockHeight":"12371"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetEvmTransfersByBlockHeight
+
+{
+  "blockEvmTransfers": [
+    {
+      "blockHeight": 12371,
+      "numEvmTransfers": 1,
+      "actionEvmTransfers": [
+        {
+          "actionHash": "2bAgDlDdF84K+XNCW95wdjMpmQqVP2b04ghyMXoN6J4=",
+          "numEvmTransfers": 1,
+          "evmTransfers": [
+            {
+              "amount": "cmNxZ2pzeGZkeHpzenp0cHlkemx6YSFJIVG5KdXU5OD=",
+              "from": "io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng",
+              "to": "ioaa77fbf8596e0de5ce362dbd5ab29599a6c38ac"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+```

@@ -91,7 +91,9 @@ If you are interested in developing DApps on top of IoTeX blockchain, [codelab](
 
 **We are radically open-minded and value open-mindedness and transparency.**
 
-- If you found bugs and places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
+- Sensitive security-related questions, comments, and reports should be sent to support@iotex.io. You should receive a prompt response, typically within 48 hours.
+
+- For non-urgent bugs or places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
 
 - If you have ideas/proposals to make IoTeX better, please do not hesitate to let us know through [Halo Program](http://iotex.io/halo)
 

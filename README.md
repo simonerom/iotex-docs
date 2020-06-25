@@ -58,6 +58,13 @@ The simplest way to get started is to run it in stand-alone mode for demonstrati
 
 Please follow instructions [here](https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md) to run a full node on the testnet or mainnet. 
 
+## :ledger: Contribute
+Anyone can be a contributor to the project, provided they have signed relevant Contributor License Agreements (CLAs) and follow the project’s contribution guidelines. Contributions will be reviewed by a maintainer, and must pass all applicable tests.
+
+Reviews check for code quality and style, including documentation, and enforce other policies. Contributions may be rejected for reasons unrelated to the code in question. For example, a change may be too complex to maintain or duplicate existing functionality.
+
+Note that contributions are not limited to code alone. Bugs, documentation, experience reports or public advocacy are all valuable ways to contribute to a project and build trust in the community.
+
 ## :globe_with_meridians: IoTeX Ecosystem
 IoTeX Ecosystem consists of an increasing number of services and applications, built around IoTeX blockchain.
 

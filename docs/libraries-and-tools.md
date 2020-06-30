@@ -868,7 +868,7 @@ import { XRC20 } from "iotex-antenna/lib/token/xrc20";
 
 ::::
 
-## Integrate with ioPay (Desktop)
+## Connect with ioPay Desktop
 
 In the client-side, use iotex-antenna@0.29.1. Here is an example of setting up WsSignerPlugin to connect to the wallet. It is nothing more than applying the plugin when initializing Antenna instance, and NOT adding your private key to the SDK as specified in the earlier documentation.
 
@@ -960,7 +960,7 @@ import { Contract } from "iotex-antenna/lib/contract/contract";
 })();
 ```
 
-## Login with IoTeX / ioPay Desktop
+## Login with ioPay Desktop
 
 Prerequisite: [Integrate with ioPay Desktop](https://docs.iotex.io/docs/libraries-and-tools.html#integrate-with-iopay-desktop).
 

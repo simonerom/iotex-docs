@@ -6,7 +6,7 @@ Please make sure to install ioctl on latest master branch of iotex-core repo.
 
 Our address based DID contract on IoTeX testnet is: `io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8`
 
-## 1.Generate a DID Doc
+## 1. Generate a DID Doc
 ```
 Generate DID document using private key from wallet
 

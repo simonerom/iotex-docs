@@ -28,6 +28,8 @@ ioctl did generate -s test1
     }
   ]
 }
+
+The hex encoded SHA256 hash of the DID doc is:21e575fd6fd75591465481404986fac73de766446c793ff67adfa171d51adf85
 ```
 
 ## 2. Upload DID Doc
@@ -42,14 +44,14 @@ https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG
 
 ## 3. Hash DID Doc
 
-DID register asked for a 32 bytes hash of the DID Doc as an input. You could use any hashing algorithm fit your need. Once you got your DID Doc hash, encode it to hex string, in order to pass into `ioctl`.
+DID register asked for a 32 bytes hash of the DID Doc as an input. You could use any hashing algorithm fit your need. Once you got your DID Doc hash, encode it to hex string, in order to pass into `ioctl`. For simplicity, you can directly use the hex encoded SHA256 hash string provided by `ioctl did generate`.
 
-Here is a Go example to hash DID doc with sha256 and output a hex string:
+Here is a Go example to hash DID doc with SHA512-256 and output a hex string:
 ```go
 package main
 
 import (
-	"crypto/sha256"
+	"crypto/sha512"
 	"encoding/hex"
 	"fmt"
 )
@@ -68,7 +70,7 @@ var doc = `{
 }`
 
 func main() {
-	sum := sha256.Sum256([]byte(doc))
+	sum := sha512.Sum512_256([]byte(doc))
 
 	fmt.Println(hex.EncodeToString(sum[:]))
 }

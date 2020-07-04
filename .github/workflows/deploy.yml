@@ -13,6 +13,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build-docs
         run: |
+          npm install
           NODE_ENV=production npm run build
       - name: Commit-files
         run: |

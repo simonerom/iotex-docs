@@ -6,7 +6,7 @@ on:
 
 jobs:
   buildAndDeploy:
-    runs-on: node12
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:

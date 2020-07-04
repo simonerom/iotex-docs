@@ -1,0 +1,29 @@
+name: Deploy iotex docs to GitHub Page
+on:
+  branches:
+      - master
+
+jobs:
+  buildAndDeploy:
+    runs-on: node12
+    steps:
+      - uses: actions/checkout@v2
+        with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build docs
+        run: |
+          NODE_ENV=production npm run build
+      - name: Commit files
+        run: |
+          cd .vuepress/dist
+          echo 'docs.iotex.io' > CNAME
+          git init
+          git add -A
+          git commit -m 'deploy'
+      - name: Deploy Docs to github page
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'gh-pages'
+          force: true
+          directory: '.vuepress/dist'

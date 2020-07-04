@@ -1,6 +1,7 @@
 name: Deploy-iotex-docs-to-GitHub-Page
 on:
-  branches:
+  push:
+    branches:
       - master
 
 jobs:

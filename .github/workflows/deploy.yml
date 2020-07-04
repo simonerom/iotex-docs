@@ -1,3 +1,6 @@
+
+
+
 name: Deploy-iotex-docs-to-GitHub-Page
 on:
   push:
@@ -20,6 +23,8 @@ jobs:
           cd .vuepress/dist
           echo 'docs.iotex.io' > CNAME
           git init
+          git config --global user.email "puncsky@users.noreply.github.com"
+          git config --global user.name "puncsky"
           git add -A
           git commit -m 'deploy'
       - name: Deploy-Docs-to-github-page

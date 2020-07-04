@@ -1,5 +1,5 @@
 ---
-title: Core API
+title: Core APIs
 ---
 
 ## Overview

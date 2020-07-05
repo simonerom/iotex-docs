@@ -9,15 +9,15 @@ Founded as an open-source project in 2017, IoTeX envisions bringing together peo
 
 Over the past 2+ years, the IoTeX blockchain was built from scratch with our mission in mind. What started as a few lines of code has now blossomed into one of the most secure, performant, and decentralized blockchains in the world. IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper). 
 
-IoTeX core team is continuously working hard to bring the community more cool features.
+IoTeX core-dev is continuously working hard to bring the community more useful features.
 
 
 ### The Architecture
 IoTeX blockchain consists of the four-layered components:
-- Networking layer enables the peer-to-peer communication between IoTex nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to other applications and users
-- Consensus layer runs Roll-DPoS to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
-- The state transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain from one to the other.
-- The programing layer implements the business logic for state transition. Currently, it supports Ethereum virtual machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it.
+- Networking layer enables the peer-to-peer communication between IoTeX nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to applications
+- Consensus layer runs [Roll-DPoS](iotex.io/research) to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
+- The state transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain based on actions.
+- The programing layer provides programmability to implement customized business logic for state transition. Currently, it supports Ethereum Virtual Machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it. [Codelabs](http://codelabs.iotex.io/) is a great place for developers to get started!
 
 ![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 
@@ -34,6 +34,18 @@ The state transition layer of the chain is flexible enough that any subprotocol 
 - Multichain subprotocol manages sub-chain management and cross-chain communication which is a work-in-progress.
 
 In the IoTeX network, transactions (the atomic operation unit to interact with the blockchain data) are referred to as "actions", and there are six types of actions corresponding to the six subprotocols as described. More information can be found [here](https://github.com/iotexproject/iotex-proto/blob/master/proto/types/action.proto).
+
+### Private Key and Address
+
+IoTeX's Private Key is 64 random hex characters, e.g., `90bf89cd944df5c6d8281b132783277c1760537809c534fc54dda34c4edfb4f4`, and the corresponding Public Key is derived from the private key using ECDSA (secp256k1), which is exactly the same as Ethereum. The public key can be recovered from a signed message using [this util](https://github.com/ethereum/go-ethereum/blob/master/crypto/signature_cgo.go#L36).
+
+IoTeX has a human readable address looks like `io1nyjs526mnqcsx4twa7nptkg08eclsw5c2dywp4`, which takes the following steps to be constructed:
+1. Generating a random private key and the corresponding public key;
+2. Apply keccak256 hash function to the public key, exluding the first byte (hash := keccak256(pk[1:]);
+3. Take the late 20 bytes as the payload (payload := hash[12:]), which is the byte representation of the address;
+4. Apply [bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki) encoding on the payload and adding io prefix.
+
+Please refer to [this repo](https://github.com/iotexproject/iotex-address) for details.
 
 ## :runner: Build and Run
 

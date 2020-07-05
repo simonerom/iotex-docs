@@ -14,26 +14,25 @@ IoTeX core-dev is continuously working hard to bring the community more useful f
 
 ### The Architecture
 IoTeX blockchain consists of the four-layered components:
-- Networking layer enables the peer-to-peer communication between IoTeX nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to applications
-- Consensus layer runs [Roll-DPoS](iotex.io/research) to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
-- The state transition layer is composed of five subprotocols and is responsible for transiting the states of the blockchain based on actions.
-- The programing layer provides programmability to implement customized business logic for state transition. Currently, it supports Ethereum Virtual Machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it. [Codelabs](http://codelabs.iotex.io/) is a great place for developers to get started!
+- **Networking Layer** enables the peer-to-peer communication between IoTeX nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to applications
+- **Consensus Layer** runs [Roll-DPoS](iotex.io/research) to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
+- **State Transition Layer** is composed of five sub-protocols and is responsible for transiting the states of the blockchain based on actions.
+- **Programing Layer** provides programmability to implement customized business logic for state transition. Currently, it supports Ethereum Virtual Machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it. [Codelabs](http://codelabs.iotex.io/) is a great place for developers to get started!
 
 ![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 
 
 ### Sub-Protocols and Actions
 
-The state transition layer of the chain is flexible enough that any subprotocol can be plugged in without hustling.
+The state transition layer of the chain is flexible enough that any sub-protocol can be plugged in without hustling. As of now, the following five sub-protocols have been [implemented](https://godoc.org/github.com/iotexproject/iotex-core/action):
 
-- Account subprotocol provides the functionality for bookkeeping balances of accounts living on this blockchain.
-- Execution subprotocol manages the execution of smart contracts and roll forward/back of the states.
-- Poll subprotocol syncs with staking subprotocol and instructs the delegates promotion/demotion on the chain.
-- Rewarding subprotocol is responsible for distributing block rewards and epoch rewards to eligible delegates and candidates.
-- Staking subprotocol manages voting and candidate registration services using bucket data units.
-- Multichain subprotocol manages sub-chain management and cross-chain communication which is a work-in-progress.
+- Account sub-protocol provides the functionality for bookkeeping balances of accounts living on this blockchain.
+- Execution sub-protocol manages the execution of smart contracts and roll forward/back of the states.
+- Poll sub-protocol syncs with staking sub-protocol and instructs the delegates promotion/demotion on the chain.
+- Rewarding sub-protocol is responsible for distributing block rewards and epoch rewards to eligible delegates and candidates.
+- Staking sub-protocol manages voting and candidate registration services using bucket data units.
 
-In the IoTeX network, transactions (the atomic operation unit to interact with the blockchain data) are referred to as "actions", and there are six types of actions corresponding to the six subprotocols as described. More information can be found [here](https://github.com/iotexproject/iotex-proto/blob/master/proto/types/action.proto).
+In the IoTeX network, transactions (the atomic operation unit to interact with the blockchain data) are referred to as **actions**, and there are five types of actions corresponding to five sub-protocols as described. More information can be found [here](https://github.com/iotexproject/iotex-proto/blob/master/proto/types/action.proto).
 
 ### Private Key and Address
 
@@ -46,6 +45,9 @@ IoTeX has a human readable address looks like `io1nyjs526mnqcsx4twa7nptkg08eclsw
 4. Apply [bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki) encoding on the payload and adding io prefix.
 
 Please refer to [this repo](https://github.com/iotexproject/iotex-address) for details.
+
+### Node Types
+TODO - fullnode, fullnode w/ archive-enabled, fullnode w/ API, fullnode w/ full API 
 
 ## :runner: Build and Run
 

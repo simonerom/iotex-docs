@@ -4,8 +4,9 @@ title: Get Started
 
 # Getting Started
 
-OneFx is a full-stack framework for building web apps. Here are the features you’ll find in Onefx.js:
+Pylon is a full-stack starter for building IoTeX Dapps. Here are the features you’ll find in Pylon:
 
+- Out-of-box integration with IoTeX antenna SDK and ioPay wallet
 - Server-side rendering and universal rendering with React and Redux
 - Apollo GraphQL (docs + playground), ES2017, TypeScript, TSX support out of the box
 - Server-side development via Koa.js
@@ -13,17 +14,17 @@ OneFx is a full-stack framework for building web apps. Here are the features you
 ## Create a project
 
 ```bash
-git clone https://github.com/puncsky/web-onefx-boilerplate.git my-awesome-project
+git clone git@github.com:iotexproject/pylon.git my-awesome-project
 ```
 
 ## Run your project
 
-This is intended for \*nix users. If you use Windows, go to [Run on Windows](/onefx/guides.html#run-on-windows). Let’s first prepare the environment.
+This is intended for \*nix users. If you use Windows, go to [Run on Windows](/pylon/guides.html#run-on-windows). Let’s first prepare the environment.
 
 ```bash
 cd my-awesome-project
 
-nvm use 10.15.0
+nvm use 10.21.0 # or latest LTS versions
 npm install
 
 # prepare environment variable
@@ -62,11 +63,11 @@ NODE_ENV=production npm run start
 
 We use prettier, tslint, and editorconfig to enforce consistent styles across the whole project, so that we will not bikeshed on coding styles in the code review.
 
-However, please visit our [Contributing Code](/onefx/code-review-checklist.html) before submitting your code.
+However, please visit our [Contributing Code](/pylon/code-review-checklist.html) before submitting your code.
 
 ## Architecture
 
-![Onefx Architecture](https://res.cloudinary.com/dohtidfqh/image/upload/v1546379050/web-guiguio/onefx-architecture.png)
+![Onefx Architecture](https://iotex.b-cdn.net/docs/PYLON%20DAPP%20STARTER%20ARCHITECTURE.png)
 
 ```txt
 .

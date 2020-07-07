@@ -6,7 +6,7 @@ title: Guides
 
 ## State management
 
-We use redux to manage state in onefx.js. To pass the state from the server to the initial page during the server-side rendering, in the server use `ctx.setState(path, val)` to set the state:
+We use redux to manage state in Pylon. To pass the state from the server to the initial page during the server-side rendering, in the server use `ctx.setState(path, val)` to set the state:
 
 ```js
 server.get("SPA", "/*", function onRoute(ctx) {
@@ -250,6 +250,31 @@ In the js file, you can read the value by `process.env.PORT`.
 
 The static configuration is located in `./config` and can be read according to the environment variable `NODE_ENV`.
 
+### CDN
+
+If you want to setup CDN for the static resources, I recommend [BunnyCDN](https://bunnycdn.com/?ref=qrv5hbyzrq) for its ease-of-use and cost-effectiveness. Then configure OneFx as
+
+```js
+module.exports = {
+  // ...
+  server: {
+    // ...
+    cdnBase: "https://example-cdn.net"
+  }
+  // ...
+};
+```
+
+And then when loading static assets, you just follow the same practice with the static assets.
+
+```jsx
+import { assetURL } from "onefx/lib/asset-url";
+
+function ImgExample() {
+  return <img src={assetURL("favicon.png")} />;
+}
+```
+
 ## References
 
 Tech Stack
@@ -270,7 +295,7 @@ Tech Stack
 
 Design Resources
 
-- [Carbon Design System](http://carbondesignsystem.com/)
+- [Ant Design](https://ant.design/)
 - [Font Awesome](http://fontawesome.io/)
 - [flaticon - icons and graphics](https://www.flaticon.com/)
 
@@ -339,32 +364,7 @@ nvm use lts/dubnium
 
 ```bash
 cd /mnt/c/
-git clone https://github.com/puncsky/web-onefx-boilerplate.git
+git clone https://github.com/iotexproject/pylon.git
 ```
 
 4. install [VS Code](https://code.visualstudio.com/) and open WSL terminal with ctrl + ` . Not sure about WSL terminal? Go to [this post](https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/).
-
-## Mobile
-
-### Create a project
-
-```bash
-git clone https://github.com/puncsky/mobile-onefx-boilerplate.git my-awesome-mobile-project
-```
-
-### Run your project
-
-```bash
-cd my-awesome-mobile-project
-
-nvm use 10.15.0
-npm install
-```
-
-#### Development mode
-
-To run your project in development mode, run:
-
-```bash
-npm run start
-```

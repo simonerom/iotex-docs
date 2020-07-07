@@ -38,33 +38,29 @@ module.exports = {
           { text: "Core", link: "/" },
           { text: "Middleware", link: "/middleware/did" },
           { text: "Hardware", link: "/hardware/pebble" },
-          { text: "OneFx", link: "/onefx/get-started" }
+          { text: "Pylon", link: "/pylon/get-started" }
         ],
         sidebar: {
-          "/onefx": [
+          "/pylon": [
             {
               collapsable: false,
               children: [
-                "onefx/get-started",
-                "onefx/guides",
-                "onefx/code-review-checklist"
+                "pylon/get-started",
+                "pylon/guides",
+                "pylon/code-review-checklist"
               ]
             }
           ],
           "/middleware": [
             {
               collapsable: false,
-              children: [
-                "middleware/did"
-              ]
+              children: ["middleware/did"]
             }
           ],
           "/hardware": [
             {
               collapsable: false,
-              children: [
-                "hardware/pebble"
-              ]
+              children: ["hardware/pebble"]
             }
           ],
           "/": [

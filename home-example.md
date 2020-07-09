@@ -4,7 +4,7 @@ heroImage: null
 heroText: null
 tagline: null
 mainTitle: "Documentation"
-subTitle: "Whether you’re a startup or a global enterprise, learn how to integrate with IoTeX to empower IoT with privacy and trust."
+subTitle: "Founded as an open source platform in 2017, IoTeX is building the Internet of Trusted Things, an open ecosystem where all "things" can interact with trust and privacy."
 topCard:
   title: "Integrate faster with Stripe Checkout"
   content: "Redirect your customers to a Stripe-hosted payments page—prebuilt, safe, and responsive across web and mobile."
@@ -75,20 +75,16 @@ part3Body:
 
 ::: slot foot1
 
-#### 有问题？
+#### Chat With Us
 
-我们随时乐意为您解决代码或其他方面的问题。[搜索我们的文档]()，[联系支持]()，或[联系销售团队]()。
+**We are radically open-minded and value open-mindedness and transparency.**
 
-您也可以在 freenode 上的 [#stripe]() 内与其他开发人员进行实时交流，也可以订阅我们的[YouTube channel]()。
+- Sensitive security-related questions, comments, and reports should be sent to support@iotex.io. You should receive a prompt response, typically within 48 hours.
+
+- For non-urgent bugs or places that need to be improved, please file issues under https://github.com/iotexproject/iotex-core/issues for the open-source community to investigate.
+
+- If you have ideas/proposals to make IoTeX better, please do not hesitate to let us know through [Halo Program](http://iotex.io/halo)
+
+- If you have feedback/suggestion, please do not hesitate to contact us via [forum](https://community.iotex.io/c/research-development/protocol) or [email](support@iotex.io). 
 :::
 
-::: slot foot2
-
-#### 注册开发者文摘
-
-请提供您的邮箱，以便 Stripe 给您发送与 API 和开发者平台有关的更新。
-
-<Home-Subscribe />
-
-您可以随时取消订阅。 阅读我们的[隐私政策]()。
-:::

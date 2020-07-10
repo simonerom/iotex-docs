@@ -35,7 +35,7 @@ module.exports = {
         },
         collapsable: false,
         nav: [
-          { text: "Core", link: "/" },
+          { text: "Home", link: "/" },
           { text: "Middleware", link: "/middleware/did" },
           { text: "Hardware", link: "/hardware/pebble" },
           { text: "Pylon", link: "/pylon/get-started" }

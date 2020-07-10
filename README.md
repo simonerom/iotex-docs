@@ -40,7 +40,7 @@ part1Body:
 part2Title: "Start With Use Cases"
 part2Body:
   - title: "Build a DApp"
-    link: "/#introduction"
+    link: "/docs/get-started.html"
     icon: "/img/icon-checkout.svg"
     content: "Build a Dapp that is secure, fast and intelligent."
   - title: "Apply for Dev Grant"
@@ -56,7 +56,7 @@ part2Body:
     icon: "/img/icon-checkout.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
   - title: "Run A Fullnode"
-    link: "/#build-and-run"
+    link: "/docs/get-started.html#build-and-run"
     icon: "/img/icon-checkout.svg"
     content: "Build, configure and run your node in a step by step way."
   - title: "Exchanges and Wallets"

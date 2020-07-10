@@ -68,6 +68,7 @@ module.exports = {
               collapsable: false,
               children: [
                 "",
+                "docs/get-started",
                 "docs/libraries-and-tools",
                 "docs/ioctl",
                 "docs/api",

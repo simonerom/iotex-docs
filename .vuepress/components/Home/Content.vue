@@ -31,7 +31,38 @@
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
-      <el-col :span="12" v-for="(detail, idx) in data.part1Body" :key="idx">
+      <el-col
+        :span="24"
+        v-for="(detail, idx) in data.part1Body"
+        :key="idx"
+        v-if="detail.isHead === true"
+      >
+        <el-card
+          shadow="hover"
+          class="card-3"
+          @click.native="jump(detail.link)"
+        >
+          <div>
+            <el-col :span="12">
+              <div class="card-title">
+                <a :href="detail.link">
+                  <h3>{{ detail.title }}</h3>
+                </a>
+              </div>
+              <div>{{ detail.content }}</div>
+            </el-col>
+            <el-col :span="12">
+              <img class="thumbnail" :src="detail.image" />
+            </el-col>
+          </div>
+        </el-card>
+      </el-col>
+      <el-col
+        :span="12"
+        v-for="(detail, idx) in data.part1Body"
+        :key="idx"
+        v-if="detail.isHead === false"
+      >
         <el-card
           shadow="hover"
           :style="detail.icon | cardStyle"
@@ -58,6 +89,30 @@
       <el-col :span="12" v-for="(detail, idx) in data.part2Body" :key="idx">
         <el-card
           shadow="hover"
+          :style="detail.icon | cardStyle"
+          class="card-2"
+          @click.native="jump(detail.link)"
+        >
+          <div class="card-body">
+            <div class="card-title">
+              <a :href="detail.link">
+                <h3>{{ detail.title }}</h3>
+              </a>
+            </div>
+            <div>{{ detail.content }}</div>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col>
+        <h2>{{ data.part3Title }}</h2>
+      </el-col>
+    </el-row>
+    <el-row :gutter="gutter">
+      <el-col :span="12" v-for="(detail, idx) in data.part3Body" :key="idx">
+        <el-card
+          shadow="hover"
           class="card-2"
           @click.native="jump(detail.link)"
         >
@@ -72,61 +127,6 @@
                 {{ tag }}
               </el-tag>
             </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <el-row>
-      <el-col>
-        <h2>{{ data.part3Title }}</h2>
-      </el-col>
-    </el-row>
-    <el-row :gutter="gutter">
-      <el-col
-        :span="24"
-        v-for="(detail, idx) in data.part3Body"
-        :key="idx"
-        v-if="detail.isHead === true"
-      >
-        <el-card
-          shadow="hover"
-          class="card-3"
-          @click.native="jump(detail.link)"
-        >
-          <div>
-            <el-col :span="12">
-              <div class="card-title">
-                <a :href="detail.link">
-                  <h3>{{ detail.title }}</h3>
-                </a>
-              </div>
-              <div>{{ detail.content }}</div>
-            </el-col>
-            <el-col :span="12">
-              <img class="thumbnail" :src="detail.image" />
-            </el-col>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col
-        :span="12"
-        v-for="(detail, idx) in data.part3Body"
-        :key="idx"
-        v-if="detail.isHead === false"
-      >
-        <el-card
-          shadow="hover"
-          :style="detail.icon | cardStyle"
-          class="card-2"
-          @click.native="jump(detail.link)"
-        >
-          <div class="card-body">
-            <div class="card-title">
-              <a :href="detail.link">
-                <h3>{{ detail.title }}</h3>
-              </a>
-            </div>
-            <div>{{ detail.content }}</div>
           </div>
         </el-card>
       </el-col>

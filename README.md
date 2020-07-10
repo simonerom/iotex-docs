@@ -10,48 +10,8 @@ topCard:
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
   icon: "/img/icon-checkout.svg"
   link: "/docs/get-started.html"
-part1Title: "Start with your use case"
+part1Title: "Explore Developer Resources"
 part1Body:
-  - title: "Build a DApp"
-    link: "/#introduction"
-    icon: "/img/icon-checkout.svg"
-    content: "Build a Dapp that is secure, fast and intelligent."
-  - title: "Apply for Dev Grant"
-    link: "https://github.com/iotexproject/halogrants"
-    icon: "/img/icon-checkout.svg"
-    content: "We fund impactful projects to make prosperous"
-  - title: "Undestand IOTX Economics"
-    link: "https://medium.com/@iotex/iotex-tokenomics-part-1-utility-of-the-iotx-token-781ff9c866e3"
-    icon: "/img/icon-checkout.svg"
-    content: "Onboard, verify, and pay out to sellers or service providers."
-  - title: "Improve the Protocol"
-    link: "https://github.com/iotexproject/iips"
-    icon: "/img/icon-checkout.svg"
-    content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Run A Fullnode"
-    link: "/#build-and-run"
-    icon: "/img/icon-checkout.svg"
-    content: "Build, configure and run your node in a step by step way."
-  - title: "Exchanges and Wallets"
-    link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
-    icon: "/img/icon-checkout.svg"
-    content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
-part2Title: "Clone a sample project"
-part2Body:
-  - title: "Auto Rewards Distribution"
-    tags: ["Web", "DPoS", "Tokens"]
-    link: "https://github.com/iotexproject/iotex-hermes"
-  - title: "Rolling Dice"
-    tags: ["DApp", "Contract", "Tokens"]
-    link: "https://github.com/iotexproject/roll-dice-demo-dapp"
-  - title: "IOTX Coin Faucet"
-    tags: ["Web", "Blockchain", "Tokens"]
-    link: "https://github.com/iotexproject/web-faucet"
-  - title: "Codelabs"
-    tags: ["Web", "Education"]
-    link: "https://github.com/iotexproject/codelabs"
-part3Title: "Explore the developer resources"
-part3Body:
   - title: "ioctl CLI"
     isHead: true
     content: "A command-line tool for interacting with IoTeX blockchains."
@@ -77,6 +37,46 @@ part3Body:
     content: "Decentralized identity for devices, apps and people"
     link: "https://github.com/iotexproject/iotex-did"
     icon: "/img/icon-checkout.svg"
+part2Title: "Start With Use Cases"
+part2Body:
+  - title: "Build a DApp"
+    link: "/#introduction"
+    icon: "/img/icon-checkout.svg"
+    content: "Build a Dapp that is secure, fast and intelligent."
+  - title: "Apply for Dev Grant"
+    link: "https://github.com/iotexproject/halogrants"
+    icon: "/img/icon-checkout.svg"
+    content: "We fund impactful projects to make prosperous"
+  - title: "Undestand IOTX Economics"
+    link: "https://medium.com/@iotex/iotex-tokenomics-part-1-utility-of-the-iotx-token-781ff9c866e3"
+    icon: "/img/icon-checkout.svg"
+    content: "Onboard, verify, and pay out to sellers or service providers."
+  - title: "Improve the Protocol"
+    link: "https://github.com/iotexproject/iips"
+    icon: "/img/icon-checkout.svg"
+    content: "Submit an improvement proposal to make the chain more powerful."
+  - title: "Run A Fullnode"
+    link: "/#build-and-run"
+    icon: "/img/icon-checkout.svg"
+    content: "Build, configure and run your node in a step by step way."
+  - title: "Exchanges and Wallets"
+    link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
+    icon: "/img/icon-checkout.svg"
+    content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
+part3Title: "Clone Sample Projects"
+part3Body:
+  - title: "Auto Rewards Distribution"
+    tags: ["Web", "DPoS", "Tokens"]
+    link: "https://github.com/iotexproject/iotex-hermes"
+  - title: "Rolling Dice"
+    tags: ["DApp", "Contract", "Tokens"]
+    link: "https://github.com/iotexproject/roll-dice-demo-dapp"
+  - title: "IOTX Coin Faucet"
+    tags: ["Web", "Blockchain", "Tokens"]
+    link: "https://github.com/iotexproject/web-faucet"
+  - title: "Codelabs"
+    tags: ["Web", "Education"]
+    link: "https://github.com/iotexproject/codelabs"
 ---
 
 <Home-Content />
@@ -85,7 +85,7 @@ part3Body:
 
 #### Chat With Us
 
-Contacting us via [email](mailto:support@iotex.io), [github](https://github.com/iotexproject/iotex-core/issues), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXGroup) is welcomed!
+Questions? Chat with us via [email](mailto:support@iotex.io), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXGroup)!
 :::
 
 ::: slot foot2

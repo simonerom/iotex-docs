@@ -80,3 +80,17 @@ part3Body:
 ---
 
 <Home-Content />
+
+::: slot foot1
+
+#### Chat With Us
+
+Contacting us via [email](mailto:support@iotex.io), [github](https://github.com/iotexproject/iotex-core/issues), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXGroup) is welcomed!
+:::
+
+::: slot foot2
+
+#### Sign up for Developer Updates
+
+<Home-Subscribe />
+:::

@@ -9,10 +9,10 @@
         :inline-message="true"
       >
         <el-form-item>
-          <el-input v-model="formData.email" placeholder="邮箱"></el-input>
+          <el-input v-model="formData.email" placeholder="Email"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onSubmit">订阅</el-button>
+          <el-button type="primary" @click="onSubmit">Subscribe</el-button>
         </el-form-item>
       </el-form>
     </el-col>

@@ -43,7 +43,7 @@
           @click.native="jump(detail.link)"
         >
           <div>
-            <el-col :span="12">
+            <el-col :span="12" :xs="24">
               <div class="card-title">
                 <a :href="detail.link">
                   <h3>{{ detail.title }}</h3>
@@ -51,7 +51,7 @@
               </div>
               <div>{{ detail.content }}</div>
             </el-col>
-            <el-col :span="12">
+            <el-col :span="12" :xs="24">
               <img class="thumbnail" :src="detail.image" />
             </el-col>
           </div>
@@ -59,6 +59,7 @@
       </el-col>
       <el-col
         :span="12"
+        :xs="24"
         v-for="(detail, idx) in data.part1Body"
         :key="idx"
         v-if="detail.isHead === false"
@@ -86,7 +87,12 @@
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
-      <el-col :span="12" v-for="(detail, idx) in data.part2Body" :key="idx">
+      <el-col
+        :span="12"
+        :xs="24"
+        v-for="(detail, idx) in data.part2Body"
+        :key="idx"
+      >
         <el-card
           shadow="hover"
           :style="detail.icon | cardStyle"
@@ -110,7 +116,12 @@
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
-      <el-col :span="12" v-for="(detail, idx) in data.part3Body" :key="idx">
+      <el-col
+        :span="12"
+        :xs="24"
+        v-for="(detail, idx) in data.part3Body"
+        :key="idx"
+      >
         <el-card
           shadow="hover"
           class="card-2"
@@ -133,10 +144,10 @@
     </el-row>
     <hr />
     <el-row :gutter="gutter">
-      <el-col :span="12">
+      <el-col :span="12" :xs="24">
         <Content slot-key="foot1" />
       </el-col>
-      <el-col :span="12">
+      <el-col :span="12" :xs="24">
         <Content slot-key="foot2" />
       </el-col>
     </el-row>
@@ -184,17 +195,25 @@ export default {
       font-size 1.15rem
   .sub-title
     margin 30px 0
-    padding-right 240px
     font-size 20px
   .el-card
     margin-bottom 20px
     cursor pointer
   .card-1
     height 100px
+    @media only screen and (max-width: 575px)
+      height auto
+
   .card-2
     height 90px
+    @media only screen and (max-width: 575px)
+      height auto
+
   .card-3
     height 120px
+    @media only screen and (max-width: 575px)
+      height auto
+
   .el-tag
     margin-right 8px
     margin-top 8px

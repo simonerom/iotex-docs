@@ -714,6 +714,28 @@ io1t54nfdnpldaxkpm35f2gzh3rx6cakypmp5xfz5: 45819 IOTX
 Solidity compiler is ready now.
 ```
 
+This process installs `solc` to you env. You can also install it by using the following commands.
+
+On Ubuntu, you can use the following command
+```
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install solc
+```
+
+On macOS, you can use the following command
+```
+brew update
+brew upgrade
+brew tap ethereum/ethereum
+brew install solidity@5
+```
+
+For more detailed instruction of installing `solc`, please refer to  https://solidity.readthedocs.io/en/v0.5.0/installing-solidity.html.
+
+Please note that `ioctl` currently supports `solc` `4.x` and `5.x`. Please make sure you install the current version.
+
+
 #### Compile smart contract
 `Usage:
   ioctl contract compile CONTRACT_NAME [CODE_FILES...] [--abi-out ABI_PATH] [--bin-out BIN_PATH]`

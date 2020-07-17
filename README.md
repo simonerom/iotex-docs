@@ -77,6 +77,14 @@ part3Body:
   - title: "Codelabs"
     tags: ["Web", "Education"]
     link: "https://github.com/iotexproject/codelabs"
+part4Title: "Delegate Resources"
+part4Body:
+  - title: "Bootstrap Manual"
+    tags: ["Delegate", "DPoS", "Blockchain"]
+    link: "hhttps://github.com/iotexproject/iotex-bootstrap/blob/master/README.md"
+  - title: "FAQ"
+    tags: ["Delegate", "DPoS", "Blockchain"]
+    link: "https://github.com/iotexproject/iotex-bootstrap/wiki/Delegate-Q&A"
 ---
 
 <Home-Content />

@@ -142,6 +142,38 @@
         </el-card>
       </el-col>
     </el-row>
+    <el-row>
+      <el-col>
+        <h2>{{ data.part4Title }}</h2>
+      </el-col>
+    </el-row>
+    <el-row :gutter="gutter">
+      <el-col
+        :span="12"
+        :xs="24"
+        v-for="(detail, idx) in data.part4Body"
+        :key="idx"
+      >
+        <el-card
+          shadow="hover"
+          class="card-2"
+          @click.native="jump(detail.link)"
+        >
+          <div>
+            <div class="card-title">
+              <a :href="detail.link">
+                <h3>{{ detail.title }}</h3>
+              </a>
+            </div>
+            <div>
+              <el-tag size="mini" v-for="(tag, i) in detail.tags" :key="i">
+                {{ tag }}
+              </el-tag>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
     <hr />
     <el-row :gutter="gutter">
       <el-col :span="12" :xs="24">

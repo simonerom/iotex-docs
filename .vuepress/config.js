@@ -11,7 +11,7 @@ module.exports = {
   locales: {
     "/": {
       lang: "en-US",
-      title: "Docs",
+      title: "IoTeX Documentaion",
       description: "Developer docs, by the community, for the community"
     }
   },

@@ -81,7 +81,7 @@ part4Title: "Delegate Resources"
 part4Body:
   - title: "Bootstrap Manual"
     tags: ["Delegate", "DPoS", "Blockchain"]
-    link: "hhttps://github.com/iotexproject/iotex-bootstrap/blob/master/README.md"
+    link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md"
   - title: "FAQ"
     tags: ["Delegate", "DPoS", "Blockchain"]
     link: "https://github.com/iotexproject/iotex-bootstrap/wiki/Delegate-Q&A"

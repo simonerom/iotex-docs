@@ -158,7 +158,7 @@
           class="card-1"
           shadow="hover"
           :style="data.topCard.icon | cardStyle"
-          @click.native="jump(data.topCard.link)"
+          @click.native="jump(detail.link)"
         >
           <div>
             <div class="card-body">

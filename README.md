@@ -47,17 +47,22 @@ part1Body:
     content: "Explore IoTeX Codelabs examples and tutorials"
     tags: ["Web", "Education"]
     link: "https://github.com/iotexproject/codelabs"
-  - title: "Decentralized Identity"
-    isHead: false
-    content: "Decentralized identity for devices, apps and people"
-    link: "https://github.com/iotexproject/iotex-did"
-    icon: "/img/icon_did.svg"
-part2Title: "Start With Use Cases"
+part2Title: "IoTeX Middleware"
 part2Body:
-  - title: "Build a DApp"
-    link: "/docs/get-started.html"
-    icon: "/img/icon_builddapp.svg"
-    content: "Build a Dapp that is secure, fast and intelligent."
+  - title: "Decentralized Identity"
+    content: "Decentralized identity for devices, apps and people"
+    link: "http://localhost:8080/middleware/did.html"
+    icon: "/img/icon_did.svg"
+part3Title: "Clone Sample Projects"
+part3Body:
+  - title: "Auto Rewards Distribution"
+    tags: ["Web", "DPoS", "Tokens"]
+    link: "https://github.com/iotexproject/iotex-hermes"
+  - title: "Rolling Dice"
+    tags: ["DApp", "Contract", "Tokens"]
+    link: "https://github.com/iotexproject/roll-dice-demo-dapp"
+part4Title: "More Resources"
+part4Body:
   - title: "Apply for Dev Grant"
     link: "https://github.com/iotexproject/halogrants"
     icon: "/img/icon_devgrant.svg"
@@ -70,30 +75,10 @@ part2Body:
     link: "https://github.com/iotexproject/iips"
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Run a Fullnode"
-    link: "/docs/get-started.html#build-and-run"
-    icon: "/img/icon_fullnode.svg"
-    content: "Build, configure and run your node in a step by step way."
   - title: "Exchanges and Wallets"
     link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
     icon: "/img/icon_exchanges.svg"
     content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
-part3Title: "Clone Sample Projects"
-part3Body:
-  - title: "Auto Rewards Distribution"
-    tags: ["Web", "DPoS", "Tokens"]
-    link: "https://github.com/iotexproject/iotex-hermes"
-  - title: "Rolling Dice"
-    tags: ["DApp", "Contract", "Tokens"]
-    link: "https://github.com/iotexproject/roll-dice-demo-dapp"
-part4Title: "Delegate Resources"
-part4Body:
-  - title: "Bootstrap Manual"
-    tags: ["Delegate", "DPoS", "Blockchain"]
-    link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/README.md"
-  - title: "FAQ"
-    tags: ["Delegate", "DPoS", "Blockchain"]
-    link: "https://github.com/iotexproject/iotex-bootstrap/wiki/Delegate-Q&A"
 ---
 
 <Home-Content />

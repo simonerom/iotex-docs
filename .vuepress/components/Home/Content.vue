@@ -155,16 +155,21 @@
         :key="idx"
       >
         <el-card
+          class="card-1"
           shadow="hover"
-          class="card-2"
-          @click.native="jump(detail.link)"
+          :style="data.topCard.icon | cardStyle"
+          @click.native="jump(data.topCard.link)"
         >
           <div>
-            <div class="card-title">
-              <a :href="detail.link">
-                <h3>{{ detail.title }}</h3>
-              </a>
+            <div class="card-body">
+              <div class="card-title">
+                <a :href="detail.link">
+                  <h3>{{ detail.title }}</h3>
+                </a>
+              </div>
+              <div>{{ detail.content }}</div>
             </div>
+
             <div>
               <el-tag size="mini" v-for="(tag, i) in detail.tags" :key="i">
                 {{ tag }}

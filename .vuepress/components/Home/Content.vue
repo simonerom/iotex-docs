@@ -157,7 +157,7 @@
         <el-card
           class="card-1"
           shadow="hover"
-          :style="data.topCard.icon | cardStyle"
+          :style="detail.icon | cardStyle"
           @click.native="jump(detail.link)"
         >
           <div>

@@ -39,9 +39,9 @@ part1Body:
     icon: "/img/icon_project_dapp.svg"
   - title: "IOTX Coin Faucet"
     isHead: false
-    content: "Get few IOTX to start your development"
+    content: "Get some IOTX to use in your DApps"
     tags: ["Web", "Blockchain", "Tokens"]
-    link: "https://github.com/iotexproject/web-faucet"
+    link: "https://community.iotex.io/t/iotex-faucet-for-mainnet-testnet-tokens/1339"
   - title: "Codelabs"
     isHead: false
     content: "Explore IoTeX Codelabs examples and tutorials"

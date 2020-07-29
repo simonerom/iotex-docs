@@ -64,7 +64,7 @@ part3Body:
 part4Title: "More Resources"
 part4Body:
   - title: "Apply for Dev Grant"
-    link: "https://github.com/iotexproject/halogrants"
+    link: "https://halo.iotex.io"
     icon: "/img/icon_devgrant.svg"
     content: "We fund impactful projects to make prosperous"
   - title: "Undestand IOTX Economics"
@@ -75,7 +75,7 @@ part4Body:
     link: "https://github.com/iotexproject/iips"
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Exchanges and Wallets"
+  - title: "Exchanges & Wallets Integrations"
     link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
     icon: "/img/icon_exchanges.svg"
     content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."

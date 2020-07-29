@@ -46,7 +46,7 @@ part1Body:
     isHead: false
     content: "Explore IoTeX Codelabs examples and tutorials"
     tags: ["Web", "Education"]
-    link: "https://github.com/iotexproject/codelabs"
+    link: "https://codelabs.iotex.io/"
 part2Title: "IoTeX Middleware"
 part2Body:
   - title: "Decentralized Identity"

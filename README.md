@@ -3,7 +3,7 @@ home: true
 heroImage: null
 heroText: null
 tagline: null
-mainTitle: "Documentation"
+mainTitle: "Documentation Home"
 subTitle: "The Open Platform to Power Internet of Trusted Things"
 topCard:
   title: "Get Started"
@@ -32,6 +32,21 @@ part1Body:
     content: "Look for deep analytical insights? There you go."
     link: "/docs/analytics.html"
     icon: "/img/icon_analytics.svg"
+  - title: "Pylon Dapp Starter"
+    isHead: false
+    content: "Full-stack starter for building IoTeX Dapps"
+    link: "http://docs.iotex.io/pylon/get-started.html"
+    icon: "/img/icon_project_dapp.svg"
+  - title: "IOTX Coin Faucet"
+    isHead: false
+    content: "Get few IOTX to start your development"
+    tags: ["Web", "Blockchain", "Tokens"]
+    link: "https://github.com/iotexproject/web-faucet"
+  - title: "Codelabs"
+    isHead: false
+    content: "Explore IoTeX Codelabs examples and tutorials"
+    tags: ["Web", "Education"]
+    link: "https://github.com/iotexproject/codelabs"
   - title: "Decentralized Identity"
     isHead: false
     content: "Decentralized identity for devices, apps and people"
@@ -71,12 +86,6 @@ part3Body:
   - title: "Rolling Dice"
     tags: ["DApp", "Contract", "Tokens"]
     link: "https://github.com/iotexproject/roll-dice-demo-dapp"
-  - title: "IOTX Coin Faucet"
-    tags: ["Web", "Blockchain", "Tokens"]
-    link: "https://github.com/iotexproject/web-faucet"
-  - title: "Codelabs"
-    tags: ["Web", "Education"]
-    link: "https://github.com/iotexproject/codelabs"
 part4Title: "Delegate Resources"
 part4Body:
   - title: "Bootstrap Manual"

@@ -1,9 +1,16 @@
 @require '~vuepress-plugin-tabs/dist/themes/default.styl'
 
-$accentColor = #3eaf7c
-$textColor = #2c3e50
-$borderColor = #eaecef
-$codeBgColor = #282c34
+.theme-container.home-page {
+  .hero {
+      img {
+        width: 350px
+      }
+      .description {
+        font-size: 1.3em
+    }
+    }
+
+}
 
 .tabs-component
   div[class*='language-']
@@ -31,8 +38,3 @@ $codeBgColor = #282c34
     border-radius 0 6px 6px 6px
     box-shadow 0 0 10px rgba(0, 0, 0, 0.05)
     padding 1em 1em
-
-.home
-  .hero
-    .description
-      display none

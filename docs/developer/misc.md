@@ -57,9 +57,9 @@ Note that is you encounter issues such as "action is not found", check for follo
 
 ## Bookkeeping
 
-Bookkeeping is a GraphQL web interface for reward distributions, which collects voting status and calculates corresponding voters' reward for a given delegate within a certain epoch range. 
+Bookkeeping is a GraphQL web interface for reward distributions, which collects voting status and calculates corresponding voters' reward for a given delegate within a certain epoch range.
 
-***While we keep bookkeeping for analytics, we recommend delegates use [Hermes](http://hermes.to) for auto-distribute voters' rewards.**
+**\*While we keep bookkeeping for analytics, we recommend delegates use [Hermes](http://hermes.to) for auto-distribute voters' rewards.**
 
 ### Get Voters' Rewards Given A Delegate Name
 
@@ -74,4 +74,3 @@ ioctl action invoke io1sesxdghz93f4sadhu6a7242m22gphmc2aucz4g <total-amount> -l 
 ```
 
 Note that `io1sesxdghz93f4sadhu6a7242m22gphmc2aucz4g` is the pre-deployed contract for sending IOTX coins to multiple addresses.
-

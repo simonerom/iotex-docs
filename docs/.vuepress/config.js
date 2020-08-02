@@ -17,7 +17,7 @@ module.exports = {
   },
 
   themeConfig: {
-    repo: "iotexproject/iotex-docs",
+    //repo: "iotexproject/iotex-docs",
     displayAllHeaders: true,
     editLinks: true,
     logo: "/logo.svg",
@@ -36,9 +36,10 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Middleware", link: "/middleware/did" },
-          { text: "Hardware", link: "/hardware/pebble" },
-          { text: "Pylon", link: "/pylon/get-started" }
+          { text: "Developers", link: "/developer/" },
+          { text: "Nodes", link: "/nodes/" },
+          { text: "Staking", link: "/staking/" },
+          { text: "Contribute", link: "/contribute/" }
         ],
         sidebar: {
           "/pylon": [

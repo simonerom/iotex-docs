@@ -6,14 +6,12 @@ Prerequisite: make sure to have ioctl installed.
 
 Our address-based DID contract on **IoTeX testnet** is: `io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8`
 
-Our address-based DID contract on **IoTeX mainnet** is: `TBD`
+## 1. Generate a DID Doc
 
-
-## 1. Generate a DID Doc Template
+```
+Generate DID document using private key from wallet
 
 Generate DID document template using an account from ioctl. The produced template can be modified as needed with its hash to be recalculated.
-```
-ioctl did generate [-s SIGNER] [flags]
 ```
 
 Example:
@@ -38,11 +36,11 @@ The hex encoded SHA256 hash of the DID doc is:21e575fd6fd75591465481404986fac73d
 
 ## 2. Upload DID Doc
 
-DID Doc can be uploaded to any publicly accessible content storage like S3 or IPFS or other cloud storage, as long as you end up with a URI which can retrieve you DID Doc.
-
-If you plan to use IPFS, you can either set up your own IPFS node or use service like https://pinata.cloud/ or upload via https://globalupload.io/. 
+DID Doc can be uploaded to any public accessible content storage like S3 or IPFS or other cloud storge, as long as you end up with a URI which is able to retrieve you DID Doc.
+If you plan to use IPFS, you can either setup your own IPFS node, or use service like https://pinata.cloud/.
 
 Exmaple:
+
 ```
 https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG
 ```
@@ -50,6 +48,8 @@ https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG
 ## 3. Hash DID Doc
 
 DID register asked for a 32 bytes hash of the DID doc as an input. You could use any hashing algorithm to fit your need. Once you got your DID Doc hash, encode it to a hex string, to pass into `ioctl`. **For simplicity, you can directly use the hex-encoded SHA256 hash string provided by `ioctl did generate`**. But if you do need to generate a hash programmatically, here is a Go example to hash a DID doc using SHA512-256 and output a hex string:
+
+Here is a Go example to hash DID doc with SHA512-256 and output a hex string:
 
 ```go
 package main
@@ -82,8 +82,6 @@ func main() {
 
 ## 4. Register DID
 
-Register a new DID with the corresponding doc to IoTeX.
-
 ```
 ioctl did register (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
@@ -93,26 +91,27 @@ Example:
 ```
 ioctl did register io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd75591465481404986fac73de766446c793ff67adfa171d51adf85 https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG -s test1
 ```
+
 ## 5. Resovle DID
 
-Resovle an IoTeX DID with our web resovler.
+You can resovle IoTeX DID with our web resovler
 
 ```
 http://did.testnet.iotex.one/1.0/identifiers/<DID>
 ```
 
 Exmaple:
+
 ```
 http://did.testnet.iotex.one/1.0/identifiers/did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A
 ```
 
 ## 6. Update DID
 
-Update an existent DID.
-
 ```
 ioctl did update (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
+
 Example:
 
 ```
@@ -121,12 +120,12 @@ ioctl did update io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd7559146548
 
 ## 7. Deregister DID
 
-Deregister an existent DID.
-
 ```
 ioctl did deregister (CONTRACT_ADDRESS|ALIAS) [flags]
 ```
+
 Example:
+
 ```
  ioctl did deregister io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 -s test1
 ```

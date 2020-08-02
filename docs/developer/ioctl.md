@@ -2,7 +2,7 @@
 title: Command-line Interface
 ---
 
-## Overview 
+## Overview
 
 ioctl is a command-line interface for interacting with IoTeX blockchains.
 
@@ -211,7 +211,7 @@ Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-#### Sign Message With Private key 
+#### Sign Message With Private key
 
 `Usage: ioctl account sign MESSAGE [-s SIGNER]`
 
@@ -358,7 +358,7 @@ Wait for several seconds and query this action by hash:
 58fc6465bd3b7e33b1508064b0342dc786247b4e18859be72fea57c993dc4950
 ```
 
-#### Read Smart Contract 
+#### Read Smart Contract
 
 `ioctl action read (ALIAS|CONTRACT_ADDRESS) -b BYTE_CODE [-s SIGNER]`
 
@@ -396,7 +396,7 @@ Wait for several seconds and query this action by hash:
 59a73e24a41385005519d1d1e7f164b36b98717f2c5649785b43c2588245502d
 ```
 
-#### Deposit To Rewarding Pool 
+#### Deposit To Rewarding Pool
 
 `ioctl action deposit AMOUNT_IOTX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 
@@ -583,7 +583,7 @@ unstakeStartTime: none
 }
 ```
 
-#### Query Staking Bucket By Index 
+#### Query Staking Bucket By Index
 
 `Usage: ioctl bc bucket [BUCKET_INDEX]`
 
@@ -705,8 +705,9 @@ io1t54nfdnpldaxkpm35f2gzh3rx6cakypmp5xfz5: 45819 IOTX
 ## Smart Contract
 
 #### Prepare solidity compiler
-`Usage:
-  ioctl contract prepare`
+
+`Usage: ioctl contract prepare`
+
 ```
 ➜  ioctl contract prepare
 
@@ -717,6 +718,7 @@ Solidity compiler is ready now.
 This process installs `solc` to you env. You can also install it by using the following commands.
 
 On Ubuntu, you can use the following command
+
 ```
 sudo add-apt-repository ppa:ethereum/ethereum
 sudo apt-get update
@@ -724,6 +726,7 @@ sudo apt-get install solc
 ```
 
 On macOS, you can use the following command
+
 ```
 brew update
 brew upgrade
@@ -731,14 +734,13 @@ brew tap ethereum/ethereum
 brew install solidity@5
 ```
 
-For more detailed instruction of installing `solc`, please refer to  https://solidity.readthedocs.io/en/v0.5.0/installing-solidity.html.
+For more detailed instruction of installing `solc`, please refer to https://solidity.readthedocs.io/en/v0.5.0/installing-solidity.html.
 
 Please note that `ioctl` currently supports `solc` `4.x` and `5.x`. Please make sure you install the current version.
 
-
 #### Compile smart contract
-`Usage:
-  ioctl contract compile CONTRACT_NAME [CODE_FILES...] [--abi-out ABI_PATH] [--bin-out BIN_PATH]`
+
+`Usage: ioctl contract compile CONTRACT_NAME [CODE_FILES...] [--abi-out ABI_PATH] [--bin-out BIN_PATH]`
 
 ```
 ➜  ioctl contract compile Multisend
@@ -752,8 +754,8 @@ Contract JSON ABI
 ```
 
 #### Deploy smart contract from sol file
-`Usage:
-  ioctl contract deploy sol CONTRACT_NAME [CODE_FILES...] [--with-arguments INIT_INPUT]`
+
+`Usage: ioctl contract deploy sol CONTRACT_NAME [CODE_FILES...] [--with-arguments INIT_INPUT]`
 
 ```
 ➜  ioctl contract deploy sol Multisend --with-arguments '{"_minTips":1,"_limit":20}' -s yqr
@@ -764,8 +766,8 @@ Wait for several seconds and query this action by hash:iotexscan.io/action/xxx..
 ```
 
 #### Deploy smart contract from bytecode
-`Usage:
-  ioctl contract deploy bytecode BYTECODE [ABI_PATH INIT_INPUT]`
+
+`Usage: ioctl contract deploy bytecode BYTECODE [ABI_PATH INIT_INPUT]`
 
 ```
 ➜  ioctl contract deploy bytecode 0x1bfc56c6... -s yqr
@@ -774,7 +776,7 @@ Output:
 version: 1  nonce: 144  gasLimit: 745466  gasPrice: 0.000001 IOTX
 senderAddress: io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng (yqr)
 execution: <
-  contract:  
+  contract:
   data: 608060405234801561001057600080fd5b5060405160408061096483398101604052805160209091015160008054600160a060020a03191633179055600191909155600255610911806100536000396000f300608060405260043610
 ...
 >
@@ -792,8 +794,8 @@ Wait for several seconds and query this action by hash:iotexscan.io/action/xxx..
 ```
 
 #### Deploy smart contract from bin file
-`Usage:
-  ioctl contract deploy bin BIN_PATH [ABI_PATH INIT_INPUT]`
+
+`Usage: ioctl contract deploy bin BIN_PATH [ABI_PATH INIT_INPUT]`
 
 ```
 ➜  ioctl contract deploy bin a.bin a.abi '{"_minTips":1,"_limit":20}' -s yqr
@@ -802,7 +804,7 @@ Output:
 version: 1  nonce: 143  gasLimit: 781866  gasPrice: 0.000001 IOTX
 senderAddress: io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng (yqr)
 execution: <
-  contract:  
+  contract:
   data: 608060405234801561001057600080fd5b5060405160408061096483398101604052805160209091015160008054600160a060020a03191633179055600191909155600255610911806100536000396000f300608060405260043610
 ...
 >
@@ -820,11 +822,11 @@ Wait for several seconds and query this action by hash:iotexscan.io/action/xxx..
 ```
 
 #### Invoke smart contract by function
-`Usage:
-  ioctl contract invoke function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]`
+
+`Usage: ioctl contract invoke function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]`
 
 ```
-→  ioctl contract invoke function io1h8z... a.abi sendCoin 2 --with-arguments {"recipients":["io1h8zxmdacge966wp6t90a02ncghaa6eptnftfqr","io14fmlh7zedcx7tn3k9k744v54nxnv8zky86tjhj"],"amounts":["312","123"],"payload":"PLEASE!!!"} 
+→  ioctl contract invoke function io1h8z... a.abi sendCoin 2 --with-arguments {"recipients":["io1h8zxmdacge966wp6t90a02ncghaa6eptnftfqr","io14fmlh7zedcx7tn3k9k744v54nxnv8zky86tjhj"],"amounts":["312","123"],"payload":"PLEASE!!!"}
 Output:
 version: 1  nonce: 146  gasLimit: 45600  gasPrice: 0.000001 IOTX
 senderAddress: io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng (yqr)
@@ -836,9 +838,9 @@ execution: <
 ```
 
 #### Invoke smart contract by bytecode
-`Usage:
-  ioctl contract invoke bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]
-`
+
+`Usage: ioctl contract invoke bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]`
+
 ```
 →  ioctl contract deploy bytecode 0x1bfc56c6... -s yqr
 Output:
@@ -852,9 +854,9 @@ execution: <
 ```
 
 #### Test smart contract by bytecode
-`Usage:
-  ioctl contract test bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]
-`
+
+`Usage: ioctl contract test bytecode (CONTRACT_ADDRESS|ALIAS) PACKED_ARGUMENTS [AMOUNT_IOTX]`
+
 ```
 →  ioctl contract test bytecode io18qq... a4d66daf
 Output:
@@ -862,10 +864,9 @@ return 0000000000000000000000000000000000000000000000000000000000000000
 ```
 
 #### Test smart contract by function
-`
-Usage:
-  ioctl contract test function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]
-`
+
+`Usage: ioctl contract test function (CONTRACT_ADDRESS|ALIAS) ABI_PATH FUNCTION_NAME [AMOUNT_IOTX] [--with-arguments INVOKE_INPUT]`
+
 ```
 →  ioctl contract test function io18qq... a.abi owner
 Output:
@@ -922,7 +923,7 @@ Wait for several seconds and query this action by hash:a51805dbca3046c62f3dd1436
 
 #### Renew a Bucket
 
-`Usage: ioctl stake2 renew BUCKET_INDEX STAKE_DURATION [DATA] [--auto-stake] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y] `
+`Usage: ioctl stake2 renew BUCKET_INDEX STAKE_DURATION [DATA] [--auto-stake] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 
 ```
 ➜   ioctl stake2 renew 56 7 -s tmp2
@@ -952,9 +953,9 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:c6acfec04e0a6a623713f928bdbe94eb573a6d52227241e0595509cea44728ab
 ```
 
-#### Change Candidate Of Bucket 
+#### Change Candidate Of Bucket
 
-`Usage: ioctl stake2 change CANDIDATE_NAME BUCKET_INDEX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y] `
+`Usage: ioctl stake2 change CANDIDATE_NAME BUCKET_INDEX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 
 ```
 ➜   ioctl stake2 change robotbp00001 56 -s tmp2
@@ -984,7 +985,7 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:2ee5a6bb764c502d9a8a016d71d83e8b610f4bade1bb0207ec97108a2934a1f6
 ```
 
-#### Transfer Ownership Of Bucket 
+#### Transfer Ownership Of Bucket
 
 `Usage: ioctl stake2 transfer (ALIAS|VOTE_ADDRESS) BUCKET_INDEX [DATA] [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 
@@ -1080,7 +1081,7 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:9571ad35b0184ad75eaabe539d57513f37fac74b9f605c172fbc28b760d256df
 ```
 
-#### Update Candidate Information 
+#### Update Candidate Information
 
 `Usage: ioctl stake2 update NAME (ALIAS|OPERATOR_ADDRESS) (ALIAS|REWARD_ADDRESS) [-s SIGNER] [-n NONCE] [-l GAS_LIMIT] [-p GAS_PRICE] [-P PASSWORD] [-y]`
 

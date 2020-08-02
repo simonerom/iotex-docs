@@ -1,17 +1,21 @@
 ---
 id: guides
-title: Get Started
+title: Introduction
 ---
 
-## :sparkler: Introduction
+## What is IoTeX?
+
+### What is IoTeX?
 
 Founded as an open-source project in 2017, IoTeX envisions bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/gIVskvgzG9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Over the past 2+ years, the IoTeX blockchain was built from scratch with our mission in mind. What started as a few lines of code has now blossomed into one of the most secure, performant, and decentralized blockchains in the world. IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper).
 
 IoTeX core-dev is continuously working hard to bring the community more useful features.
 
-### The Architecture
+### The IoTeX Architecture
 
 IoTeX blockchain consists of the four-layered components:
 

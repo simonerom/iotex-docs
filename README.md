@@ -55,7 +55,7 @@ part2Body:
     link: "https://github.com/iotexproject/iips"
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Run A Fullnode"
+  - title: "Run a Fullnode"
     link: "/docs/get-started.html#build-and-run"
     icon: "/img/icon_fullnode.svg"
     content: "Build, configure and run your node in a step by step way."

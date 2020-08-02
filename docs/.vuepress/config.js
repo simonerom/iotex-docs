@@ -20,7 +20,6 @@ module.exports = {
     //repo: "iotexproject/iotex-docs",
     displayAllHeaders: true,
     editLinks: true,
-    logo: "/logo.svg",
     locales: {
       "/": {
         label: "English",

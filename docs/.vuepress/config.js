@@ -63,17 +63,16 @@ module.exports = {
               children: ["hardware/pebble"]
             }
           ],
-          "/": [
+          "/developer": [
             {
               collapsable: false,
               children: [
-                "",
-                "docs/get-started",
-                "docs/libraries-and-tools",
-                "docs/ioctl",
-                "docs/api",
-                "docs/analytics",
-                "docs/misc"
+                "developer/introduction",
+                "developer/libraries-and-tools",
+                "developer/ioctl",
+                "developer/api",
+                "developer/analytics",
+                "developer/misc"
               ]
             }
           ]

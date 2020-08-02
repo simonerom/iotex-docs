@@ -7,7 +7,7 @@ set -e
 NODE_ENV=production npm run build
 
 # navigate into the build output directory
-cd docs/.vuepress/dist
+cd .vuepress/dist
 
 # if you are deploying to a custom domain
 echo 'docs.iotex.io' > CNAME
@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:simonerom/iotex-docs.git topics-reorg:gh-pages
+ git push -f git@github.com:iotexproject/iotex-docs.git master:gh-pages
 
 cd -

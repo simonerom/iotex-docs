@@ -59,3 +59,4 @@ typings/
 .env
 
 .vuepress/dist
+.vscode/launch.json

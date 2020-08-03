@@ -1,19 +1,10 @@
 ---
-id: guides
-title: Introduction
+title: IoTeX Architecture
 ---
 
-## What is IoTeX?
-
-### What is IoTeX?
-
-Founded as an open-source project in 2017, IoTeX envisions bringing together people, process, data and things with trust and free will to create new capabilities, richer experiences, and unprecedented economic opportunity. Our platform aims to be the global trust backbone for intelligently and efficiently connecting distinct parties, where IoTeX blockchain is the root of trust for this open platform.
-
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/gIVskvgzG9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+### IoTeX Architecture
 
 Over the past 2+ years, the IoTeX blockchain was built from scratch with our mission in mind. What started as a few lines of code has now blossomed into one of the most secure, performant, and decentralized blockchains in the world. IoTeX blockchain is the leading scalable and extensible blockchain with several innovative technologies in-house, including the blockchains-in-blockchain architecture for heterogeneous computing, fast and robust Roll-DPoS consensus scheme, and plug-in-play sub-protocols. More details can be found [here](https://www.iotex.io/research-paper).
-
-IoTeX core-dev is continuously working hard to bring the community more useful features.
 
 ### The IoTeX Architecture
 
@@ -22,7 +13,7 @@ IoTeX blockchain consists of the four-layered components:
 - **Networking Layer** enables the peer-to-peer communication between IoTeX nodes, and provide blockchain services (through [grpc](https://grpc.io/)) to applications
 - **Consensus Layer** runs [Roll-DPoS](iotex.io/research) to select the active block producers among a pool of block producer candidates (who are elected via staking and voting), using a decentralized randomized algorithm (DKG + BLS).
 - **State Transition Layer** is composed of five sub-protocols and is responsible for transiting the states of the blockchain based on actions.
-- **Programing Layer** provides programmability to implement customized business logic for state transition. Currently, it supports Ethereum Virtual Machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it. [Codelabs](http://codelabs.iotex.io/) is a great place for developers to get started!
+- **Programming Layer** provides programmability to implement customized business logic for state transition. Currently, it supports Ethereum Virtual Machine (EVM) with smart contracts written in Solidity. Developers could seamlessly port existing DApps onto it. [Codelabs](http://codelabs.iotex.io/) is a great place for developers to get started!
 
 ![IoTeX Blockchain Architecture](https://cdn-images-1.medium.com/max/2000/0*cPrsvVa1wIE0cqnS)
 

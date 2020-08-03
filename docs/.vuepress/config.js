@@ -65,9 +65,17 @@ module.exports = {
           ],
           "/developer": [
             {
+              title: "Introduction",
+              sidebarDepth: 1,
+              collapsable: false,
+              children: ["developer/whatisiotex", "developer/vision"]
+            },
+            {
+              title: "More",
+              sidebarDepth: 1,
               collapsable: false,
               children: [
-                "developer/introduction",
+                "developer/iott-architecture",
                 "developer/libraries-and-tools",
                 "developer/ioctl",
                 "developer/api",

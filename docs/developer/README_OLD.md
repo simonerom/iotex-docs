@@ -75,15 +75,11 @@ part4Body:
     link: "https://github.com/iotexproject/iips"
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
-<<<<<<< HEAD:docs/developer/README_OLD.md
   - title: "Exchanges & Wallets Integrations"
-=======
-  - title: "Run a Fullnode"
     link: "/docs/get-started.html#build-and-run"
     icon: "/img/icon_fullnode.svg"
     content: "Build, configure and run your node in a step by step way."
   - title: "Exchanges and Wallets"
->>>>>>> origin/master:README.md
     link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
     icon: "/img/icon_exchanges.svg"
     content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."

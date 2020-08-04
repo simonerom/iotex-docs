@@ -35,7 +35,7 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Introduction", link: "/introduction/" },
+          { text: "Introduction", link: "/introduction/whatisiotex" },
           { text: "Develop", link: "/developer/" },
           { text: "Get Involved", link: "/contribute/" }
         ],
@@ -44,7 +44,7 @@ module.exports = {
             {
               collapsable: false,
               title: "Introduction",
-              path: "/introduction/platform-overview",
+              path: "/introduction/whatisiotex",
               children: [
                 "introduction/whatisiotex",
                 {

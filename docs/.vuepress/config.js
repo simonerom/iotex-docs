@@ -36,18 +36,21 @@ module.exports = {
         nav: [
           { text: "Home", link: "/" },
           { text: "Developers", link: "/developer/" },
-          { text: "Nodes", link: "/nodes/" },
-          { text: "Staking", link: "/staking/" },
+          { text: "Full Node", link: "/nodes/" },
           { text: "Contribute", link: "/contribute/" }
         ],
         sidebar: {
-          "/pylon": [
+          "/staking": [
             {
+              title: "Staking & Voting",
+              path: "/staking",
+              sidebarDepth: 0,
               collapsable: false,
               children: [
-                "pylon/get-started",
-                "pylon/guides",
-                "pylon/code-review-checklist"
+                "staking/how-to-stake",
+                "staking/staking-options",
+                "staking/change-vote",
+                "staking/add-tokens"
               ]
             }
           ],
@@ -67,15 +70,39 @@ module.exports = {
             {
               title: "Introduction",
               sidebarDepth: 1,
+              path: "/developer/",
               collapsable: false,
-              children: ["developer/whatisiotex", "developer/vision"]
+              children: [
+                "developer/whatisiotex",
+                {
+                  collapsable: true,
+                  title: "The platform",
+                  path: "/developer/platform-overview",
+                  children: [
+                    "developer/platform-overview",
+                    "developer/blockchain",
+                    "developer/middleware",
+                    "developer/tools-and-api"
+                  ]
+                },
+                {
+                  collapsable: true,
+                  title: "Core Concepts",
+                  path: "/developer/account-concept",
+                  children: [
+                    "developer/account-concept",
+                    "developer/node-concept",
+                    "developer/transaction-concept",
+                    "developer/fee-concept"
+                  ]
+                }
+              ]
             },
             {
-              title: "More",
+              title: "Yet to be reviewed...",
               sidebarDepth: 1,
               collapsable: false,
               children: [
-                "developer/iott-architecture",
                 "developer/libraries-and-tools",
                 "developer/ioctl",
                 "developer/api",

@@ -9,28 +9,28 @@ topCard:
   title: "Get Started"
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
   icon: "/img/icon_iotex.svg"
-  link: "/docs/get-started.html"
+  link: "/developer/get-started.html"
 part1Title: "Explore Developer Resources"
 part1Body:
   - title: "ioctl CLI"
     isHead: true
     content: "A command-line tool for interacting with IoTeX blockchains."
-    link: "/docs/ioctl.html"
+    link: "/developer/ioctl.html"
     image: "/img/ioctl.png"
   - title: "Chain API Reference"
     isHead: false
     content: "Discover all IoTeX blockchain API resources."
-    link: "/docs/api.html"
+    link: "/developer/api.html"
     icon: "/img/icon_chainapi.svg"
   - title: "SDKs"
     isHead: false
     content: "From Java to Golang, we've got you covered."
-    link: "/docs/libraries-and-tools.html"
+    link: "/developer/libraries-and-tools.html"
     icon: "/img/icon_sdk.svg"
   - title: "Analytics GraphQL Reference"
     isHead: false
     content: "Look for deep analytical insights? There you go."
-    link: "/docs/analytics.html"
+    link: "/developer/analytics.html"
     icon: "/img/icon_analytics.svg"
   - title: "Pylon Dapp Starter"
     isHead: false
@@ -76,7 +76,7 @@ part4Body:
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
   - title: "Exchanges & Wallets Integrations"
-    link: "/docs/get-started.html#build-and-run"
+    link: "/developer/get-started.html#build-and-run"
     icon: "/img/icon_fullnode.svg"
     content: "Build, configure and run your node in a step by step way."
   - title: "Exchanges and Wallets"

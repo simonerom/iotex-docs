@@ -2,17 +2,24 @@
 home: true
 pageClass: home-page
 heroImage: /logo.svg
-heroText: Developer Documentation
-tagline: IoTeX is more than just blockchain. It is a decentralized IoT platform that combines blockchain, secure hardware, and data services components.
-actionText: Get Started →
+heroText: The Internet of Trusted Things
+tagline: IoTeX is a decentralized IoT platform that combines blockchain, secure hardware, and data services components.
+extraImage: /platform-layout.png
+actionText: Start Building →
 actionLink: /developer/
 features:
-  - title: Build on IoTeX
-    details: Start developing your IoT devices and Dapps that are “Powered by IoTeX”, allowing anyone to own their data, identity, and privacy while enjoying a fully connected lifestyle.
-  - title: Setup a Full Node
-    details: Learn how to setup and deploy a IoTeX Blockchain Full-Node and join as a Candidate Delegate in the IoTeX Network.
-  - title: IoTeX Staking
-    details: As a IOTX token holder you can give your contribution to the security of the IoTeX network and earning rewards by staking your tokens and voting for a delegate.
-    link: /staking/
-footer: © 2020 IoTeX | Visit our GitHub
+  - title: Explore the Protocol
+    featureLink: https://github.com/iotexproject/iotex-core#iotex-core
+    linkText: Visit GitHub ↗
+    details: Check out to the official Go implementation of IoTeX protocol!
+  - title: Join as a Delegate
+    featureLink: https://github.com/iotexproject/iotex-bootstrap#iotex-delegate-manual
+    linkText: Delegate guide ↗
+    details: Learn how to configure a full node and join as a candidate delegate.
+  - title: Learn more
+    featureLink: /introduction/whatisiotex.html
+    linkText: Introduction →
+    details: Explore the vision of IoTeX and learn about core concepts.
+footer: © 2020 IoTeX
+footerLink: https://iotex.io
 ---

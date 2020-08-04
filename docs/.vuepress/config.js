@@ -35,69 +35,45 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Developers", link: "/developer/" },
-          { text: "Full Node", link: "/nodes/" },
-          { text: "Contribute", link: "/contribute/" }
+          { text: "Introduction", link: "/introduction/" },
+          { text: "Develop", link: "/developer/" },
+          { text: "Get Involved", link: "/contribute/" }
         ],
         sidebar: {
-          "/staking": [
-            {
-              title: "Staking & Voting",
-              path: "/staking",
-              sidebarDepth: 0,
-              collapsable: false,
-              children: [
-                "staking/how-to-stake",
-                "staking/staking-options",
-                "staking/change-vote",
-                "staking/add-tokens"
-              ]
-            }
-          ],
-          "/middleware": [
+          "/introduction": [
             {
               collapsable: false,
-              children: ["middleware/did"]
-            }
-          ],
-          "/hardware": [
-            {
-              collapsable: false,
-              children: ["hardware/pebble"]
-            }
-          ],
-          "/developer": [
-            {
               title: "Introduction",
-              sidebarDepth: 1,
-              path: "/developer/",
-              collapsable: false,
+              path: "/introduction/platform-overview",
               children: [
-                "developer/whatisiotex",
+                "introduction/whatisiotex",
                 {
-                  collapsable: true,
+                  collapsable: false,
                   title: "The platform",
-                  path: "/developer/platform-overview",
+                  path: "/introduction/platform-overview",
                   children: [
-                    "developer/platform-overview",
-                    "developer/blockchain",
-                    "developer/middleware",
-                    "developer/tools-and-api"
+                    "introduction/platform-overview",
+                    "introduction/blockchain",
+                    "introduction/middleware",
+                    "introduction/tools-and-api"
                   ]
                 },
                 {
-                  collapsable: true,
+                  collapsable: false,
                   title: "Core Concepts",
-                  path: "/developer/account-concept",
+                  path: "/introduction/account-concept",
                   children: [
-                    "developer/account-concept",
-                    "developer/node-concept",
-                    "developer/transaction-concept",
-                    "developer/fee-concept"
+                    "introduction/account-concept",
+                    "introduction/node-concept",
+                    "introduction/transaction-concept",
+                    "introduction/fee-concept"
                   ]
                 }
               ]
-            },
+            }
+          ],
+
+          "/developer": [
             {
               title: "Yet to be reviewed...",
               sidebarDepth: 1,

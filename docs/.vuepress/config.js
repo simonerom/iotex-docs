@@ -35,8 +35,8 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Introduction", link: "/introduction/whatisiotex" },
-          { text: "Develop", link: "/developer/" },
+          { text: "Developers", link: "/developer/" },
+          { text: "Core concepts", link: "/introduction/whatisiotex" },
           { text: "Get Involved", link: "/contribute/" }
         ],
         sidebar: {
@@ -53,9 +53,9 @@ module.exports = {
                   path: "/introduction/platform-overview",
                   children: [
                     "introduction/platform-overview",
-                    "introduction/blockchain",
-                    "introduction/middleware",
-                    "introduction/tools-and-api"
+                    "introduction/blockchain-layer",
+                    "introduction/middleware-layer",
+                    "introduction/tools-layer"
                   ]
                 },
                 {
@@ -65,7 +65,7 @@ module.exports = {
                   children: [
                     "introduction/account-concept",
                     "introduction/node-concept",
-                    "introduction/transaction-concept",
+                    "introduction/action-concept",
                     "introduction/fee-concept"
                   ]
                 }

@@ -130,3 +130,27 @@ Example:
 ```
  ioctl did deregister io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 -s test1
 ```
+
+## 8. Get DID hash
+
+Get the hash of an existent DID.
+
+```
+ioctl did gethash (CONTRACT_ADDRESS|ALIAS) DID [flags]
+```
+Example:
+```
+ ioctl did gethash io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 did:io:0x8601CAb8A22bA1DB04ce909E4Ec1deE5555Bf3B0
+```
+
+## 9. Get DID uri
+
+Get the uri of an existent DID.
+
+```
+ioctl did geturi (CONTRACT_ADDRESS|ALIAS) DID [flags]
+```
+Example:
+```
+ ioctl did geturi io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 did:io:0x8601CAb8A22bA1DB04ce909E4Ec1deE5555Bf3B0
+```

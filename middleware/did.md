@@ -133,7 +133,7 @@ Example:
 
 ## 8. Get DID hash
 
-Get the hash of an existent DID.
+Get the hash of an existent DID doc.
 
 ```
 ioctl did gethash (CONTRACT_ADDRESS|ALIAS) DID [flags]
@@ -143,9 +143,9 @@ Example:
  ioctl did gethash io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 did:io:0x8601CAb8A22bA1DB04ce909E4Ec1deE5555Bf3B0
 ```
 
-## 9. Get DID uri
+## 9. Get DID URI
 
-Get the uri of an existent DID.
+Get the URI of an existent DID doc.
 
 ```
 ioctl did geturi (CONTRACT_ADDRESS|ALIAS) DID [flags]

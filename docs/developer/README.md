@@ -9,7 +9,7 @@ topCard:
   title: "Get Started"
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
   icon: "/img/icon_iotex.svg"
-  link: "/developer/get-started.html"
+  link: "/developer/get-started/ioctl.html"
 part1Title: "Explore Developer Resources"
 part1Body:
   - title: "ioctl CLI"

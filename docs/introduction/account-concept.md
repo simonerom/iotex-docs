@@ -21,15 +21,16 @@ For owned accounts, the private key is used to _sign_ transactions on the behalf
 
 While the address of an account can be generated from the private key, it's not possible to trace the private key that generated a certain address from the knowledge of the address alone.
 
+::: details Account generation steps
+
+A IoTeX account can be generated using the following steps:
+
+1. Generating a random private key and the corresponding public key using $secp256k1$'s elliptic curve;
+2. Apply $keccak256$ hash function to the public key, exluding the first byte: $hash := keccak256(pk[1:])$
+3. Take the last 20 bytes as the payload: $payload := hash[12:]$, which is the byte representation of the address;
+4. Apply [bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki) encoding on the payload and adding io prefix.
+   :::
+
 ### Smart contract Accounts
 
 As anticipated, smart contract accounts do not have a private key associated to it, therefore they cannot initiate transactions: a contract address can only be the destination of transactions. On the other hand, a smart contract address has some **executable code** associated to it, that gets **executed** each time a transaction is sent to its address.
-
-### Address generation
-
-A IoTeX address can be generated using the following steps:
-
-1. Generating a random private key and the corresponding public key using secp256k1's elliptic curve;
-2. Apply keccak256 hash function to the public key, exluding the first byte ($hash := keccak256(pk[1:])$;
-3. Take the late 20 bytes as the payload (payload := hash[12:]), which is the byte representation of the address;
-4. Apply [bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki) encoding on the payload and adding io prefix.

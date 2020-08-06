@@ -11,7 +11,7 @@ Similarly to other blockchains, IoTeX is a peer-to-peer network of **nodes** tha
 
 In IoTeX there are three types of nodes:
 
-- **Gateway**: these are nodes that keep a full copy of the blockchain, so that they can securely verify any new incoming transaction against the current status of the ledger. They can serve as the trusted gateway for communication among other users and devices in the IoTeX network, and with the blockchain itself.
+- **Gateway**: these are nodes that keep a full copy of the blockchain, so that they can securely verify any new incoming transaction against the current status of the ledger. They can serve as the trusted gateway for communication among other users and devices in the IoTeX network, and with the blockchain itself. Once the node is fully synced, one can communicate with them via [gRPC service](https://grpc.io/). The details of APIs are specified in the [API Docs](developer/api), and the corresponding proto files are located at https://github.com/iotexproject/iotex-core/tree/master/proto/api.
 
 - **Delegate Candidates**: these are very similar to a full node, except that the owner of the node configured it such that the node is recognised as a "Delegate Candidate" by other network participants, hence it's entitled to receive **votes** by IOTX token holders. Learn more about IoTeX Delegates [in this thread](https://community.iotex.io/t/official-iotex-delegates-thread/1263), and view the full list of Delegates on the [IoTeX voting website](member.iotex.io).
 

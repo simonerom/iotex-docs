@@ -1,4 +1,11 @@
 module.exports = {
+  markdown: {
+    lineNumbers: true,
+    extendMarkdown: md => {
+      // use more markdown-it plugins!
+      md.use(require("markdown-it-katex"));
+    }
+  },
   plugins: [
     [
       "@vuepress/google-analytics",
@@ -93,6 +100,13 @@ module.exports = {
   },
 
   head: [
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"
+      }
+    ],
     ["link", { rel: "icon", href: `/logo.png` }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
     ["meta", { name: "theme-color", content: "#3eaf7c" }],

@@ -1,6 +1,6 @@
 module.exports = {
   markdown: {
-    lineNumbers: true,
+    lineNumbers: false,
     extendMarkdown: md => {
       // use more markdown-it plugins!
       md.use(require("markdown-it-katex"));
@@ -72,8 +72,7 @@ module.exports = {
                   children: [
                     "introduction/account-concept",
                     "introduction/node-concept",
-                    "introduction/action-concept",
-                    "introduction/fee-concept"
+                    "introduction/action-concept"
                   ]
                 }
               ]
@@ -82,9 +81,19 @@ module.exports = {
 
           "/developer": [
             {
+              title: "Get Started",
+              path: "/developer/get-started/ioctl",
+              sidebarDepth: 0,
+              collapsable: true,
+              children: [
+                "/developer/get-started/ioctl",
+                "developer/get-started/single-node"
+              ]
+            },
+            {
               title: "Yet to be reviewed...",
               sidebarDepth: 1,
-              collapsable: false,
+              collapsable: true,
               children: [
                 "developer/libraries-and-tools",
                 "developer/ioctl",

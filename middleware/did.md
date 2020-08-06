@@ -2,21 +2,22 @@
 title: Address Based DID
 ---
 
-Please make sure to install ioctl on the latest master branch of iotex-core repo.
+Prerequisite: make sure to have ioctl installed.
 
 Our address-based DID contract on **IoTeX testnet** is: `io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8`
 
 Our address-based DID contract on **IoTeX mainnet** is: `TBD`
 
 
-## 1. Generate a DID Doc
-```
-Generate DID document using the private key from the wallet
+## 1. Generate a DID Doc Template
 
-Usage:
+Generate DID document template using an account from ioctl. The produced template can be modified as needed with its hash to be recalculated.
+```
   ioctl did generate [-s SIGNER] [flags]
 ```
+
 Example:
+
 ```bash
 ioctl did generate -s test1
 {
@@ -84,10 +85,11 @@ func main() {
 Register a new DID with the corresponding doc to IoTeX.
 
 ```
-Usage:
   ioctl did register (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
+
 Example:
+
 ```
 ioctl did register io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd75591465481404986fac73de766446c793ff67adfa171d51adf85 https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG -s test1
 ```
@@ -98,6 +100,7 @@ Resovle an IoTeX DID with our web resovler.
 ```
 http://did.testnet.iotex.one/1.0/identifiers/<DID>
 ```
+
 Exmaple:
 ```
 http://did.testnet.iotex.one/1.0/identifiers/did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A
@@ -108,10 +111,10 @@ http://did.testnet.iotex.one/1.0/identifiers/did:io:0x476c81C27036D05cB5ebfe30ae
 Update an existent DID.
 
 ```
-Usage:
   ioctl did update (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
 Example:
+
 ```
 ioctl did update io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd75591465481404986fac73de766446c793ff67adfa171d51adf85 https://gateway.pinata.cloud/ipfs/QmNNhWHyi5tRH78QqcTYHwfyNc3bbuLZTTvmk3UhWdAWjG -s test1
 ```
@@ -121,7 +124,6 @@ ioctl did update io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd7559146548
 Deregister an existent DID.
 
 ```
-Usage:
   ioctl did deregister (CONTRACT_ADDRESS|ALIAS) [flags]
 ```
 Example:

@@ -13,7 +13,7 @@ Our address-based DID contract on **IoTeX mainnet** is: `TBD`
 
 Generate DID document template using an account from ioctl. The produced template can be modified as needed with its hash to be recalculated.
 ```
-  ioctl did generate [-s SIGNER] [flags]
+ioctl did generate [-s SIGNER] [flags]
 ```
 
 Example:
@@ -85,7 +85,7 @@ func main() {
 Register a new DID with the corresponding doc to IoTeX.
 
 ```
-  ioctl did register (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
+ioctl did register (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
 
 Example:
@@ -111,7 +111,7 @@ http://did.testnet.iotex.one/1.0/identifiers/did:io:0x476c81C27036D05cB5ebfe30ae
 Update an existent DID.
 
 ```
-  ioctl did update (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
+ioctl did update (CONTRACT_ADDRESS|ALIAS) hash uri [flags]
 ```
 Example:
 
@@ -124,7 +124,7 @@ ioctl did update io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 21e575fd6fd7559146548
 Deregister an existent DID.
 
 ```
-  ioctl did deregister (CONTRACT_ADDRESS|ALIAS) [flags]
+ioctl did deregister (CONTRACT_ADDRESS|ALIAS) [flags]
 ```
 Example:
 ```

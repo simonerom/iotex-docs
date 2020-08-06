@@ -1,8 +1,10 @@
 ---
-title: Address Based DID
+title: Decentralized Identity
 ---
 
-Prerequisite: make sure to have ioctl installed.
+iotex DID has been integrated by uniresolver.io -- which is the industrial de facto that resolves DID to the corresponding document
+
+Please make sure to install ioctl on latest master branch of iotex-core repo.
 
 Our address-based DID contract on **IoTeX testnet** is: `io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8`
 

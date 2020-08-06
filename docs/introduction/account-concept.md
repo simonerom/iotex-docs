@@ -1,17 +1,17 @@
 ---
 id: guides
-title: IoTeX Accounts
+title: Accounts
 ---
 
-### IoTeX Accounts
+### Accounts
 
-An Account represents any entity participanting in the IoTeX network, that can be a user, a device, an enterprise, or even a piece of software that lives on the blockchain itself (a so called _smart contract_). Each IoTeX account always has a "public key" associated to it, that is represented by a 41 characters string starting by `io1...`, and is referred to as the **Address** of the account.
+An Account represents any entity participanting in the IoTeX network, that can be a user, a device, an enterprise, or even a piece of software that lives on the blockchain itself (a so called _smart contract_). Each IoTeX account always has a "public key" associated with it, that can be represented by a 41 characters string starting by `io1...`, and is referred to as the **Address** of the account.
 
 A typical address in the IoTeX blockchain looks like this:
 
 `io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd`
 
-Similarly to other blockchain platform, in IoTeX we have two type of accounts: **owned** accounts that have a known **private key** associated to them, and **smart contract accounts** that do not have a known private key associated with them.
+Similarly to other smart contract platforms, in IoTeX we have two type of accounts: **owned** accounts that have a known **private key** associated to them, and **smart contract** accounts that do not have a known private key associated with them.
 
 ![IoTeX Platform](/img/introduction/accounts.png)
 
@@ -23,4 +23,13 @@ While the address of an account can be generated from the private key, it's not 
 
 ### Smart contract Accounts
 
-As anticipated, smart contract accounts do not have a private key associated to it, therefore they cannot initiate transactions: a contract address can only be the destination of transactions. On the other side, a smart contract address has some **executable code** associated to it, that gets executed each time a transaction is sent to its account address.
+As anticipated, smart contract accounts do not have a private key associated to it, therefore they cannot initiate transactions: a contract address can only be the destination of transactions. On the other hand, a smart contract address has some **executable code** associated to it, that gets **executed** each time a transaction is sent to its address.
+
+### Address generation
+
+A IoTeX address can be generated using the following steps:
+
+1. Generating a random private key and the corresponding public key using secp256k1's elliptic curve;
+2. Apply keccak256 hash function to the public key, exluding the first byte ($hash := keccak256(pk[1:])$;
+3. Take the late 20 bytes as the payload (payload := hash[12:]), which is the byte representation of the address;
+4. Apply [bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki) encoding on the payload and adding io prefix.

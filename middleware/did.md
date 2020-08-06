@@ -154,3 +154,15 @@ Example:
 ```
  ioctl did geturi io1m3wjevwhz2s58sasq0wj4luxrnqt047s687zw8 did:io:0x8601CAb8A22bA1DB04ce909E4Ec1deE5555Bf3B0
 ```
+
+## 10. Deploy DID contract with ioctl and solc
+
+Deploy DID contract with ioctl and solc.First install ioctl and solc,and then prepare the DID contract files.
+
+```
+ioctl contract deploy sol CONTRACT_NAME [CODE_FILES...] [--with-arguments INIT_INPUT] [flags]
+```
+Example:
+```
+ ioctl contract deploy sol IoTeXDID.sol
+```

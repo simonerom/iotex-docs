@@ -16,12 +16,23 @@
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
       </p>
 
-      <img
-        class="extraImage"
-        v-if="data.extraImage"
-        :src="$withBase(data.extraImage)"
-      />
-
+      <div class="bc-layers">
+        <img
+          class="extraImage"
+          v-if="data.extraImage1"
+          :src="$withBase(data.extraImage1)"
+        />
+        <img
+          class="extraImage"
+          v-if="data.extraImage2"
+          :src="$withBase(data.extraImage2)"
+        />
+        <img
+          class="extraImage"
+          v-if="data.extraImage3"
+          :src="$withBase(data.extraImage3)"
+        />
+      </div>
       <p v-if="data.actionText && data.actionLink" class="action">
         <NavLink class="action-button" :item="actionLink" />
       </p>
@@ -118,6 +129,9 @@ export default {
       border-bottom 1px solid darken($accentColor, 10%)
       &:hover
         background-color lighten($accentColor, 5%)
+  .bc-layers
+    display flex
+
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0

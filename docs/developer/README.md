@@ -3,19 +3,19 @@ home: false
 heroImage: null
 heroText: null
 tagline: null
-mainTitle: "Home"
+mainTitle: "Developer Home"
 subTitle: "Welcome to the IoTex Developer documentation"
 topCard:
   title: "Get Started"
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
   icon: "/img/icon_iotex.svg"
-  link: "/developer/get-started/ioctl.html"
+  link: "/developer/get-started/ioctl-install.html"
 part1Title: "Explore Developer Resources"
 part1Body:
   - title: "ioctl CLI"
     isHead: true
     content: "A command-line tool for interacting with IoTeX blockchains."
-    link: "/developer/ioctl.html"
+    link: "/developer/get-started/ioctl-install.html"
     image: "/img/ioctl.png"
   - title: "Chain API Reference"
     isHead: false
@@ -25,7 +25,7 @@ part1Body:
   - title: "SDKs"
     isHead: false
     content: "From Java to Golang, we've got you covered."
-    link: "/developer/libraries-and-tools.html"
+    link: "/developer/sdk/overview"
     icon: "/img/icon_sdk.svg"
   - title: "Analytics GraphQL Reference"
     isHead: false
@@ -51,7 +51,7 @@ part2Title: "IoTeX Middleware"
 part2Body:
   - title: "Decentralized Identity"
     content: "Decentralized identity for devices, apps and people"
-    link: "http://localhost:8080/middleware/did.html"
+    link: "/developer/did/overview"
     icon: "/img/icon_did.svg"
 part3Title: "Clone Sample Projects"
 part3Body:

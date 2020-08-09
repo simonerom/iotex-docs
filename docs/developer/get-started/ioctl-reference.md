@@ -2,7 +2,56 @@
 title: ioctl command reference
 ---
 
+# ioctl command reference
+
 [[toc]]
+
+## Install ioctl
+
+Install ioctl Release Build:
+
+```
+curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-cli.sh | sh
+```
+
+install ioctl Latest/Unstable Build:
+
+```
+curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-cli.sh | sh -s "unstable"
+```
+
+## Show Version & Update
+
+### Version
+
+`Usage: ioctl version`
+
+```
+→  ioctl version
+Client:
+packageVersion:"v0.5.0" packageCommitID:"a4308fc82bea22cfaa45addef679a09f41f3a998" gitStatus:"clean" goVersion:"go version go1.11.5 darwin/amd64" buildTime:"2019-04-20-PDT/18:04:37"
+
+Server: api.iotex.one:443
+packageVersion:"v0.5.0" packageCommitID:"a4308fc82bea22cfaa45addef679a09f41f3a998" gitStatus:"clean" goVersion:"go version go1.11.5 linux/amd64" buildTime:"2019-04-21-UTC/01:04:11"
+```
+
+### Update ioctl
+
+`Usage: ioctl update [-t version-type]`
+
+```
+➜  ioctl update
+Downloading the latest stable version ...
+Password:
+ioctl is up-to-date now.
+```
+
+```
+➜  ioctl update -t unstable
+Downloading the latest unstable version ...
+Password:
+ioctl is up-to-date now.
+```
 
 ## Managing Accounts
 
@@ -199,7 +248,57 @@ Public Key: 04ac93d2fffdf488659c3f58890f6ddc55818d50f884e515aa90b2b1ca1e0fc223f8
 Account #IOsenser has been updated.
 ```
 
-## Action
+## Using Aliases
+
+### Set Alias
+
+`Usage: ioctl alias set ALIAS ADDRESS`
+
+```
+➜  ioctl alias set test io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg
+set
+```
+
+### Remove Alias
+
+`Usage: ioctl alias remove ALIAS`
+
+```
+➜  ioctl alias remove frank
+frank is removed
+```
+
+### List Alias
+
+`Usage: ioctl alias list`
+
+```
+➜  ioctl alias list
+io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt - IOsenser
+io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg - test
+io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - whale
+```
+
+### Export Aliases To Either Json Or Yaml Format
+
+`Usage: ioctl alias export`
+
+```
+➜  ioctl alias export
+{"aliases":[{"name":"gas-test","address":"io15kqxz7a0r72akrgy6p7fuu88llg7cxn9rlfjdj"},{"name":"public-length","address":"io15cg78lnv54r8m8vrkrv9ktq4uyngp5aenmj5wa"},{"name":"test","address":"io1v9r84ckmccqczl00r0sdepvaunsk456pcw9rvq"},{"name":"tmp2","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"daddypig","address":"io1gh439pm67d4cwxt882xpylj75klys6esepml60"},{"name":"dorothy","address":"io1x0e9jwx7yv7sk2p4lj4vt4czydwtlwkhaaczt7"},{"name":"infinite-loop","address":"io14cu7qpseelx0zg8lm2tl4a927lqmfl7dgr886q"},{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"},{"name":"tmp","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"cashier","address":"io1paxfkzr5kpgxjxckfydhttcg3vqtug5ehlrvrx"}]}
+```
+
+### Import Aliases
+
+`Usage: ioctl alias import 'DATA'`
+
+```
+➜  ioctl alias import '{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"}'
+0/0 aliases imported
+Existed aliases:
+```
+
+## Work with Action
 
 ### Transfer Tokens
 
@@ -382,57 +481,7 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:23aee3e08f084d5090329d47e27afa8c08358967ca8d6f2b2dc26803b7491d4e
 ```
 
-## Alias
-
-### Set Alias
-
-`Usage: ioctl alias set ALIAS ADDRESS`
-
-```
-➜  ioctl alias set test io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg
-set
-```
-
-### Remove Alias
-
-`Usage: ioctl alias remove ALIAS`
-
-```
-➜  ioctl alias remove frank
-frank is removed
-```
-
-### List Alias
-
-`Usage: ioctl alias list`
-
-```
-➜  ioctl alias list
-io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt - IOsenser
-io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg - test
-io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - whale
-```
-
-### Export Aliases To Either Json Or Yaml Format
-
-`Usage: ioctl alias export`
-
-```
-➜  ioctl alias export
-{"aliases":[{"name":"gas-test","address":"io15kqxz7a0r72akrgy6p7fuu88llg7cxn9rlfjdj"},{"name":"public-length","address":"io15cg78lnv54r8m8vrkrv9ktq4uyngp5aenmj5wa"},{"name":"test","address":"io1v9r84ckmccqczl00r0sdepvaunsk456pcw9rvq"},{"name":"tmp2","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"daddypig","address":"io1gh439pm67d4cwxt882xpylj75klys6esepml60"},{"name":"dorothy","address":"io1x0e9jwx7yv7sk2p4lj4vt4czydwtlwkhaaczt7"},{"name":"infinite-loop","address":"io14cu7qpseelx0zg8lm2tl4a927lqmfl7dgr886q"},{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"},{"name":"tmp","address":"io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4"},{"name":"cashier","address":"io1paxfkzr5kpgxjxckfydhttcg3vqtug5ehlrvrx"}]}
-```
-
-### Import Aliases
-
-`Usage: ioctl alias import 'DATA'`
-
-```
-➜  ioctl alias import '{"name":"max-time","address":"io1fzyv2tlfh3xkper4xln3phfr0mcklzmgans5p5"}'
-0/0 aliases imported
-Existed aliases:
-```
-
-## Blockchain
+## Querying the Blockchain
 
 ### Query Blockchain Information
 
@@ -558,7 +607,7 @@ unstakeStartTime: none
 }
 ```
 
-## Config
+## Configuring ioctl
 
 `Variables: [endpoint, wallet, explorer, defaultacc, language, nsv2height]`\
 `Explorers: [iotexscan (default), iotxplorer, custom]`
@@ -590,7 +639,7 @@ endpoint is set to api.iotex.one:443
 Config reset to default values
 ```
 
-## Node
+## Querying Delegates
 
 ### Query Delegates
 
@@ -657,7 +706,7 @@ ProbationList : [
 io1t54nfdnpldaxkpm35f2gzh3rx6cakypmp5xfz5: 45819 IOTX
 ```
 
-## Smart Contract
+## Working with Smart Contracts
 
 ### Prepare solidity compiler
 
@@ -828,7 +877,7 @@ Output:
 return 000000000000000000000000c7f43fab2ca353d29ce0da04851ab74f45b09593
 ```
 
-## Stake/Vote
+## Staking/Voting Actions
 
 ### Create Bucket for Voting
 
@@ -1069,61 +1118,6 @@ Action has been sent to blockchain.
 Wait for several seconds and query this action by hash:c6daaedee325d339e2eba15b76646329c940c0f07ebe9c13cd1f3288ee319a5d
 ```
 
-## Version/Update
-
-### Version
-
-`Usage: ioctl version`
-
-```
-→  ioctl version
-Client:
-packageVersion:"v0.5.0" packageCommitID:"a4308fc82bea22cfaa45addef679a09f41f3a998" gitStatus:"clean" goVersion:"go version go1.11.5 darwin/amd64" buildTime:"2019-04-20-PDT/18:04:37"
-
-Server: api.iotex.one:443
-packageVersion:"v0.5.0" packageCommitID:"a4308fc82bea22cfaa45addef679a09f41f3a998" gitStatus:"clean" goVersion:"go version go1.11.5 linux/amd64" buildTime:"2019-04-21-UTC/01:04:11"
-```
-
-### Update ioctl
-
-`Usage: ioctl update [-t version-type]`
-
-```
-➜  ioctl update
-Downloading the latest stable version ...
-Password:
-ioctl is up-to-date now.
-```
-
-```
-➜  ioctl update -t unstable
-Downloading the latest unstable version ...
-Password:
-ioctl is up-to-date now.
-```
-
-## XRC20 Tokens
-
-### Query Total Token Supply On Erc20 Contract
-
-`Usage: ioctl xrc20 totalSupply -c ALIAS|CONTRACT_ADDRESS`
-
-```
-➜   ioctl xrc20 totalSupply -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
-Raw output: 0000000000000000000000000000000000000000010f73e141e95768f6bfacac
-Output in decimal: 328166124527934490560933036
-```
-
-### Query Account Balance On Erc20 Contract
-
-`Usage: ioctl xrc20 balanceOf ALIAS|ACCOUNT_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
-
-```
-➜   ioctl xrc20 balanceOf io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
-Raw output: 000000000000000000000000000000000000000000000000b469471f80170d33
-Output in decimal: 13000000000000199987
-```
-
 ### Transfer Token On Erc20 Contract
 
 `Usage: ioctl xrc20 transfer ALIAS|TARGET_ADDRESS AMOUNT -c ALIAS|CONTRACT_ADDRESS [-l GAS_LIMIT] -s SIGNER [-p GAS_PRICE]`
@@ -1171,4 +1165,26 @@ Wait for several seconds and query this action by hash:iotexscan.io/action/xxx..
 ➜   ioctl xrc20 allowance io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
 Raw output: 0000000000000000000000000000000000000000000000000000000000000004
 Output in decimal: 4
+```
+
+## Working with XRC20 Tokens
+
+### Query Total Token Supply On Erc20 Contract
+
+`Usage: ioctl xrc20 totalSupply -c ALIAS|CONTRACT_ADDRESS`
+
+```
+➜   ioctl xrc20 totalSupply -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
+Raw output: 0000000000000000000000000000000000000000010f73e141e95768f6bfacac
+Output in decimal: 328166124527934490560933036
+```
+
+### Query Account Balance On Erc20 Contract
+
+`Usage: ioctl xrc20 balanceOf ALIAS|ACCOUNT_ADDRESS -c ALIAS|CONTRACT_ADDRESS`
+
+```
+➜   ioctl xrc20 balanceOf io1q4enhh0tp5pqpa6s4urhwrx32529pmyyzdgu3q -c io1y9ndaezjrdlkw93hquqru7txh9jcsmtmrvt4yw
+Raw output: 000000000000000000000000000000000000000000000000b469471f80170d33
+Output in decimal: 13000000000000199987
 ```

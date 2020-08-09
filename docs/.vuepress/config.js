@@ -1,4 +1,7 @@
 module.exports = {
+  alias: {
+    "@gateway": "introduction/node-concept"
+  },
   markdown: {
     lineNumbers: false,
     extendMarkdown: md => {
@@ -42,9 +45,14 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Developers", link: "/developer/" },
           { text: "Core concepts", link: "/introduction/whatisiotex" },
-          { text: "Get Involved", link: "/contribute/" }
+          { text: "Developers", link: "/developer/" },
+          { text: "Get Involved", link: "/contribute/" },
+          {
+            text: "Discord",
+            link:
+              "https://discord.com/channels/534888542648664074/549879942775701505"
+          }
         ],
         sidebar: {
           "/introduction": [
@@ -81,25 +89,82 @@ module.exports = {
 
           "/developer": [
             {
-              title: "Get Started",
-              path: "/developer/get-started/ioctl",
-              sidebarDepth: 0,
-              collapsable: true,
+              collapsable: false,
+              title: "Developer Home",
+              path: "/developer/",
               children: [
-                "/developer/get-started/ioctl",
-                "developer/get-started/single-node"
-              ]
-            },
-            {
-              title: "Yet to be reviewed...",
-              sidebarDepth: 1,
-              collapsable: true,
-              children: [
-                "developer/libraries-and-tools",
-                "developer/ioctl",
-                "developer/api",
-                "developer/analytics",
-                "developer/misc"
+                {
+                  title: "Get Started",
+                  path: "/developer/get-started/ioctl-install",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "/developer/get-started/ioctl-install",
+                    "/developer/get-started/ioctl-basic",
+                    "developer/get-started/single-node",
+                    "developer/get-started/interact"
+                  ]
+                },
+
+                {
+                  title: "Antenna SDKs",
+                  path: "/developer/sdk/overview",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "developer/sdk/overview",
+                    "developer/sdk/javascript",
+                    "developer/sdk/golang",
+                    "developer/sdk/swift",
+                    "developer/sdk/java",
+                    "developer/sdk/c",
+                    "developer/sdk/account-create",
+                    "developer/sdk/transfer",
+                    "developer/sdk/did"
+                  ]
+                },
+                {
+                  title: "Decentralized Identity",
+                  path: "/developer/did/overview",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "developer/did/overview",
+                    "developer/did/self-managed-interface",
+                    "developer/did/create-register",
+                    "developer/did/query",
+                    "developer/did/update",
+                    "developer/did/delete",
+                    "developer/did/resolution",
+                    "developer/did/verifiable-credentials",
+                    "developer/did/security-notes",
+                    "developer/did/reference"
+                  ]
+                },
+                {
+                  collapsable: true,
+                  sidebarDepth: 0,
+                  title: "ioctl command reference",
+                  path: "/developer/get-started/ioctl-reference",
+                  children: [
+                    {
+                      title: "Managing Accounts",
+                      path:
+                        "developer/get-started/ioctl-reference.md#managing-accounts"
+                    }
+                  ]
+                },
+                {
+                  title: "Reviewing...",
+                  sidebarDepth: 1,
+                  collapsable: true,
+                  children: [
+                    "developer/libraries-and-tools",
+                    "developer/api",
+                    "developer/analytics",
+                    "developer/misc"
+                  ]
+                }
               ]
             }
           ]

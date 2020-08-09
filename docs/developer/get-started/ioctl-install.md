@@ -2,7 +2,7 @@
 title: Install ioctl client
 ---
 
-# Command line client
+# Install ioctl Command line client
 
 The most basic tool for a IoTeX developer to get started is **ioctl**: a command-line interface that can communicate with a IoTeX [gateway](/introduction/node-concept) node, allowing you to query and send [actions](/introduction/action-concept) to the blockchain. You can quickly download and install the latest release of ioctl typing the following command in a terminal window:
 

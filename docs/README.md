@@ -4,7 +4,11 @@ pageClass: home-page
 heroImage: /logo.svg
 heroText: The Internet of Trusted Things
 tagline: IoTeX is a decentralized IoT platform that combines blockchain, secure hardware, and data services components.
-extraImage: /platform-layout.png
+
+extraImage1: /home-developer-layer.png
+extraImage2: /home-middleware-layer.png
+extraImage3: /home-blockchain-layer.png
+
 actionText: Start Building →
 actionLink: /developer/
 features:

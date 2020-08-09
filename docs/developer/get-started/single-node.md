@@ -1,14 +1,15 @@
 ---
-title: Local Testnet
+title: Run a Local Testnet
 ---
 
-### Get started with a local Testnet
+# Run a local Testnet
 
-Before you start your journey as an IoTeX developer, you will need a IoTeX [Gateway node](/introduction/node-concept) to serve as an **endpoint** to interact with the blockchain. While you can use the official the official gateway node provided by IoTeX, this would require you to obtain and consume some real IOTX tokens as you would be using the actual IoTeX Mainnet.
-You will be using the IoTeX Mainnet later, when your Dapps are deployed, meanwhile you can configure a local testnet that is made of one single node and has some pre-generated accounts owning test-IOTX tokens.
+## Build the node server
+
+Before you start your journey as an IoTeX developer, you need a IoTeX [Gateway node](/introduction/node-concept) to serve as an **endpoint**, that you can use to interact with the blockchain. While IoTeX provides official gateway nodes both to interact with official [Mainnet]() and [Testenet](), in this guide we will configure our own local Testnet, that will also include pre-generated accounts with some balance to start with.
 
 ::: warning
-To configure a single-node blockchain locally on your computer, you will need golang installed: find [more isnstructions on GitHub](https://github.com/iotexproject/iotex-core#iotex-core).
+To configure a single-node blockchain locally on your computer, you will need git and golang installed: find [more isnstructions on GitHub](https://github.com/iotexproject/iotex-core#iotex-core).
 :::
 
 Clone and build the IoTeX Full-Node code (iotex-core)
@@ -19,7 +20,26 @@ cd iotex-core
 make
 ```
 
-Now that you have the node executable built in the .bin/ directory, you can start it using the _single-node_ configuration file and enable it as a _Gateway_ node with the following command:
+## Add a test account with initial balance
+
+Now that you have the node executable built in the .bin/ directory, the last step is to add some initial test accounts preloaded with a positive balance of IOTX. So let's generate a new IoTeX Account, so let's list our available accounts:
+
+```
+$ ioctl account list
+
+io1a8r9fvu6e3vthfaqvnxlhc6eavsm6t8a2cwtud - devaccount
+```
+
+edit the genesis file `./config/standalone-genesis.yaml` and add this account to the `initBalances` section:
+
+```yaml
+account:
+  initBalances:
+    # overwrite with your test address
+    io1a8r9fvu6e3vthfaqvnxlhc6eavsm6t8a2cwtud: "100000000000000000000000000000000000"
+```
+
+we can now start our testnet using _STANDALONE_ mode to simulate a full blockchain in a single node, and also enabling it as a _Gateway_ so that we can interact with it. To do that, just run the server specifying the configuration file for standalone mode, and enable the gateway plugin:
 
 ```
 bin/server -plugin=gateway -config-path=./config/standalone-config.yaml

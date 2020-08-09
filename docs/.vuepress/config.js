@@ -100,9 +100,10 @@ module.exports = {
                   collapsable: true,
                   children: [
                     "/developer/get-started/ioctl-install",
-                    "/developer/get-started/ioctl-basic",
+                    "/developer/get-started/ioctl-create-account",
                     "developer/get-started/single-node",
-                    "developer/get-started/interact"
+                    "developer/get-started/interact",
+                    "/developer/get-started/ioctl-send-transfer"
                   ]
                 },
 

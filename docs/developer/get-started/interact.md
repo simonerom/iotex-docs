@@ -29,7 +29,7 @@ Blockchain Node: localhost:14014
 Verify the balance of your account:
 
 ```bash
-$ ioctl account balance devaccount
+$ ioctl account balance dev-acc
 
 io1a8r9fvu6e3vthfaqvnxlhc6eavsm6t8a2cwtud: 100000000000000000000000000000000000 IOTX
 ```

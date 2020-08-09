@@ -73,7 +73,7 @@ export default {
     padding-left 0.5em
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
-      cursor auto
+      cursor pointer
       color inherit
   // refine styles of nested sidebar groups
   &.is-sub-group
@@ -84,15 +84,16 @@ export default {
       font-weight bold
       padding-left 2rem
       &:not(.clickable)
-        opacity 0.5
+        opacity 1
     & > .sidebar-group-items
-      padding-left 1rem
+      padding-left 2.5rem
       & > li > .sidebar-link
+        padding-left 0.5rem
         font-size: 0.95em;
-        border-left none
+        border-left 0.25rem solid $accentColor
   &.depth-2
     & > .sidebar-heading
-      border-left none
+      border-left 0.25rem solid $accentColor
 
 .sidebar-heading
   color $textColor
@@ -105,7 +106,7 @@ export default {
   width 100%
   box-sizing border-box
   margin 0
-  border-left 0.25rem solid transparent
+  //border-left 0.25rem solid transparent
   &.open, &:hover
     color inherit
   .arrow

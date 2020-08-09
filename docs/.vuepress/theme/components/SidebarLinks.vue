@@ -55,7 +55,9 @@ export default {
     },
 
     toggleGroup(index) {
-      this.openGroupIndex = index === this.openGroupIndex ? -1 : index;
+      // this.openGroupIndex = index === this.openGroupIndex ? -1 : index;
+      // Prevent to close when clicking an already open group
+      this.openGroupIndex = index;
     },
 
     isActive(page) {

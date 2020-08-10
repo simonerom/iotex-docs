@@ -1,8 +1,14 @@
-# 1. Introduction to the process of writing S3 data
+---
+title: Tracker Dashboard
+---
 
-- Trackers collect data and places it in the corresponding topic of IOT-Core, such as `nrf-352656100458374`.
-- IOT-Core listens for the corresponding topic and adds the post-processing command: write to S3. Pay attention to the setting of role permissions. Make sure that the specified S3 bucket has writable permissions.
-- IOT-Core has Web-UI to mock data into topic, which can be manually filled with several records for verification.
+# Pebble Tracked Dashboard
+
+## Writing S3 data
+
+1. Trackers collect data and places it in the corresponding topic of IOT-Core, such as `nrf-352656100458374`.
+2. IOT-Core listens for the corresponding topic and adds the post-processing command: write to S3. Pay attention to the setting of role permissions. Make sure that the specified S3 bucket has writable permissions.
+3. IOT-Core has Web-UI to mock data into topic, which can be manually filled with several records for verification.
 
 The file format of S3 is determined in the IOT-Core [Action] configuration. The content of the file is the active data of tracker. Such as:
 
@@ -11,18 +17,18 @@ The file format of S3 is determined in the IOT-Core [Action] configuration. The 
 - Gyroscope: AX AY AZ acceleration, GX GY GZ gravity acceleration.
 - Voltage data: VBAT.
 
-# 2. The process of converting tracker data to grafana dashboard
+## Converting tracker data to Grtafana dashboard
 
-### 2.1 Create a kinesis data stream
+### Create a kinesis data stream
 
 Kinesis data stream is used to hook up lambda data processing functions. Enter the kinesis console and create a kinesis data stream. The number of slices is set to 1 and the name is `test-stream`.
 
-### 2.2 Create IAM role
+### Create IAM role
 
 - Create Role: `test-stream`, permission: `AmazonKinesisFullAccess`
 - Create Role: `lambda_role`, permission: `AWSLambdaKinesisExecutionRole`
 
-### 2.3 IOT-Core -> Kinesis data stream
+### IOT-Core to Kinesis data stream
 
 - Enter the IOT core console and click `Action` in the left sidebar
 - Create a rule with the following parameters:
@@ -30,7 +36,7 @@ Kinesis data stream is used to hook up lambda data processing functions. Enter t
   - SQL like: `select * from 'topic / nrf-352656100458374'`
   - Add operation: send the message to Amazon kinesis stream, and select role as `test-stream`.
 
-### 2.4 Create Lambda Function
+### Create Lambda Function
 
 - Create a lambda function:
   - Name: testInfluxdb
@@ -101,6 +107,6 @@ def lambda_handler(event, context):
     write_point(req_data)
 ```
 
-### 2.5 Grafana Dashboard
+### Grafana Dashboard
 
 http://docs.grafana.org/

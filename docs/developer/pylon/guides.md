@@ -1,8 +1,10 @@
 ---
-title: Guides
+title: Pylon Guides
 ---
 
-# Guides
+# Pylon Guides
+
+[[toc]]
 
 ## State management
 

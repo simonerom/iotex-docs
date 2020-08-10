@@ -1,8 +1,8 @@
 ---
-title: Get Started
+title: Pylon Introduction
 ---
 
-# Getting Started
+# Pylon Introduction
 
 Pylon is a full-stack starter for building IoTeX Dapps. Here are the features you’ll find in Pylon:
 
@@ -10,6 +10,10 @@ Pylon is a full-stack starter for building IoTeX Dapps. Here are the features yo
 - Server-side rendering and universal rendering with React and Redux
 - Apollo GraphQL (docs + playground), ES2017, TypeScript, TSX support out of the box
 - Server-side development via Koa.js
+
+#### Contents
+
+[[toc]]
 
 ## Create a project
 
@@ -67,7 +71,7 @@ However, please visit our [Contributing Code](/pylon/code-review-checklist.html)
 
 ## Architecture
 
-![Onefx Architecture](https://iotex.b-cdn.net/docs/PYLON%20DAPP%20STARTER%20ARCHITECTURE.png)
+![Onefx Architecture](/img/developer/pylon-arch.png)
 
 ```txt
 .

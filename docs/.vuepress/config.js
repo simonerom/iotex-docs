@@ -63,12 +63,13 @@ module.exports = {
               title: "Introduction",
               path: "/introduction/whatisiotex",
               children: [
-                "introduction/whatisiotex",
                 {
-                  collapsable: false,
+                  collapsable: true,
                   title: "The platform",
-                  path: "/introduction/platform-overview",
+                  sidebarDepth: 0,
+                  path: "/introduction/whatisiotex",
                   children: [
+                    "introduction/whatisiotex",
                     "introduction/platform-overview",
                     "introduction/blockchain-layer",
                     "introduction/middleware-layer",
@@ -76,8 +77,9 @@ module.exports = {
                   ]
                 },
                 {
-                  collapsable: false,
+                  collapsable: true,
                   title: "Core Concepts",
+                  sidebarDepth: 0,
                   path: "/introduction/account-concept",
                   children: [
                     "introduction/account-concept",

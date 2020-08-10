@@ -23,7 +23,7 @@ features:
   - title: Learn more
     featureLink: /introduction/whatisiotex.html
     linkText: Introduction →
-    details: Explore the vision of IoTeX and learn about core concepts.
+    details: Explore the vision of IoTeX and learn about the core concepts.
 footer: © 2020 IoTeX
 footerLink: https://iotex.io
 ---

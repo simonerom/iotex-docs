@@ -3,7 +3,7 @@ id: guides
 title: Middleware Layer
 ---
 
-### The Middleware Layer
+# The Middleware Layer
 
 IoTeX not only excels in blockchain, but also in core middleware components that we have fine-tuned for IoT. What truly differentiates IoTeX from other platforms is our focus on middleware that enables trusted devices and user-owned data:
 

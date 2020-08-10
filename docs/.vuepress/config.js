@@ -55,6 +55,7 @@ module.exports = {
           }
         ],
         sidebar: {
+          initialOpenGroupIndex: 1,
           "/introduction": [
             {
               collapsable: false,
@@ -90,6 +91,7 @@ module.exports = {
           "/developer": [
             {
               collapsable: false,
+              sidebarDepth: 0,
               title: "Developer Home",
               path: "/developer/",
               children: [
@@ -106,7 +108,6 @@ module.exports = {
                     "/developer/get-started/ioctl-send-transfer"
                   ]
                 },
-
                 {
                   title: "Antenna SDKs",
                   path: "/developer/sdk/overview",
@@ -114,14 +115,27 @@ module.exports = {
                   collapsable: true,
                   children: [
                     "developer/sdk/overview",
-                    "developer/sdk/javascript",
-                    "developer/sdk/golang",
-                    "developer/sdk/swift",
-                    "developer/sdk/java",
-                    "developer/sdk/c",
+                    "developer/sdk/install-antenna-js",
+                    "developer/sdk/install-antenna-go",
+                    "developer/sdk/install-antenna-swift",
+                    "developer/sdk/install-antenna-java",
+                    "developer/sdk/install-antenna-c"
+                  ]
+                },
+                {
+                  title: "Code Examples",
+                  path: "/developer/sdk/account-create",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
                     "developer/sdk/account-create",
                     "developer/sdk/transfer",
-                    "developer/sdk/did"
+                    "developer/sdk/smart-contracts",
+                    "developer/sdk/xrc20",
+                    "developer/sdk/did",
+                    "developer/sdk/rpc",
+                    "developer/sdk/iopay-integrate",
+                    "developer/sdk/iopay-login"
                   ]
                 },
                 {
@@ -143,7 +157,14 @@ module.exports = {
                   ]
                 },
                 {
-                  title: "IoCtl Command Reference",
+                  title: "Secure Hardware",
+                  path: "/developer/hardware/pebble",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: ["developer/hardware/pebble"]
+                },
+                {
+                  title: "ioctl Client Reference",
                   path: "/developer/ioctl/install",
                   sidebarDepth: 0,
                   collapsable: true,
@@ -162,15 +183,17 @@ module.exports = {
                   ]
                 },
                 {
+                  title: "Core API",
+                  path: "/developer/core-api/api",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: ["/developer/core-api/api"]
+                },
+                {
                   title: "Reviewing...",
                   sidebarDepth: 1,
                   collapsable: true,
-                  children: [
-                    "developer/libraries-and-tools",
-                    "developer/api",
-                    "developer/analytics",
-                    "developer/misc"
-                  ]
+                  children: ["developer/analytics", "developer/misc"]
                 }
               ]
             }

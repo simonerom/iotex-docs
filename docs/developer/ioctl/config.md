@@ -1,8 +1,8 @@
 ---
-title: Configure IoCtl
+title: Configure ioctl
 ---
 
-# Configure IoCtl
+# Configure ioctl
 
 [[toc]]
 

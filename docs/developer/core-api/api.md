@@ -1,10 +1,12 @@
 ---
-title: Core API
+title: Full gRPC API
 ---
 
-## Overview
+# Full gRPC API
 
 If you are accessing a non-TLS endpoint, make sure add `-plaintext` in your `grpcurl` commnad.
+
+[[toc]]
 
 ## GetAccount
 

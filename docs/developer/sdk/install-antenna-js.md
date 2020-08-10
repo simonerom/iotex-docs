@@ -1,5 +1,5 @@
 ---
-title: Antenna-Javascript
+title: Antenna-JS SDK
 ---
 
 # Install Javascript SDK

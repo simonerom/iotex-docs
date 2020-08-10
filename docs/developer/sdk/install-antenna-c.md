@@ -1,5 +1,5 @@
 ---
-title: Antenna-C
+title: Antenna-C SDK
 ---
 
 # Install Antenna-C

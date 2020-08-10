@@ -6,7 +6,7 @@ title: Install & Update
 
 [[toc]]
 
-## Install IoCtl
+## Install ioctl
 
 Install ioctl Release Build:
 

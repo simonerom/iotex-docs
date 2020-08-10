@@ -34,6 +34,7 @@
     "webpack-dev-middleware": "3.6.0"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.3",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",

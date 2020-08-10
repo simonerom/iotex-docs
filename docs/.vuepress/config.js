@@ -16,6 +16,7 @@ module.exports = {
         ga: "UA-111756489-6" // UA-00000000-0
       }
     ],
+    "@vuepress/back-to-top",
     "tabs"
   ],
   locales: {

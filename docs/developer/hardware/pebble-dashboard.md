@@ -2,7 +2,7 @@
 title: Tracker Dashboard
 ---
 
-# Pebble Tracked Dashboard
+# Pebble Tracker Dashboard
 
 ## Writing S3 data
 

@@ -17,6 +17,7 @@ module.exports = {
       }
     ],
     "@vuepress/back-to-top",
+    "vuepress-plugin-smooth-scroll",
     "tabs"
   ],
   locales: {
@@ -29,7 +30,6 @@ module.exports = {
 
   themeConfig: {
     //repo: "iotexproject/iotex-docs",
-    displayAllHeaders: true,
     editLinks: true,
     locales: {
       "/": {

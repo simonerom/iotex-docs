@@ -8,6 +8,8 @@ title: Pebble Tracker
 
 IoTeX's Pebble Tracker meets the demand of applications that require strong data security, integrity protection, and multiparty trust across the entire supply chain. Existing asset tracking solutions lack critical security features, rendering them easily hackable and exposed to data corruption.
 
+![](/img/developer/pebble.png)
+
 ## Features
 
 Pebble Tracker combines an **environmental sensor** (temperature, relative humidity, barometric pressure, altitude, and volatile organic compounds - VOCs), a **motion sensor** (3-axis gyroscope, 3-axis accelerometer), and an ambient **light sensor**. It's also equipped with cellular network connectivity and integrated GPS supporting precise, long range tracking of asset data using established cellular infrastructure.

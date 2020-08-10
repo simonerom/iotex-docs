@@ -142,6 +142,17 @@ module.exports = {
                   ]
                 },
                 {
+                  title: "Pylon dApp Starter",
+                  path: "/developer/pylon/introduction",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "/developer/pylon/introduction",
+                    "/developer/pylon/guides",
+                    "/developer/pylon/code-review-checklist"
+                  ]
+                },
+                {
                   title: "Decentralized Identity",
                   path: "/developer/did/overview",
                   sidebarDepth: 0,
@@ -164,7 +175,10 @@ module.exports = {
                   path: "/developer/hardware/pebble",
                   sidebarDepth: 0,
                   collapsable: true,
-                  children: ["developer/hardware/pebble"]
+                  children: [
+                    "developer/hardware/pebble",
+                    "developer/hardware/pebble-dashboard"
+                  ]
                 },
                 {
                   title: "ioctl Client Reference",
@@ -186,7 +200,7 @@ module.exports = {
                   ]
                 },
                 {
-                  title: "Core API",
+                  title: "Core API Reference",
                   path: "/developer/core-api/api",
                   sidebarDepth: 0,
                   collapsable: true,

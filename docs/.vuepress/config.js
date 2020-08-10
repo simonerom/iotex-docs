@@ -176,8 +176,8 @@ module.exports = {
                   sidebarDepth: 0,
                   collapsable: true,
                   children: [
-                    "developer/hardware/pebble",
-                    "developer/hardware/pebble-dashboard"
+                    "developer/hardware/pebble"
+                    //  "developer/hardware/pebble-dashboard" needs update
                   ]
                 },
                 {

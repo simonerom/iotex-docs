@@ -1,5 +1,5 @@
 ---
-title: Antenna-Swfit
+title: Antenna-Swfit SDK
 ---
 
 # Install Antenna Swift

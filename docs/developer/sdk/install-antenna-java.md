@@ -1,5 +1,5 @@
 ---
-title: Antenna Java
+title: Antenna-Java SDK
 ---
 
 # Install Antenna-Java

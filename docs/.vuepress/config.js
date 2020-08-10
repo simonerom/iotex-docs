@@ -143,16 +143,21 @@ module.exports = {
                   ]
                 },
                 {
-                  collapsable: true,
+                  title: "IoCtl Command Reference",
+                  path: "/developer/ioctl/install",
                   sidebarDepth: 0,
-                  title: "ioctl command reference",
-                  path: "/developer/get-started/ioctl-reference",
+                  collapsable: true,
                   children: [
-                    {
-                      title: "Managing Accounts",
-                      path:
-                        "developer/get-started/ioctl-reference.md#managing-accounts"
-                    }
+                    "developer/ioctl/install",
+                    "developer/ioctl/config",
+                    "developer/ioctl/account",
+                    "developer/ioctl/alias",
+                    "developer/ioctl/action",
+                    "developer/ioctl/bc",
+                    "developer/ioctl/node",
+                    "developer/ioctl/contract",
+                    "developer/ioctl/stake2",
+                    "developer/ioctl/xrc20"
                   ]
                 },
                 {

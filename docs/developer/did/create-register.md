@@ -35,7 +35,7 @@ function generateDIDString() private view returns (string) {
 
 An example of registration:
 
-```c++
+```c
 createDID("0x5576E95935366Ebd2637D9171E4C92e60598be10", "8806157fdcbcea265623576fa72d88568db3f9ca8b36bddfe3755ae80457eaf5", "user:password@tcp(example_connection_string:3306)/")
 ```
 

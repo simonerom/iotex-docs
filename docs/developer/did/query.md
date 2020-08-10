@@ -7,7 +7,7 @@ title: Query a DID
 IoTeX clients can query a DID's current hash and URI given a DID string whether they own the DID or not.
 Here is a draft DID hash/URI read implementation:
 
-```c++
+```c
 // For reference only and subject to change
 
 function getHash(string did) public view returns (bytes32) {

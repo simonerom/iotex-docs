@@ -6,7 +6,7 @@ title: Manage Accounts
 
 [[toc]]
 
-### Create Account(s)
+### Create Accounts
 
 `Usage: ioctl account create`
 
@@ -46,7 +46,7 @@ title: Manage Accounts
 }
 ```
 
-### Create An Account Into Wallet
+### Create and store Accounts
 
 `Usage: ioctl account createadd ALIAS`
 
@@ -58,7 +58,19 @@ New account "IOsenser" is created.
 Please Keep your password, or you will lose your private key.
 ```
 
-### Import An Account With Private Key
+### Update the Password for an Account
+
+`Usage: ioctl account update (ALIAS|ADDRESS)`
+
+```
+➜  ioctl account update IOsenser
+#IOsenser: Enter current password
+#IOsenser: Enter new password
+#IOsenser: Enter new password again
+Account #IOsenser has been updated.
+```
+
+### Import an Account from Private Key
 
 `Usage: ioctl account import [key|keystore] ALIAS`
 Two options are available. If you use `key`,
@@ -77,7 +89,7 @@ If you use `keystore`,
 ➜  ioctl account import keystore whale
 ```
 
-### Export Private Key From An Account
+### Export an Account Private Key
 
 `Usage: ioctl account export (ALIAS|ADDRESS)`
 
@@ -87,7 +99,17 @@ Enter password #whale:
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### Delete An Account
+### Export an Account Public Key
+
+`Usage: ioctl account exportpublic (ALIAS|ADDRESS)`
+
+```
+➜  ioctl account exportpublic tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+### Delete an Account
 
 `Usage: ioctl account delete (ALIAS|ADDRESS)`
 
@@ -113,7 +135,17 @@ io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg
 io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - 007
 ```
 
-### Query Balance
+### Sign a Message
+
+`Usage: ioctl account sign MESSAGE [-s SIGNER]`
+
+```
+➜  ioctl account sign "abcd" -s tmp2
+Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
+ec280f9f95ed5774fb042e69d92bfb685443dc99350d5460ecf1067d1cb539150903ff0d18cdd5072ce72765996e80c96df7ed86c2b887ce4d41aa8cc2dd0b0001
+```
+
+### Query the Balance of an Account
 
 `Usage: ioctl account balance (ALIAS|ADDRESS)`
 
@@ -127,7 +159,7 @@ io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt: 0.721 IOTX
 io1l3wc0smczyay8xq747e2hw63mzg3ctp6uf8wsg: 4689 IOTX
 ```
 
-### Query Nonce
+### Query the nonce of an Account
 
 `Usage: ioctl account nonce (ALIAS|ADDRESS)`
 
@@ -137,7 +169,7 @@ io1r2r0um9dw35922tptkuphseq43hq2knk3fjrlt:
 Nonce: 0, Pending Nonce: 1
 ```
 
-### Translate Address
+### IoTeX↔Ethereum Address Conversion
 
 `Usage: ioctl account ethaddr (ALIAS|IOTEX_ADDRESS|ETH_ADDRESS)`
 
@@ -156,27 +188,7 @@ io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - 0xAA260324ad0DA6FA2231f0FfEC916A99bb
 io14gnqxf9dpkn05g337rl7eyt2nxasphf5m6n0rd - 0xAA260324ad0DA6FA2231f0FfEC916A99bb00dd34
 ```
 
-### Export Public Key From Account
-
-`Usage: ioctl account exportpublic (ALIAS|ADDRESS)`
-
-```
-➜  ioctl account exportpublic tmp2
-Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-### Sign Message With Private key
-
-`Usage: ioctl account sign MESSAGE [-s SIGNER]`
-
-```
-➜  ioctl account sign "abcd" -s tmp2
-Enter password #io120au9ra0nffdle04jx2g5gccn6gq8qd4fy03l4:
-ec280f9f95ed5774fb042e69d92bfb685443dc99350d5460ecf1067d1cb539150903ff0d18cdd5072ce72765996e80c96df7ed86c2b887ce4d41aa8cc2dd0b0001
-```
-
-### Verify Public Key And Address By Private Key
+### Generate Public Key And Address from Private Key
 
 `Usage: ioctl account verify`
 
@@ -185,16 +197,4 @@ ec280f9f95ed5774fb042e69d92bfb685443dc99350d5460ecf1067d1cb539150903ff0d18cdd507
 Enter private key:
 Address:  io1gh439pm67d4cwxt882xpylj75klys6esepml60
 Public Key: 04ac93d2fffdf488659c3f58890f6ddc55818d50f884e515aa90b2b1ca1e0fc223f85c5a0dc8b9a55b9a282a1ba8a269a3426f168591b60c921380f7d6d34c1f4f
-```
-
-### Update Password Of An Account
-
-`Usage: ioctl account update (ALIAS|ADDRESS)`
-
-```
-➜  ioctl account update IOsenser
-#IOsenser: Enter current password
-#IOsenser: Enter new password
-#IOsenser: Enter new password again
-Account #IOsenser has been updated.
 ```

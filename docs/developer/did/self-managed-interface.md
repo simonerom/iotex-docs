@@ -33,7 +33,7 @@ Every user or device needs to register its own DID by uploading its UUID under a
 
 The DID structure looks like follows:
 
-```c++
+```c
 struct DID {
         bool exist;
         bytes32 hash;
@@ -45,6 +45,6 @@ struct DID {
 
 An example IoTeX DID:
 
-```c++
+```c
 did:io:0x5576E95935366Ebd2637D9171E4C92e60598be10
 ```

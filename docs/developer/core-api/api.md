@@ -1,5 +1,5 @@
 ---
-title: Full gRPC API
+title: Complete Core API
 ---
 
 # Full gRPC API

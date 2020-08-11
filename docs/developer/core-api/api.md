@@ -1,8 +1,8 @@
 ---
-title: Complete Core API
+title: gRPC API
 ---
 
-# Full gRPC API
+# IoTeX Node full gRPC API
 
 Below is the alphabetical list of all available gRPC calls provided be a IoTeX Blobkchain Gateway node. To run the examples you can use [grpcurl](https://github.com/fullstorydev/grpcurl/releases) command line client for your OS.
 

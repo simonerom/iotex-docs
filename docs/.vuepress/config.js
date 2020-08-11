@@ -60,7 +60,7 @@ module.exports = {
           "/introduction": [
             {
               collapsable: false,
-              title: "Introduction",
+              title: "Core Concepts Home",
               path: "/introduction/whatisiotex",
               children: [
                 {
@@ -255,7 +255,9 @@ module.exports = {
                 }
               ]
             }
-          ]
+          ],
+
+          "/contribute": ["/contribute/"]
         }
       }
     }

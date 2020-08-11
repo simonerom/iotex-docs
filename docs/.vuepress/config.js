@@ -16,6 +16,16 @@ module.exports = {
         ga: "UA-111756489-6" // UA-00000000-0
       }
     ],
+    [
+      "sidebar",
+      {
+        grouping: true,
+        groupOptions: {
+          collapsable: true,
+          sidebarDepth: 2
+        }
+      }
+    ],
     "@vuepress/back-to-top",
     "vuepress-plugin-smooth-scroll",
     "tabs"
@@ -99,6 +109,10 @@ module.exports = {
               path: "/developer/",
               children: [
                 {
+                  title: "Software Tools",
+                  collapsable: false
+                },
+                {
                   title: "Get Started",
                   path: "/developer/get-started/ioctl-install",
                   sidebarDepth: 0,
@@ -153,6 +167,10 @@ module.exports = {
                   ]
                 },
                 {
+                  title: "Middleware",
+                  collapsable: false
+                },
+                {
                   title: "Decentralized Identity",
                   path: "/developer/did/overview",
                   sidebarDepth: 0,
@@ -171,17 +189,25 @@ module.exports = {
                   ]
                 },
                 {
-                  title: "Secure Hardware",
+                  title: "Hardware",
+                  collapsable: false
+                },
+                {
+                  title: "Pebble Tracker",
                   path: "/developer/hardware/pebble",
                   sidebarDepth: 0,
                   collapsable: true,
                   children: [
-                    "developer/hardware/pebble"
-                    //  "developer/hardware/pebble-dashboard" needs update
+                    "developer/hardware/pebble",
+                    "developer/hardware/pebble-dashboard" //needs update
                   ]
                 },
                 {
-                  title: "ioctl Client Reference",
+                  title: "Reference",
+                  collapsable: false
+                },
+                {
+                  title: "ioctl Client",
                   path: "/developer/ioctl/install",
                   sidebarDepth: 0,
                   collapsable: true,
@@ -200,17 +226,35 @@ module.exports = {
                   ]
                 },
                 {
-                  title: "Core API Reference",
+                  title: "Node Core API",
                   path: "/developer/core-api/api",
                   sidebarDepth: 0,
                   collapsable: true,
                   children: ["/developer/core-api/api"]
                 },
                 {
-                  title: "Reviewing...",
-                  sidebarDepth: 1,
+                  title: "GraphQL API",
+                  path: "/developer/graphql/analytics",
+                  sidebarDepth: 0,
                   collapsable: true,
-                  children: ["developer/analytics", "developer/misc"]
+                  children: [
+                    "/developer/graphql/analytics",
+                    "/developer/graphql/member-portal"
+                  ]
+                },
+                {
+                  title: "More Resources",
+                  collapsable: false
+                },
+                {
+                  title: "Misc Tools",
+                  path: "/developer/more/action-injector",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "/developer/more/action-injector",
+                    "/developer/more/bookkeeping"
+                  ]
                 }
               ]
             }

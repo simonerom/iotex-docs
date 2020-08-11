@@ -2,7 +2,7 @@
 title: Analytics
 ---
 
-## Overview
+## Analytics GraphQL API
 
 Analytics is an application built upon IoTeX core API which extracts data from IoTeX blockchain and reindexes them for applications to use via a GraphQL web interface. You can use the playground [here](https://analytics.iotexscan.io).
 

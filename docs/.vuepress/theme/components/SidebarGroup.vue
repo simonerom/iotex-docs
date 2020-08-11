@@ -81,12 +81,22 @@ export default {
     & > .sidebar-heading
       font-size 0.95em
       line-height 1.4
-      font-weight bold
+      font-weight normal
       padding-left 2rem
       &:not(.clickable)
         opacity 1
+        text-transform uppercase
+        // background-color #E2E5E7
+        float left
+        margin-left 1.5rem
+        padding 0.2rem
+        margin-top 1rem
+        padding-right 3rem
+        padding-left 0.5rem
+        border-radius 2px
+        font-weight 700
     & > .sidebar-group-items
-      padding-left 2.5rem
+      padding-left 2.1rem
       & > li > .sidebar-link
         padding-left 0.5rem
         font-size: 0.95em;

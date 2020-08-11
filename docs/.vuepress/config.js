@@ -222,13 +222,14 @@ module.exports = {
                   collapsable: true,
                   children: ["/developer/core-api/api"]
                 },
-                {
-                  title: "Core REST API",
-                  path: "/developer/pharos/api",
-                  sidebarDepth: 0,
-                  collapsable: true,
-                  children: ["/developer/pharos/api"]
-                },
+
+                // {
+                //   title: "Core REST API",
+                //   path: "/developer/pharos/api",
+                //   sidebarDepth: 0,
+                //   collapsable: true,
+                //   children: ["/developer/pharos/api"]
+                // },
                 {
                   title: "GraphQL API",
                   path: "/developer/graphql/analytics",
@@ -242,6 +243,16 @@ module.exports = {
                 {
                   title: "More Resources",
                   collapsable: false
+                },
+                {
+                  title: "Exchanges Integration",
+                  path: "/developer/integrations/rosetta",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "/developer/integrations/rosetta",
+                    "/developer/integrations/guide"
+                  ]
                 },
                 {
                   title: "Misc Tools",

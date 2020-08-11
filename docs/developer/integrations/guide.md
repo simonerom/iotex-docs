@@ -88,6 +88,6 @@ If you get an "**unimplemented**" error code, with a message like "**feature not
 
 ## Testing
 
-Once you've fully integrated with the IoTeX blockchain, please make accurate tests on both the testnet and the mainnet. All states of the IoTeX blockchain can be queried through either the command line tool [ioctl](/developer/get-started/ioctl-install) and the official IoTeX explorers for ([Mainnet](https://iotexscan.io)ì and [Testnet](https://testnet.iotexscan.io)).
+Once you've fully integrated with the IoTeX blockchain, please make accurate tests on both testnet and mainnet. All states of the IoTeX blockchain can be queried through either the command line tool [ioctl](/developer/get-started/ioctl-install) or the official IoTeX explorers for ([Mainnet](https://iotexscan.io)ì and [Testnet](https://testnet.iotexscan.io)).
 
 Please reach to IoTeX Team if you have any question.

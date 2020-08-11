@@ -14,3 +14,9 @@ You can deploy the IoTeX Rosetta gateway along with the IoTeX Mainnet node by fo
 ## Your Exchange doesn't implement Rosetta?
 
 Go ahead, and check out the [general integration guide](guide)!
+
+## Testing
+
+Once you've fully integrated with the IoTeX blockchain, please make accurate tests on both testnet and mainnet. All states of the IoTeX blockchain can be queried through either the command line tool [ioctl](/developer/get-started/ioctl-install) or the official IoTeX explorers for ([Mainnet](https://iotexscan.io)ì and [Testnet](https://testnet.iotexscan.io)).
+
+Please reach to IoTeX Team if you have any question.

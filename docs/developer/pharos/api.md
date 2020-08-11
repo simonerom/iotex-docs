@@ -32,7 +32,7 @@ Response:
 }
 ```
 
-## Get Transaction Info by Hash
+## Get Action Info by Hash
 
 URL:
 
@@ -73,6 +73,15 @@ Response:
   ]
 }
 ```
+
+## Send Actions
+
+URL:
+`https://pharos.iotex.io/v1/actions/addr/:addr?count={number}&start={number}`
+
+Example:
+
+`https://pharos.iotex.io/v1/actions/addr/io1e2nqsyt7fkpzs5x7zf2uk0jj72teu5n6aku3tr?count=2&start=0`
 
 ## List Actions by Address
 
@@ -137,7 +146,7 @@ Response:
 }
 ```
 
-## List Actions by Block
+## List Transfers by Block
 
 URL:
 
@@ -202,11 +211,35 @@ Response:
 }
 ```
 
+## List current Block Producers
+
+URL:
+
+`https://pharos.iotex.io/v1/staking/validators`
+
+Example:
+
+`https://pharos.iotex.io/v1/staking/validators`
+
+Response:
+
+```json
+[
+  {"id":"metanyx","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},{"id":"royalland","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},
+
+  {"id":"huobiwallet","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},{"id":"droute","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},
+
+  {"id":"longz","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},{"id":"coredev","status":true,"details":{"reward":{"annual":0},"locktime":259200,"minimum_amount":"100000000000000000000"}},
+
+  ...
+]
+```
+
 ## List Buckets by Address
 
 URL:
 
-`https://pharos.iotex.io/v1/votes/addr/:addr
+`https://pharos.iotex.io/v1/votes/addr/:addr`
 
 Example:
 

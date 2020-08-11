@@ -10,23 +10,13 @@ module.exports = {
     }
   },
   plugins: [
+    "@vuepress/back-to-top",
     [
       "@vuepress/google-analytics",
       {
         ga: "UA-111756489-6" // UA-00000000-0
       }
     ],
-    [
-      "sidebar",
-      {
-        grouping: true,
-        groupOptions: {
-          collapsable: true,
-          sidebarDepth: 2
-        }
-      }
-    ],
-    "@vuepress/back-to-top",
     "vuepress-plugin-smooth-scroll",
     "tabs"
   ],
@@ -226,11 +216,18 @@ module.exports = {
                   ]
                 },
                 {
-                  title: "Node Core API",
+                  title: "Core gRPC API",
                   path: "/developer/core-api/api",
                   sidebarDepth: 0,
                   collapsable: true,
                   children: ["/developer/core-api/api"]
+                },
+                {
+                  title: "Core REST API",
+                  path: "/developer/pharos/api",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: ["/developer/pharos/api"]
                 },
                 {
                   title: "GraphQL API",

@@ -84,7 +84,7 @@ export default {
       font-weight normal
       padding-left 2rem
       &:not(.clickable)
-        opacity 1
+        opacity 0.9
         text-transform uppercase
         // background-color #E2E5E7
         float left

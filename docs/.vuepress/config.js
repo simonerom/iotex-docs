@@ -190,7 +190,7 @@ module.exports = {
                   collapsable: true,
                   children: [
                     "developer/hardware/pebble",
-                    "developer/hardware/pebble-dashboard" //needs update
+                    // "developer/hardware/pebble-dashboard" //needs update
                   ]
                 },
                 {

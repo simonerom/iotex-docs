@@ -14,23 +14,21 @@ If you are accessing a non-TLS endpoint, make sure you use `-plaintext` option i
 
 ## EstimateActionGasConsumptionByExecution
 
-```
 Usage:
-  Get Estimated Action Gas Consumption By Execution
+Get Estimated Action Gas Consumption By Execution
 Request:
-  Execution: iotextypes.Execution
-    -Amount: Execution Amount
-    -Contract: Contract Address
-    -Data: Data
-  CallerAddress: Address of Caller
+Execution: iotextypes.Execution
+-Amount: Execution Amount
+-Contract: Contract Address
+-Data: Data
+CallerAddress: Address of Caller
 
 Response:
-  Gas: Estimated Gas Amount
-```
+Gas: Estimated Gas Amount
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"execution": {"amount":"0", "contract":"io154mvzs09vkgn0hw6gg3ayzw5w39jzp47f8py9v"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}' api.mainnet.iotex.one:443 iotexapi.APIService.EstimateActionGasConsumption
 
 {
@@ -56,7 +54,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"transfer": {"amount":"100000", "recipient":"io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}, "callerAddress": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}'  api.mainnet.iotex.one:443 iotexapi.APIService.EstimateActionGasConsumption
 
 {
@@ -77,7 +75,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "execution": {"amount": "0", "contract": ""}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' api.iotex.one:443 iotexapi.APIService.EstimateGasForAction
 
 {
@@ -98,7 +96,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetAccount
 
 {
@@ -128,7 +126,7 @@ Resposne:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byAddr": {"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
 
 Resolved method descriptor:
@@ -182,7 +180,7 @@ Resposne:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byBlk": {"blkHash": "6344115bcd43b7315ffdf5338d0f97b26caed7734efea034a27208f64670f5e9", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
 
 {
@@ -225,7 +223,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byHash": {"actionHash": "b7024bc52f315fafb9cc7677e730aec79767b28fbaa6bdd1f37c1861dd699aba", "checkPending": false}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
 
 {
@@ -272,7 +270,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byIndex": {"start": 0, "count": 2}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
 
 {
@@ -337,7 +335,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byHash": {"blkHash": "230ba8095d5a505e355652f9dcc2b13605419a8fa3d3fd5ddc6d24fd6a902641"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetBlockMetas
 
 {
@@ -373,7 +371,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"byIndex": {"start": 1, "count": 2}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetBlockMetas
 
 {
@@ -417,7 +415,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.GetChainMeta
 
 {
@@ -448,7 +446,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"epochNumber": 1}' api.iotex.one:443 iotexapi.APIService.GetEpochMeta
 
 {
@@ -625,7 +623,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -v -plaintext -d '{"filter": {}, "byBlock": {"blockHash": "221e7f14dddd57a739975b943bfffb1cbfcffa1ee043cf693b92af987e42ed93"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetLogs
 
 
@@ -650,7 +648,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"filter": {}, "byRange": {"fromBlock": "12000", "count": "2"}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetLogs
 
 {
@@ -687,7 +685,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"startHeight": 1, "count": 2, "withReceipts": true}' api.mainnet.iotex.one:443 iotexapi.APIService.GetRawBlocks
 
 {
@@ -793,7 +791,7 @@ Reponse:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.GetServerMeta
 
 {
@@ -820,7 +818,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"actionHash": "dd2e83336f1ff219b1e54558f0627e1f556ed2caeedb44b758b0e107aa246531"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetReceiptByAction
 {
   "receiptInfo": {
@@ -921,7 +919,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~  grpcurl -d '{"blockHeight":5202793}' api.iotex.one:443 iotexapi.APIService.GetTransactionLogByBlockHeight
 {
   "transactionLogs": {
@@ -994,7 +992,7 @@ Resposne:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"unconfirmedByAddr": {"address": "io1juvx5g063eu4ts832nukp4vgcwk2gnc5cu9ayd", "start": 0, "count": 1}}' api.mainnet.iotex.one:443 iotexapi.APIService.GetActions
 
 {
@@ -1015,7 +1013,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -plaintext -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "execution": {"amount": "0", "contract": ""}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' 127.0.0.1:14014 iotexapi.APIService.ReadContract
 
 {
@@ -1045,7 +1043,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"protocolID": "cmV3YXJkaW5n", "methodName": "VW5jbGFpbWVkQmFsYW5jZQ==", "arguments": "aW8xanV2eDVnMDYzZXU0dHM4MzJudWtwNHZnY3drMmduYzVjdTlheWQ="}' api.iotex.one:443 iotexapi.APIService.ReadState
 
 {
@@ -1066,7 +1064,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -plaintext -d '{"action": {"core": {"version": 1, "nonce": 2, "gasLimit": 10000, "gasPrice": "10", "transfer": {"amount": "100", "recipient": "io1sxm6zl56um2c3ntq5fwqjar4za5ka560x53muy"}}, "senderPubKey": "BOk7WxyPumkmNlKkg61VMY5O7VtRIjFMt/2wd9jHKVCXzsku5QsRCNx0lalyDlkh5W0wSON6vmpnFtfJuRPp8uY=", "signature": "9mrqFBggiRocZhkRVUswxs83NaEFNdEYYczI8049vlovHEP4YMQz+3Isznc3CrYaJxAbc2PTIz7y2meerJ8bHAA="}}' 127.0.0.1:14014 iotexapi.APIService.SendAction
 
 {
@@ -1087,7 +1085,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl api.iotex.one:443 iotexapi.APIService.SuggestGasPrice
 
 {
@@ -1108,7 +1106,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl api.mainnet.iotex.one:443 iotexapi.APIService.StreamBlocks
 
 {
@@ -1173,7 +1171,7 @@ Response:
 
 Example:
 
-```
+```json
 ➜  ~ grpcurl -d '{"filter": {}}'  api.mainnet.iotex.one:443 iotexapi.APIService.StreamLogs
 
 {

@@ -85,7 +85,7 @@ part4Body:
     content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
 ---
 
-<Home-Content />
+<DeveloperHome />
 
 ::: slot foot1
 
@@ -98,5 +98,5 @@ Questions? Chat with us via [email](mailto:support@iotex.io), [forum](https://co
 
 #### Sign up for Developer Updates
 
-<Home-Subscribe />
+<Subscribe />
 :::

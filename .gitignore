@@ -60,3 +60,7 @@ typings/
 .env
 
 docs/.vuepress/dist/
+
+# MacOS generated file
+.DS_Store
+

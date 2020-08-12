@@ -193,6 +193,7 @@
 
 <script>
 export default {
+  name: "DeveloperHome",
   data() {
     return {
       gutter: 20

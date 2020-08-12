@@ -86,7 +86,6 @@ export default {
       &:not(.clickable)
         opacity 0.9
         text-transform uppercase
-        // background-color #E2E5E7
         float left
         margin-left 1.5rem
         padding 0.2rem

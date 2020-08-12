@@ -29,7 +29,7 @@ module.exports = {
   },
 
   themeConfig: {
-    //repo: "iotexproject/iotex-docs",
+    repo: "iotexproject/iotex-docs",
     editLinks: true,
     locales: {
       "/": {

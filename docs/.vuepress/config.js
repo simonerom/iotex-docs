@@ -30,6 +30,7 @@ module.exports = {
 
   themeConfig: {
     repo: "iotexproject/iotex-docs",
+    docsDir: "docs",
     editLinks: true,
     locales: {
       "/": {

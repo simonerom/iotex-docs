@@ -266,7 +266,7 @@ The `index.js` should always export the main component. This file should also be
 
 ❌ Bad
 
-```txt
+```text
 MyAwesomeComponent.js
 My-Awesome-Component.js
 my_awesome_component.js
@@ -274,7 +274,7 @@ my_awesome_component.js
 
 ✅ Good
 
-```txt
+```text
 my-awesome-component.js
 ```
 

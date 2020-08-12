@@ -73,7 +73,7 @@ However, please visit our [Contributing Code](/pylon/code-review-checklist.html)
 
 ![Onefx Architecture](/img/developer/pylon-arch.png)
 
-```txt
+```text
 .
 ├── README.md
 ├── ava.config.js           // ava test util configuration

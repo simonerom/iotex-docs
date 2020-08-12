@@ -119,44 +119,40 @@ const GET_HEALTH = gql`
 `;
 ```
 
-```<js></js>
+```js
 <Query query={GET_HEALTH} ssr={false} fetchPolicy="network-only">
-   {({
-     loading,
-     error,
-     data
-   }: QueryResult<{ health: string }>) => {
-     if (loading) {
-       return (
-         <div>
-           <Icon type="loading" /> Checking Status
-         </div>
-       );
-     }
-     if (error) {
-       return (
-         <div>
-           <Icon
-             type="close-circle"
-             theme="twoTone"
-             twoToneColor={colors.error}
-           />{" "}
-           Not OK
-         </div>
-       );
-     }
+  {({ loading, error, data }: QueryResult<{ health: string }>) => {
+    if (loading) {
+      return (
+        <div>
+          <Icon type="loading" /> Checking Status
+        </div>
+      );
+    }
+    if (error) {
+      return (
+        <div>
+          <Icon
+            type="close-circle"
+            theme="twoTone"
+            twoToneColor={colors.error}
+          />{" "}
+          Not OK
+        </div>
+      );
+    }
 
-     return (
-       <div>
-         <Icon
-           type="check-circle"
-           theme="twoTone"
-           twoToneColor={colors.success}
-         />{" "}
-         {data && data.health}
-       </div>
-     );
-   }}
+    return (
+      <div>
+        <Icon
+          type="check-circle"
+          theme="twoTone"
+          twoToneColor={colors.success}
+        />{" "}
+        {data && data.health}
+      </div>
+    );
+  }}
 </Query>
 ```
 
@@ -242,7 +238,7 @@ PORT=4004 npm run watch
 
 or in `.env` file
 
-```env
+```
 PORT=4004
 ```
 

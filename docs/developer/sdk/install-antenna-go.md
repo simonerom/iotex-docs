@@ -6,7 +6,7 @@ title: Antenna-Go SDK
 
 In your Golang project root, use `go dep` or `go mod`.
 
-```golang
+```go
 go get -u github.com/iotexproject/iotex-antenna-go
 ```
 

@@ -20,7 +20,7 @@ jobs:
           NODE_ENV=production npm run build
       - name: Commit-files
         run: |
-          cd .vuepress/dist
+          cd docs/.vuepress/dist
           echo 'docs.iotex.io' > CNAME
           git init
           git config --global user.email "puncsky@users.noreply.github.com"

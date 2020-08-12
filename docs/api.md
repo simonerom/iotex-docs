@@ -1046,78 +1046,139 @@ Example:
 
 ```
 
-## GetEvmTransfersByActionHash
+## GetTransactionLogByBlockHeight
 
 ```
 Usage:
-  Get EVM Transfer By Action Hash
-Request:
-  ActionHash: Action Hash
-
-Response:
-  ActionEvmTransfers: Action EVM transfer
-```
-
-Example:
-
-```
-➜  ~ grpcurl -d '{"actionHash":"b0a0af2b5b33dcf58a41e6c3edfee9c0352ada249f242c1024d920895c446e69"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetEvmTransfersByActionHash
-
-{
-  "actionEvmTransfers": [
-    {
-      "actionHash": "2bAgDlDdF84K+XNCW95wdjMpmQqVP2b04ghyMXoN6J4=",
-      "numEvmTransfers": 1,
-      "evmTransfers": [
-        {
-          "amount": "cmNxZ2pzeGZkeHpzenp0cHlkemx6YSFJIVG5KdXU5OD=",
-          "from": "io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng",
-          "to": "ioaa77fbf8596e0de5ce362dbd5ab29599a6c38ac"
-        }
-      ]
-    }
-  ]
-}
-
-```
-
-## GetEvmTransfersByBlockHeight
-
-```
-Usage:
-  Get EVM Transfer By Block Height
+  Get Transaction log By Block Height
 Request:
   BlockHeight: Block Height
 
 Response:
-  BlockEvmTransfers: Block EVM transfer
+  GetTransactionLogByBlockHeightResponse: Transaction logs in Block
 ```
 
 Example:
 
 ```
-➜  ~ grpcurl -d '{"blockHeight":"12371"}' api.mainnet.iotex.one:443 iotexapi.APIService.GetEvmTransfersByBlockHeight
-
+➜  ~  grpcurl -d '{"blockHeight":5202793}' api.iotex.one:443 iotexapi.APIService.GetTransactionLogByBlockHeight
 {
-  "blockEvmTransfers": [
-    {
-      "blockHeight": 12371,
-      "numEvmTransfers": 1,
-      "actionEvmTransfers": [
-        {
-          "actionHash": "2bAgDlDdF84K+XNCW95wdjMpmQqVP2b04ghyMXoN6J4=",
-          "numEvmTransfers": 1,
-          "evmTransfers": [
-            {
-              "amount": "cmNxZ2pzeGZkeHpzenp0cHlkemx6YSFJIVG5KdXU5OD=",
-              "from": "io1cl6rl2ev5dfa988qmgzg2x4hfazmp9vn2g66ng",
-              "to": "ioaa77fbf8596e0de5ce362dbd5ab29599a6c38ac"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "transactionLogs": {
+    "logs": [
+      {
+        "actionHash": "1LPINzrSjUZiWQKrkgMwmKU/coMzWEczDgtGof0RLY0=",
+        "numTransactions": "40",
+        "transactions": [
+          {
+            "amount": "650975000000000000",
+            "sender": "io1scqu4w9z9wsakpxwjz0yasw7u424huaswwpy76",
+            "recipient": "io0000000000000000000000rewardingprotocol",
+            "type": "GAS_FEE"
+          },
+          {
+            "amount": "6532163000000000000000000",
+            "sender": "io1scqu4w9z9wsakpxwjz0yasw7u424huaswwpy76",
+            "recipient": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu"
+          },
+          {
+            "amount": "100000000000000000000",
+            "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+            "recipient": "io1tef0w2vn288htckthslg7ut6qgula6ssn3rukx"
+          },
+          {
+            "amount": "1800000000000000000000",
+            "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+            "recipient": "io1mzly3mzaw0nesn96zsmp3gqvhj929ejkl6rsh9"
+          },
+          {
+            "amount": "425000000000000000000",
+            "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+            "recipient": "io1u9khn0q9g40mfca9dhkg35dr8rtdds65uvc7s0"
+          },
+          {
+            "amount": "499000000000000000000000",
+            "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+            "recipient": "io1lvukz4482xweap8xm7zsa5fdj85wlnqgympjsm"
+          },
+          ...
+          {
+            "amount": "9000000000000000000000",
+            "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+            "recipient": "io1ea0pdyphktxt42yjlt6gtktalls6thasck6g2v"
+          }
+        ]
+      }
+    ]
+  },
+  "blockIdentifier": {
+    "hash": "457d95613c3e8007b0dd2605f29dca5321e453209e4750c43d0613f1d93b6854",
+    "height": "5202793"
+  }
 }
+```
+
+## GetTransactionLogByActionHash
 
 ```
+Usage:
+  Get Transaction log By Action hash
+Request:
+  ActionHash: Action Hash
+
+Response:
+  GetTransactionLogByActionHashResponse: Transaction logs in Action
+```
+
+Example:
+
+```
+grpcurl -d '{"actionHash":"d4b3c8373ad28d46625902ab92033098a53f7283335847330e0b46a1fd112d8d"}' api.iotex.one:443 iotexapi.APIService.GetTransactionLogByActionHash
+{
+  "transactionLog": {
+    "actionHash": "1LPINzrSjUZiWQKrkgMwmKU/coMzWEczDgtGof0RLY0=",
+    "numTransactions": "40",
+    "transactions": [
+      {
+        "amount": "650975000000000000",
+        "sender": "io1scqu4w9z9wsakpxwjz0yasw7u424huaswwpy76",
+        "recipient": "io0000000000000000000000rewardingprotocol",
+        "type": "GAS_FEE"
+      },
+      {
+        "amount": "6532163000000000000000000",
+        "sender": "io1scqu4w9z9wsakpxwjz0yasw7u424huaswwpy76",
+        "recipient": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu"
+      },
+      {
+        "amount": "100000000000000000000",
+        "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+        "recipient": "io1tef0w2vn288htckthslg7ut6qgula6ssn3rukx"
+      },
+      {
+        "amount": "1800000000000000000000",
+        "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+        "recipient": "io1mzly3mzaw0nesn96zsmp3gqvhj929ejkl6rsh9"
+      },
+      ...
+      {
+        "amount": "14600000000000000000000",
+        "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+        "recipient": "io10p639dt4xf9cf256ctzuem63pgej827zwl2035"
+      },
+      {
+        "amount": "8400000000000000000000",
+        "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+        "recipient": "io1ap5smf54awc7vngtgzsmvvppswza0y3t0gng90"
+      },
+  
+      {
+        "amount": "9000000000000000000000",
+        "sender": "io1lvemm43lz6np0hzcqlpk0kpxxww623z5hs4mwu",
+        "recipient": "io1ea0pdyphktxt42yjlt6gtktalls6thasck6g2v"
+      }
+    ]
+  }
+}
+```
+
+

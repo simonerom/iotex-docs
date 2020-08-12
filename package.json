@@ -4,8 +4,8 @@
   "description": "iotex documentation",
   "main": "index.js",
   "scripts": {
-    "start": "vuepress dev",
-    "build": "vuepress build"
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "husky": {
     "hooks": {
@@ -24,8 +24,9 @@
   },
   "dependencies": {
     "element-ui": "^2.13.0",
+    "markdown-it-katex": "^2.0.3",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.2.0",
+    "vuepress": "^1.5.2",
     "vuepress-plugin-tabs": "^0.2.2",
     "webpack-dev-middleware": "^3.7.2"
   },
@@ -33,12 +34,14 @@
     "webpack-dev-middleware": "3.6.0"
   },
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.3",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "husky": "3.0.0",
     "prettier": "1.18.2",
-    "pretty-quick": "1.11.1"
+    "pretty-quick": "1.11.1",
+    "vuepress-plugin-smooth-scroll": "0.0.9"
   }
 }

@@ -901,6 +901,10 @@ grpcurl -d '{"actionHash":"d4b3c8373ad28d46625902ab92033098a53f7283335847330e0b4
         "recipient": "io1ea0pdyphktxt42yjlt6gtktalls6thasck6g2v"
       }
     ]
+  },
+  "blockIdentifier": {
+    "hash": "457d95613c3e8007b0dd2605f29dca5321e453209e4750c43d0613f1d93b6854",
+    "height": "5202793"
   }
 }
 ```
@@ -1183,5 +1187,3 @@ Example:
   }
 }
 ```
-
-

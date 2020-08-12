@@ -4,7 +4,6 @@ heroImage: null
 heroText: null
 tagline: null
 mainTitle: "Developer Home"
-subTitle: "Welcome to the IoTex Developer documentation"
 topCard:
   title: "Get Started"
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
@@ -20,7 +19,7 @@ part1Body:
   - title: "Chain API Reference"
     isHead: false
     content: "Discover all IoTeX blockchain API resources."
-    link: "/developer/api.html"
+    link: "/developer/core-api/api"
     icon: "/img/icon_chainapi.svg"
   - title: "SDKs"
     isHead: false
@@ -30,18 +29,18 @@ part1Body:
   - title: "Analytics GraphQL Reference"
     isHead: false
     content: "Look for deep analytical insights? There you go."
-    link: "/developer/analytics.html"
+    link: "/developer/graphql/analytics"
     icon: "/img/icon_analytics.svg"
   - title: "Pylon Dapp Starter"
     isHead: false
     content: "Full-stack starter for building IoTeX Dapps"
-    link: "http://docs.iotex.io/pylon/get-started.html"
+    link: "/developer/pylon/introduction"
     icon: "/img/icon_project_dapp.svg"
-  - title: "IOTX Coin Faucet"
+  - title: "IoTeX Studio"
     isHead: false
-    content: "Get some IOTX to use in your DApps"
-    tags: ["Web", "Blockchain", "Tokens"]
-    link: "https://community.iotex.io/t/iotex-faucet-for-mainnet-testnet-tokens/1339"
+    content: "Check out our Web IDE to develop, test and deploy smart contracts"
+    tags: ["Web", "Education"]
+    link: "https://ide.iotex.io/"
   - title: "Codelabs"
     isHead: false
     content: "Explore IoTeX Codelabs examples and tutorials"
@@ -75,12 +74,8 @@ part4Body:
     link: "https://github.com/iotexproject/iips"
     icon: "/img/icon_iip.svg"
     content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Exchanges & Wallets Integrations"
-    link: "/developer/get-started.html#build-and-run"
-    icon: "/img/icon_fullnode.svg"
-    content: "Build, configure and run your node in a step by step way."
   - title: "Exchanges and Wallets"
-    link: "https://github.com/iotexproject/iotex-bootstrap/blob/master/integration/exchange.md"
+    link: "/developer/integrations/rosetta"
     icon: "/img/icon_exchanges.svg"
     content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
 ---
@@ -91,7 +86,7 @@ part4Body:
 
 #### Chat With Us
 
-Questions? Chat with us via [email](mailto:support@iotex.io), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXGroup)!
+Questions? Chat with us via [email](mailto:support@iotex.io), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXDev)!
 :::
 
 ::: slot foot2

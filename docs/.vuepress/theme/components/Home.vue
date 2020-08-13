@@ -16,23 +16,35 @@
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
       </p>
 
-      <div class="bc-layers">
-        <img
-          class="extraImage"
-          v-if="data.extraImage1"
-          :src="$withBase(data.extraImage1)"
-        />
-        <img
-          class="extraImage"
-          v-if="data.extraImage2"
-          :src="$withBase(data.extraImage2)"
-        />
-        <img
-          class="extraImage"
-          v-if="data.extraImage3"
-          :src="$withBase(data.extraImage3)"
-        />
+      <div v-if="data.titleCards && data.titleCards.length" class="titleCards">
+        <div
+          v-for="(titleCard, index) in data.titleCards"
+          :key="index"
+          class="titleCard"
+        >
+          <h4>{{ titleCard.title }}</h4>
+          <ul>
+            <div
+              v-if="titleCard.links && titleCard.links.length"
+              class="titleCardsLink"
+            >
+              <div
+                v-for="(link, index) in titleCard.links"
+                :key="index"
+                class="titleCardLink"
+              >
+                <li>
+                  <a v-if="link.url" :href="link.url" class="">{{
+                    link.text
+                  }}</a>
+                  <span v-else>{{ link.text }}</span>
+                </li>
+              </div>
+            </div>
+          </ul>
+        </div>
       </div>
+
       <p v-if="data.actionText && data.actionLink" class="action">
         <NavLink class="action-button" :item="actionLink" />
       </p>
@@ -153,6 +165,34 @@ export default {
       color lighten($textColor, 10%)
     p
       color lighten($textColor, 25%)
+  .titleCards
+    margin-top .5rem
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+    align-content stretch
+    justify-content center
+  .titleCard
+    margin 1rem
+    padding 3rem 3rem 2rem 1rem
+    text-align left
+    border 3px solid $accentColor
+    border-radius 8px
+    h4
+      margin-left 1rem
+      font-size 1rem
+      font-weight 700
+      color #5f5f5f
+    ul
+      font-size 0.85rem
+      font-weight 500
+      list-style: none;
+    li::before
+      padding-right .5rem
+      content: "\203A";
+      font-size 1.2rem
+      line-height 2rem
+      color $accentColor
   .footer
     padding 2.5rem
     border-top 1px solid $borderColor

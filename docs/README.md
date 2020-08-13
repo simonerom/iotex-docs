@@ -5,9 +5,31 @@ heroImage: /logo.svg
 heroText: The Internet of Trusted Things
 tagline: IoTeX is a decentralized IoT platform that combines blockchain, secure hardware, and data services components.
 
-extraImage1: /home-developer-layer.png
-extraImage2: /home-middleware-layer.png
-extraImage3: /home-blockchain-layer.png
+titleCards:
+  - title: DEVELOPER TOOLS
+    links:
+      - text: Decentralized Storage
+        url:
+      - text: Data Dashboards
+        url:
+      - text: Smart Contract Tools
+        url:
+  - title: MIDDLEWARE
+    links:
+      - text: Decentralized Identity
+        url:
+      - text: IoT Cloud & Data Oracle
+        url:
+      - text: Confidential Computing
+        url:
+  - title: IOTEX BLOCKCHAIN
+    links:
+      - text: Value Transactions
+        url:
+      - text: Data Transactions
+        url:
+      - text: Smart Contracts
+        url:
 
 actionText: Start Building →
 actionLink: /developer/

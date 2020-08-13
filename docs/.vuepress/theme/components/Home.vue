@@ -59,9 +59,8 @@
       >
         <h2>{{ feature.title }}</h2>
         <p>{{ feature.details }}</p>
-        <a :href="feature.featureLink" class="action-button-mini">{{
-          feature.linkText
-        }}</a>
+        <NavLink class="action-button-mini" :item="{link: feature.featureLink,
+        text: feature.linkText}"" />
       </div>
     </div>
 
@@ -105,15 +104,17 @@ export default {
   .action-button-mini
       display inline-block
       font-size .9em
-      color #fff
+      color #ffffff
       background-color $accentColor
-      padding .2rem 1rem
+      padding .3rem 1rem
       border-radius 2px
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
       &:hover
         background-color lighten($accentColor, 10%)
+    path, polygon
+      color #ffffff
   .hero
     text-align center
     img

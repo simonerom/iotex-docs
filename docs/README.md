@@ -36,15 +36,15 @@ actionLink: /developer/
 features:
   - title: Explore the Protocol
     featureLink: https://github.com/iotexproject/iotex-core#iotex-core
-    linkText: Visit GitHub ↗
+    linkText: Visit GitHub
     details: Check out to the official Go implementation of IoTeX protocol!
   - title: Join as a Delegate
-    featureLink: https://github.com/iotexproject/iotex-bootstrap#iotex-delegate-manual
-    linkText: Delegate guide ↗
+    featureLink: https://community.iotex.io/t/official-iotex-delegates-thread/1263
+    linkText: Delegate guide
     details: Learn how to configure a full node and join as a candidate delegate.
   - title: Learn more
     featureLink: /introduction/whatisiotex.html
-    linkText: Introduction →
+    linkText: Introduction
     details: Explore the vision of IoTeX and learn about the core concepts.
 footer: © 2020 IoTeX
 footerLink: https://iotex.io

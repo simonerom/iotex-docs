@@ -34,9 +34,10 @@
                 class="titleCardLink"
               >
                 <li>
-                  <a v-if="link.url" :href="link.url" class="">{{
-                    link.text
-                  }}</a>
+                  <NavLink
+                    v-if="link.url"
+                    :item="{ link: link.url, text: link.text }"
+                  />
                   <span v-else>{{ link.text }}</span>
                 </li>
               </div>

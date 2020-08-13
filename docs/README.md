@@ -39,7 +39,7 @@ features:
     linkText: Visit GitHub ↗
     details: Check out to the official Go implementation of IoTeX protocol!
   - title: Join as a Delegate
-    featureLink: https://github.com/iotexproject/iotex-bootstrap#iotex-delegate-manual
+    featureLink: https://community.iotex.io/t/official-iotex-delegates-thread/1263
     linkText: Delegate guide ↗
     details: Learn how to configure a full node and join as a candidate delegate.
   - title: Learn more

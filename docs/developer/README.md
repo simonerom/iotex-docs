@@ -3,7 +3,7 @@ home: false
 heroImage: null
 heroText: null
 tagline: null
-mainTitle: "Developer Home"
+mainTitle: "Build your IoTeX Integration"
 topCard:
   title: "Get Started"
   content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."

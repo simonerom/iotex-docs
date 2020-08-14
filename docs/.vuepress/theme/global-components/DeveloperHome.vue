@@ -10,7 +10,7 @@
       <el-col>
         <el-card
           class="card-1"
-          shadow="hover"
+          shadow="none"
           :style="data.topCard.icon | cardStyle"
           @click.native="jump(data.topCard.link)"
         >
@@ -37,11 +37,7 @@
         :key="idx"
         v-if="detail.isHead === true"
       >
-        <el-card
-          shadow="hover"
-          class="card-3"
-          @click.native="jump(detail.link)"
-        >
+        <el-card shadow="none" class="card-3" @click.native="jump(detail.link)">
           <div>
             <el-col :span="12" :xs="24">
               <div class="card-title">
@@ -65,7 +61,7 @@
         v-if="detail.isHead === false"
       >
         <el-card
-          shadow="hover"
+          shadow="none"
           :style="detail.icon | cardStyle"
           class="card-2"
           @click.native="jump(detail.link)"
@@ -94,7 +90,7 @@
         :key="idx"
       >
         <el-card
-          shadow="hover"
+          shadow="none"
           :style="detail.icon | cardStyle"
           class="card-2"
           @click.native="jump(detail.link)"
@@ -122,11 +118,7 @@
         v-for="(detail, idx) in data.part3Body"
         :key="idx"
       >
-        <el-card
-          shadow="hover"
-          class="card-2"
-          @click.native="jump(detail.link)"
-        >
+        <el-card shadow="none" class="card-2" @click.native="jump(detail.link)">
           <div>
             <div class="card-title">
               <a :href="detail.link">
@@ -156,7 +148,7 @@
       >
         <el-card
           class="card-1"
-          shadow="hover"
+          shadow="none"
           :style="detail.icon | cardStyle"
           @click.native="jump(detail.link)"
         >
@@ -225,6 +217,8 @@ export default {
 
 <style lang="stylus">
 .custom-page
+  h2
+    border none
   .card-body
     padding-left 50px
   .card-title
@@ -235,6 +229,7 @@ export default {
     margin 30px 0
     font-size 20px
   .el-card
+    border none
     margin-bottom 20px
     cursor pointer
   .card-1

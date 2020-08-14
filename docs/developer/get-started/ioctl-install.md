@@ -11,5 +11,5 @@ curl https://raw.githubusercontent.com/iotexproject/iotex-core/master/install-cl
 ```
 
 ::: tip
-ioctl is a powerful tool to interact with the IoTeX blockchain, and it also provides additional utility commands to be used locally: we will see some of the basic commands that you need to get started but you can also [check out the full reference documentation](ioctl-reference).
+ioctl is a powerful tool to interact with the IoTeX blockchain, and it also provides additional utility commands to be used locally: we will see some of the basic commands that you need to get started but you can also [check out the full reference documentation](/developer/ioctl/install).
 :::

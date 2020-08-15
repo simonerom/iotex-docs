@@ -23,7 +23,7 @@ module.exports = {
   locales: {
     "/": {
       lang: "en-US",
-      title: "IoTeX Documentaion",
+      title: "IoTeX Documentation",
       description: "Developer docs, by the community, for the community"
     }
   },
@@ -51,9 +51,8 @@ module.exports = {
           { text: "Developers", link: "/developer/" },
           { text: "Get Involved", link: "/contribute/" },
           {
-            text: "Discord",
-            link:
-              "https://discord.com/channels/534888542648664074/549879942775701505"
+            text: "Dev Chat",
+            link: "https://t.me/IoTeXDev"
           }
         ],
         sidebar: {
@@ -189,7 +188,7 @@ module.exports = {
                   sidebarDepth: 0,
                   collapsable: true,
                   children: [
-                    "developer/hardware/pebble",
+                    "developer/hardware/pebble"
                     // "developer/hardware/pebble-dashboard" //needs update
                   ]
                 },

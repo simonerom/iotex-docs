@@ -12,8 +12,10 @@
         {{ data.heroText || $title || "Hello" }}
       </h1>
 
-      <p v-if="data.tagline !== null" class="description">
-        {{ data.tagline || $description || "Welcome to your VuePress site" }}
+      <p v-if="data.taglines !== null" class="description">
+        <span v-for="(tagline, index) in data.taglines" :key="index">
+          {{ tagline.text }}<br />
+        </span>
       </p>
 
       <div v-if="data.titleCards && data.titleCards.length" class="titleCards">
@@ -129,9 +131,10 @@ export default {
     h1, .description, .action
       margin 1.8rem auto
     .description
-      max-width 35rem
+      max-width 50rem
+      font-weight 400
       font-size 1.6rem
-      line-height 1.3
+      line-height 1.5
       color lighten($textColor, 40%)
     .action-button
       display inline-block
@@ -178,7 +181,7 @@ export default {
     justify-content center
   .titleCard
     margin 1rem
-    padding 3rem 3rem 2rem 1rem
+    padding 1rem 3rem 1rem 1rem
     text-align left
     border 3px solid $accentColor
     border-radius 8px

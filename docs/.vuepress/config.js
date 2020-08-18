@@ -189,7 +189,7 @@ module.exports = {
                   sidebarDepth: 0,
                   collapsable: true,
                   children: [
-                    "developer/hardware/pebble",
+                    "developer/hardware/pebble"
                     // "developer/hardware/pebble-dashboard" //needs update
                   ]
                 },
@@ -244,6 +244,16 @@ module.exports = {
                 {
                   title: "More Resources",
                   collapsable: false
+                },
+                {
+                  title: "Clone Finished Projects",
+                  path: "/developer/complete-projects/rolling-dice",
+                  sidebarDepth: 0,
+                  collapsable: true,
+                  children: [
+                    "/developer/complete-projects/rolling-dice",
+                    "/developer/complete-projects/hermes"
+                  ]
                 },
                 {
                   title: "Exchanges Integration",

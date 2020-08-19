@@ -3,9 +3,9 @@
     <div class="banner">
       <div class="banner-text">
         <a href="https://halo.iotex.io">
-          <b>Halo</b>Grants are
+          <b>Halo</b>Grants Program is
           <div class="neon">open</div>
-          <div class="subtitle">Get your next project funded</div>
+          <div class="subtitle can-hide">Get your next project funded</div>
         </a>
       </div>
     </div>
@@ -162,9 +162,7 @@ $navbar-horizontal-padding = 1.5rem
   margin-top .1rem
   text-align center
 }
-@media screen and (min-width: 0px) and (max-width: 720px) {
-  .subtitle{ display: none; }
-}
+
 
 .subtitle
   display inline

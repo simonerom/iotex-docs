@@ -3,7 +3,7 @@
     <!-- First section: Products integration -->
     <el-row>
       <el-col>
-        <h1 class="firstSection">{{ data.part1Title }}</h1>
+        <h1>{{ data.part1Title }}</h1>
       </el-col>
     </el-row>
 
@@ -162,7 +162,8 @@
     <el-row :gutter="gutter" class="footer-row">
       <el-col
         :span="6"
-        :xs="12"
+        :md="12"
+        :xs="24"
         v-for="(detail, idx) in data.part4Body"
         :key="idx"
       >
@@ -237,7 +238,7 @@ export default {
         backgroundImage: `url(${img})`,
         backgroundSize: "64px 64px",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "0px 0px"
+        backgroundPosition: "top left"
       };
     }
   }
@@ -249,22 +250,25 @@ export default {
   h2
     border none
     padding-top 2rem
-.firstSection
-  margin-top 3rem
+
 
 .el-card__body
   padding 0px
 
 .card-body:not(.no-icon)
-  padding-left 100px
+  padding-left 5.5rem
 
 .card-body
   line-height 1.5rem
   .card-title
     h3
+      color: $textColor
       margin 0
       margin-bottom 10px
       font-size 1.15rem
+    a
+      h3
+        color: $accentColor
   .sub-title
     margin 30px 0
     font-size 20px
@@ -273,13 +277,16 @@ export default {
     margin-top .5rem
 
   .flex
+    .nav-link
+      color: $textColor
+      font-weight 700
     display flex
     flex-wrap wrap
     align-items flex-start
 
   .nav-link
     font-size 0.85rem
-    font-weight 500
+    font-weight 400
     line-height 1rem
     color $accentColor
     margin-right 1rem

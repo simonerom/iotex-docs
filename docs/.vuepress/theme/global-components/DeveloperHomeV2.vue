@@ -14,19 +14,32 @@
         v-for="(detail, idx) in data.part1Body"
         :key="idx"
       >
-        <el-card
-          shadow="none"
-          :style="detail.icon | cardStyle"
-          class="card"
-          @click.native="jump(detail.link)"
-        >
+        <el-card shadow="none" :style="detail.icon | cardStyle" class="card">
           <div class="card-body">
             <div class="card-title">
               <a :href="detail.link">
                 <h3>{{ detail.title }}</h3>
               </a>
             </div>
-            <div>{{ detail.content }}</div>
+            <div>
+              {{ detail.content }}
+            </div>
+            <div
+              v-if="detail.sublinks && detail.sublinks.length"
+              class="titleCardLinks flex"
+            >
+              <div
+                v-for="(sublink, index) in detail.sublinks"
+                :key="index"
+                class="titleCardLink"
+              >
+                <NavLink
+                  v-if="sublink.url"
+                  :item="{ link: sublink.url, text: sublink.text }"
+                />
+                <span v-else>{{ sublink.text }}</span>
+              </div>
+            </div>
           </div>
         </el-card>
       </el-col>
@@ -54,6 +67,22 @@
               </div>
               <div>
                 {{ detail.content }}
+              </div>
+              <div
+                v-if="detail.sublinks && detail.sublinks.length"
+                class="titleCardLinks flex"
+              >
+                <div
+                  v-for="(sublink, index) in detail.sublinks"
+                  :key="index"
+                  class="titleCardLink"
+                >
+                  <NavLink
+                    v-if="sublink.url"
+                    :item="{ link: sublink.url, text: sublink.text }"
+                  />
+                  <span v-else>{{ sublink.text }}</span>
+                </div>
               </div>
             </div>
           </el-card>
@@ -104,7 +133,7 @@
             </div>
             <div
               v-if="detail.sublinks && detail.sublinks.length"
-              class="titleCardsLink"
+              class="titleCardLinks"
             >
               <div
                 v-for="(sublink, index) in detail.sublinks"
@@ -127,7 +156,7 @@
     <el-row>
       <el-col>
         <!-- Just a margin trick to extend the line full-page -->
-        <hr class="my-footer-line" style="margin: 0 -100%;" />
+        <hr class="my-footer-line" />
       </el-col>
     </el-row>
     <el-row :gutter="gutter" class="footer-row">
@@ -148,7 +177,7 @@
             </div>
             <div
               v-if="detail.sublinks && detail.sublinks.length"
-              class="titleCardsLink"
+              class="titleCardLinks"
             >
               <div
                 v-for="(sublink, index) in detail.sublinks"
@@ -239,13 +268,21 @@ export default {
   .sub-title
     margin 30px 0
     font-size 20px
-  .card-links
-    margin-top 1rem
+
+  .titleCardLinks
+    margin-top .5rem
+
+  .flex
+    display flex
+    flex-wrap wrap
+    align-items flex-start
+
   .nav-link
     font-size 0.85rem
     font-weight 500
     line-height 1rem
     color $accentColor
+    margin-right 1rem
   .nav-link::after
     //content: "\203A";
 
@@ -287,6 +324,7 @@ hr:not(.my-footer-line)
 
 hr
   border-top 2px solid $borderColor
+  margin-left -500px
 
 .thumbnail
   padding 0

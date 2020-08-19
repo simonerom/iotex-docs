@@ -157,12 +157,12 @@ $navbar-horizontal-padding = 1.5rem
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+
 .banner-text {
   margin: auto;
   margin-top .1rem
   text-align center
 }
-
 
 .subtitle
   display inline

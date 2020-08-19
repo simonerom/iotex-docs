@@ -21,10 +21,18 @@ part1Body:
   - title: "Smart Contracts"
     content: "Exchange any asset or implement any logic in a transparent, decentralized fashion, at a lightning speed with IoTeX smart contracts."
     link: "/developer/core-api/api"
+    sublinks:
+      - url: "https://ide.iotex.io"
+        text: "IoTeX Studio"
     icon: "/img/icon_project_dapp.svg"
   - title: "Exchanges & Wallets"
     content: "Integrate your software with Payments, Deposits & Withdraws of IOTX coins and XRC20 tokens."
     link: "/developer/sdk/overview"
+    sublinks:
+      - url: "/"
+        text: "Rosetta API"
+      - url: "/"
+        text: "Guide"
     icon: "/img/icon_exchanges.svg"
 
 part2TopCard:
@@ -37,7 +45,12 @@ part2Title: "Explore Developer Tools"
 part2Body:
   - title: "SDKs"
     content: "Get the SDK library in your favorite language to easily work with the IoTeX API."
-    link: "/developer/did/overview"
+    link: "/developer/sdk/overview"
+    sublinks:
+      - text: "Overview"
+        url: "/developer/sdk/overview"
+      - text: "Faucet"
+        url: "https://faucet.iotex.io"
     icon: "/img/icon_sdk.svg"
   - title: "Core API"
     content: "See all available API calls to interact with a IoTeX blockchain node."
@@ -95,7 +108,7 @@ part4Body:
       - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#privacy-preserving-xrc20-tokens"
         text: "Private XRC20 Token (open)"
       - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#digital-twin-for-devices"
-        text: "Digital Twin for Devices (open)"
+        text: "Digital Twins (open)"
       - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#iotex-all-in-one-for-dummies (open)"
         text: "IoTeX for Dummies (open)"
       - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#decentralized-exchange"

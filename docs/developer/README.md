@@ -72,30 +72,10 @@ part3Body:
         text: "Email us"
 part4Title: "More Resources"
 part4Body:
-  - title: "ABOUT IOTEX"
-    sublinks:
-      - url: "/introduction/whatisiotex"
-        text: "What is IoTex?"
-      - url: "https://iotex.io"
-        text: "IoTeX Website"
-      - url: "https://halo.iotex.io"
-        text: "Apply for a Dev Grant"
-      - url: "mailto:info@iotex.io"
-        text: "Send us an email"
-  - title: "OPEN GRANT PROPOSALS"
-    sublinks:
-      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#privacy-preserving-xrc20-tokens"
-        text: "Private XRC20 Token"
-      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#digital-twin-for-devices"
-        text: "Digital Twin for Devices"
-      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#iotex-all-in-one-for-dummies"
-        text: "IoTeX for Dummies"
-      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#decentralized-exchange"
-        text: "IoTeX Decentralized Exchange"
-      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md"
-        text: "See all"
   - title: "RESOURCES"
     sublinks:
+      - url: "https://faucet.iotex.io"
+        text: "IOTX Faucet (Testnet)"
       - url: "https://github.com/iotexproject"
         text: "GitHub Repos"
       - url: "http://codelabs.iotex.io/"
@@ -110,13 +90,34 @@ part4Body:
         text: "Tech Blog"
       - url: "https://youtube.com"
         text: "Youtube"
-
+  - title: "GRANT PROPOSALS"
+    sublinks:
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#privacy-preserving-xrc20-tokens"
+        text: "Private XRC20 Token (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#digital-twin-for-devices"
+        text: "Digital Twin for Devices (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#iotex-all-in-one-for-dummies (open)"
+        text: "IoTeX for Dummies (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#decentralized-exchange"
+        text: "IoTeX DEX (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md"
+        text: "See all open proposals"
+      - url: "https://halo.iotex.io"
+        text: "Apply for a Dev Grant"
   - title: "POWERED BY IOTEX"
     sublinks:
       - url: "https://ucam.iotex.io"
         text: "Ucam by TENVIS"
       - url: "/developer/hardware/pebble"
         text: "IoTeX Edge Oracle"
+  - title: "ABOUT IOTEX"
+    sublinks:
+      - url: "/introduction/whatisiotex"
+        text: "What is IoTex?"
+      - url: "https://iotex.io"
+        text: "IoTeX Website"
+      - url: "mailto:info@iotex.io"
+        text: "Send us an email"
 ---
 
 <DeveloperHomeV2 />

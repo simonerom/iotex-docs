@@ -271,6 +271,7 @@ module.exports = {
                   sidebarDepth: 0,
                   collapsable: true,
                   children: [
+                    "/developer/more/faucets",
                     "/developer/more/action-injector",
                     "/developer/more/bookkeeping"
                   ]

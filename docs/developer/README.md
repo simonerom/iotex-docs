@@ -1,97 +1,148 @@
 ---
+pageClass: dev-home
 home: false
 heroImage: null
 heroText: null
 tagline: null
-mainTitle: "Developer Home"
-topCard:
-  title: "Get Started"
-  content: "IoTeX platform aims to be the global trust backbone for efficiently connecting distinct parties, where blockchain is the root of trust for this open platform."
-  icon: "/img/icon_iotex.svg"
-  link: "/developer/get-started/ioctl-install.html"
-part1Title: "Explore Developer Resources"
+
+part1Title: "Build your IoTeX Integration"
 part1Body:
-  - title: "ioctl CLI"
-    isHead: true
-    content: "A command-line tool for interacting with IoTeX blockchains."
-    link: "/developer/get-started/ioctl-install.html"
-    image: "/img/ioctl.png"
-  - title: "Chain API Reference"
-    isHead: false
-    content: "Discover all IoTeX blockchain API resources."
-    link: "/developer/core-api/api"
-    icon: "/img/icon_chainapi.svg"
-  - title: "SDKs"
-    isHead: false
-    content: "From Java to Golang, we've got you covered."
-    link: "/developer/sdk/overview"
-    icon: "/img/icon_sdk.svg"
-  - title: "Analytics GraphQL Reference"
-    isHead: false
-    content: "Look for deep analytical insights? There you go."
-    link: "/developer/graphql/analytics"
-    icon: "/img/icon_analytics.svg"
-  - title: "Pylon Dapp Starter"
-    isHead: false
-    content: "Full-stack starter for building IoTeX Dapps"
-    link: "/developer/pylon/introduction"
-    icon: "/img/icon_project_dapp.svg"
-  - title: "IoTeX Studio"
-    isHead: false
-    content: "Check out our Web IDE to develop, test and deploy smart contracts"
-    tags: ["Web", "Education"]
-    link: "https://ide.iotex.io/"
-  - title: "Codelabs"
-    isHead: false
-    content: "Explore IoTeX Codelabs examples and tutorials"
-    tags: ["Web", "Education"]
-    link: "https://codelabs.iotex.io/"
-part2Title: "IoTeX Middleware"
-part2Body:
   - title: "Decentralized Identity"
-    content: "Decentralized identity for devices, apps and people"
+    content: "Give your users the ability to create and control their identity in a self-sovereign fashion. IoTeX DID applies to individuals, enterprises and devices!"
     link: "/developer/did/overview"
     icon: "/img/icon_did.svg"
-part3Title: "Clone Sample Projects"
+    sublinks:
+      - url: "/developer/did/overview"
+        text: "Overview"
+      - url: "/developer/ioctl/did"
+        text: "command line reference"
+  - title: "Smart Contracts"
+    content: "Exchange any asset or implement any logic in a transparent, decentralized fashion, at a lightning speed with IoTeX smart contracts."
+    link: "/developer/sdk/smart-contracts"
+    sublinks:
+      - url: "https://ide.iotex.io"
+        text: "IoTeX Studio"
+      - text: "Faucet"
+        url: "https://faucet.iotex.io"
+    icon: "/img/icon_project_dapp.svg"
+  - title: "Exchanges & Wallets"
+    content: "Integrate your software with Payments, Deposits & Withdraws of IOTX coins and XRC20 tokens."
+    link: "/developer/integrations/guide"
+    sublinks:
+      - url: "/developer/integrations/rosetta"
+        text: "Rosetta API"
+      - url: "/developer/integrations/guide"
+        text: "General guide"
+    icon: "/img/icon_exchanges.svg"
+
+part2TopCard:
+  title: "ioctl Command Line Client"
+  content: "ioctl is the IoTeX command line client to interact with a IoTeX Gateway Node. With ioctl you can send and query actions to the blockchain, manage accounts, transfer XRC20 tokens, deploy smart contracts, create a decentralized identity, and much more! "
+  image: "/img/ioctl.png"
+  link: "/developer/get-started/ioctl-install.html"
+
+part2Title: "Explore Developer Tools"
+part2Body:
+  - title: "SDKs"
+    content: "Get the SDK library in your favorite language to easily work with the IoTeX API."
+    link: "/developer/sdk/overview"
+    sublinks:
+      - text: "Overview"
+        url: "/developer/sdk/overview"
+      - text: "Javascript"
+        url: "/developer/sdk/install-antenna-js.md"
+      - text: "Java"
+        url: "/developer/sdk/install-antenna-java"
+      - text: "Swift"
+        url: "/developer/sdk/install-antenna-swift"
+      - text: "Go"
+        url: "/developer/sdk/install-antenna-go"
+    icon: "/img/icon_sdk.svg"
+  - title: "Core API"
+    content: "See all available gRPC API calls to interact with a IoTeX blockchain node."
+    link: "developer/core-api/api.html"
+    sublinks:
+      - text: "gRPC proto files"
+        url: "https://github.com/iotexproject/iotex-proto"
+    icon: "/img/icon_chainapi.svg"
+  - title: "Pylon Dapp Starter"
+    content: "Pylon is a full-stack starter for building IoTeX Dapps, out-of the box integrated with IoTeX antenna SDK and ioPay wallet"
+    link: "/developer/pylon/introduction"
+    sublinks:
+      - text: "See on GitHub"
+        url: "https://github.com/iotexproject/pylon#pylon"
+    icon: "/img/icon_project_dapp.svg"
+part3Title: "Join the community"
 part3Body:
-  - title: "Auto Rewards Distribution"
-    tags: ["Web", "DPoS", "Tokens"]
-    link: "https://github.com/iotexproject/iotex-hermes"
-  - title: "Rolling Dice"
-    tags: ["DApp", "Contract", "Tokens"]
-    link: "https://github.com/iotexproject/roll-dice-demo-dapp"
+  - title: "News"
+    icon: "/img/icon_analytics.svg"
+    sublinks:
+      - url: "#/"
+        text: "Developer Newsletter"
+      - url: "https://medium.com/iotex/tech/home"
+        text: "Tech Blog"
+  - title: "Social"
+    icon: "/img/icon_analytics.svg"
+    sublinks:
+      - url: "https://t.me/iotexdev"
+        text: "Developer Chat"
+      - url: "https://community.iotex.io/c/research-development/7"
+        text: "Tech & Dev Forum"
+  - title: "Help"
+    icon: "/img/icon_iotex.svg"
+    sublinks:
+      - url: "https://t.me/iotexgroup"
+        text: "Official Telegram Group"
+      - url: "mailto:info@iotex.io"
+        text: "Email us"
 part4Title: "More Resources"
 part4Body:
-  - title: "Apply for Dev Grant"
-    link: "https://halo.iotex.io"
-    icon: "/img/icon_devgrant.svg"
-    content: "We fund impactful projects to make prosperous"
-  - title: "Undestand IOTX Economics"
-    link: "https://medium.com/@iotex/iotex-tokenomics-part-1-utility-of-the-iotx-token-781ff9c866e3"
-    icon: "/img/icon_economics.svg"
-    content: "Onboard, verify, and pay out to sellers or service providers."
-  - title: "Improve the Protocol"
-    link: "https://github.com/iotexproject/iips"
-    icon: "/img/icon_iip.svg"
-    content: "Submit an improvement proposal to make the chain more powerful."
-  - title: "Exchanges and Wallets"
-    link: "/developer/integrations/rosetta"
-    icon: "/img/icon_exchanges.svg"
-    content: "Support deposit/withdraw of IOTX coins and XRC20 tokens."
+  - title: "RESOURCES"
+    sublinks:
+      - url: "https://faucet.iotex.io"
+        text: "IOTX Faucet (Testnet)"
+      - url: "https://github.com/iotexproject"
+        text: "GitHub Repos"
+      - url: "http://codelabs.iotex.io/"
+        text: "Codelabs"
+      - url: "https://iotexscan.io"
+        text: "Block Explorer"
+      - url: "https://member.iotex.io/login"
+        text: "Delegates Portal"
+      - url: "https://member.iotex.io"
+        text: "Voting Portal"
+      - url: "https://medium.com/iotex/tech/home"
+        text: "Tech Blog"
+      - url: "https://youtube.com"
+        text: "Youtube"
+  - title: "GRANT PROPOSALS"
+    sublinks:
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#privacy-preserving-xrc20-tokens"
+        text: "Private XRC20 Token (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#digital-twin-for-devices"
+        text: "Digital Twins (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#iotex-all-in-one-for-dummies (open)"
+        text: "IoTeX for Dummies (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md#decentralized-exchange"
+        text: "IoTeX DEX (open)"
+      - url: "https://github.com/iotexproject/halogrants/blob/master/rfp-proposals/rfp-ideas.md"
+        text: "See all open proposals"
+      - url: "https://halo.iotex.io"
+        text: "Apply for a Dev Grant"
+  - title: "POWERED BY IOTEX"
+    sublinks:
+      - url: "https://ucam.iotex.io"
+        text: "Ucam by TENVIS"
+      - url: "/developer/hardware/pebble"
+        text: "IoTeX Edge Oracle"
+  - title: "ABOUT IOTEX"
+    sublinks:
+      - url: "/introduction/whatisiotex"
+        text: "What is IoTex?"
+      - url: "https://iotex.io"
+        text: "IoTeX Website"
+      - url: "mailto:info@iotex.io"
+        text: "Send us an email"
 ---
 
-<DeveloperHome />
-
-::: slot foot1
-
-#### Chat With Us
-
-Questions? Chat with us via [email](mailto:support@iotex.io), [forum](https://community.iotex.io/c/research-development/protocol) or [telegram](https://t.me/IoTeXDev)!
-:::
-
-::: slot foot2
-
-#### Sign up for Developer Updates
-
-<Subscribe />
-:::
+<DeveloperHomeV2 />

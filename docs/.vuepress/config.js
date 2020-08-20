@@ -49,11 +49,7 @@ module.exports = {
           { text: "Home", link: "/" },
           { text: "Core concepts", link: "/introduction/whatisiotex" },
           { text: "Developers", link: "/developer/" },
-          { text: "Get Involved", link: "/contribute/" },
-          {
-            text: "Dev Chat",
-            link: "https://t.me/IoTeXDev"
-          }
+          { text: "Get Involved", link: "/contribute/" }
         ],
         sidebar: {
           initialOpenGroupIndex: 1,

@@ -293,7 +293,7 @@ module.exports = {
         href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"
       }
     ],
-    ["link", { rel: "icon", href: `/logo.png` }],
+    ["link", { rel: "icon", href: `/img/favicon.png` }],
     ["link", { rel: "manifest", href: "/manifest.json" }],
     ["meta", { name: "theme-color", content: "#3eaf7c" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],

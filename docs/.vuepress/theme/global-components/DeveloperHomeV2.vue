@@ -57,7 +57,6 @@
             shadow="none"
             :style="detail.icon | cardStyle"
             class="card closer"
-            @click.native="jump(detail.link)"
           >
             <div class="card-body">
               <div class="card-title">
@@ -125,7 +124,6 @@
           shadow="none"
           :style="detail.icon | cardStyle"
           class="card closer"
-          @click.native="jump(detail.link)"
         >
           <div class="card-body">
             <div class="card-title">
@@ -296,7 +294,6 @@ export default {
   background none
   border none
   margin-bottom 40px
-  cursor pointer
 
 .card
   height auto

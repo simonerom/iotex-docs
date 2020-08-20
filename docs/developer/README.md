@@ -12,12 +12,10 @@ part1Body:
     link: "/developer/get-started/ioctl-install.html"
     icon: "/img/icon_did.svg"
     sublinks:
-      - url: "/"
+      - url: "/developer/did/overview"
         text: "Overview"
-      - url: "/"
-        text: "Command Line DID"
-      - url: "/"
-        text: "References"
+      - url: "/developer/ioctl/did"
+        text: "Command Line"
   - title: "Smart Contracts"
     content: "Exchange any asset or implement any logic in a transparent, decentralized fashion, at a lightning speed with IoTeX smart contracts."
     link: "/developer/core-api/api"
@@ -29,10 +27,10 @@ part1Body:
     content: "Integrate your software with Payments, Deposits & Withdraws of IOTX coins and XRC20 tokens."
     link: "/developer/sdk/overview"
     sublinks:
-      - url: "/"
+      - url: "/developer/integrations/rosetta"
         text: "Rosetta API"
-      - url: "/"
-        text: "Guide"
+      - url: "/developer/integrations/guide"
+        text: "General guide"
     icon: "/img/icon_exchanges.svg"
 
 part2TopCard:

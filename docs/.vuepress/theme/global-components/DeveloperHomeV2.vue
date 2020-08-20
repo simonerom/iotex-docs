@@ -162,7 +162,6 @@
     <el-row :gutter="gutter" class="footer-row">
       <el-col
         :span="6"
-        :md="12"
         :xs="24"
         v-for="(detail, idx) in data.part4Body"
         :key="idx"

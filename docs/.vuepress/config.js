@@ -47,8 +47,8 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Core concepts", link: "/introduction/whatisiotex" },
           { text: "Developers", link: "/developer/" },
+          { text: "Core concepts", link: "/introduction/whatisiotex" },
           { text: "Get Involved", link: "/contribute/" }
         ],
         sidebar: {

@@ -24,5 +24,5 @@ In IoTeX there are four types of node:
 - **LightNode**: This is a _light_ node: it only stores the headers of past blocks up to a certain block height, so that it cannot serve as Consensus Delegate, and it cannot be a gateway. It can only act as a local, lightweight **validation node**. _[Light nodes will be available from release 1.3 of the blockchain]_
 
 :::tip
-Interested in becoming a IoTeX Delegate? Check out [this forum thread](https://community.iotex.io/t/official-iotex-delegates-thread/1263). Also, you can see the full list of Delegates on the IoTeX [voting website](member.iotex.io) and [Block Explorer](iotexscan.io).
+Interested in becoming a IoTeX Delegate? Check out [this forum thread](https://community.iotex.io/t/official-iotex-delegates-thread/1263). Also, you can see the full list of Delegates on the IoTeX [Voting Portal](https://member.iotex.io) and [Block Explorer](https://iotexscan.io).
 :::

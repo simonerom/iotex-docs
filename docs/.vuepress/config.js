@@ -49,7 +49,8 @@ module.exports = {
           { text: "Home", link: "/" },
           { text: "Developers", link: "/developer/" },
           { text: "Core concepts", link: "/introduction/whatisiotex" },
-          { text: "Get Involved", link: "/contribute/" }
+          { text: "Get Involved", link: "/contribute/" },
+          { text: "Dev Chat", link: "https://t.me/iotexdev" }
         ],
         sidebar: {
           initialOpenGroupIndex: 1,

@@ -3,9 +3,9 @@
     <div class="banner">
       <div class="banner-text">
         <a href="https://halo.iotex.io">
-          <b>Halo</b>Grants Program is
+          <div class="subtitle can-hide">Get your next project funded »</div>
+          <b>Halo Grants Program is now</b>
           <div class="neon">open</div>
-          <div class="subtitle can-hide">Get your next project funded</div>
         </a>
       </div>
     </div>
@@ -197,5 +197,5 @@ $navbar-horizontal-padding = 1.5rem
     margin-left 1rem
   a::after
     margin-left: .3rem
-    content: "\203A";
+    //content: "\203A";
 </style>

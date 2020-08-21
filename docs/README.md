@@ -4,9 +4,9 @@ pageClass: home-page
 heroImage: /logo.svg
 heroText: The Internet of Trusted Things
 taglines:
-  - text: IoTeX is a technology platform that combines blockchain, secure hardware, and confidential computing to empower user-centric, privacy-focused products and services.
+  - text: IoTeX is a decentralized platform that combines blockchain, secure hardware, and confidential computing to empower privacy-focused devices, apps, and services.
   - text: Whether you are an IoT enterprise, device manufacturer, or Dapp builder,
-  - text: come build the future with us on IoTeX.
+  - text: come build the the future on IoTeX.
 
 titleCards:
   - title: DEVELOPER TOOLS

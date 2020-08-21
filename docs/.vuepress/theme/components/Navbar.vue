@@ -9,6 +9,7 @@
         </a>
       </div>
     </div>
+
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <RouterLink :to="$localePath" class="home-link">

@@ -8,7 +8,7 @@ tagline: null
 part1Title: "Build your IoTeX Integration"
 part1Body:
   - title: "Decentralized Identity"
-    content: "Give your users the ability to create and control their identity in a self-sovereign fashion. IoTeX DID applies to individuals, enterprises and devices!"
+    content: "Give your users the ability to create and control their identity. IoTeX DID applies to individuals, enterprises and devices!"
     link: "/developer/did/overview"
     icon: "/img/icon_did.svg"
     sublinks:

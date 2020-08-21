@@ -10,6 +10,8 @@
     <el-row :gutter="gutter">
       <el-col
         :span="12"
+        :lg="8"
+        :sm="24"
         :xs="24"
         v-for="(detail, idx) in data.part1Body"
         :key="idx"
@@ -51,7 +53,7 @@
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
-      <el-col :span="12" :xs="24">
+      <el-col :span="12" :lg="12" :sm="24" :xs="24">
         <el-row v-for="(detail, idx) in data.part2Body" :key="idx">
           <el-card
             shadow="none"
@@ -87,7 +89,7 @@
           </el-card>
         </el-row>
       </el-col>
-      <el-col :span="12" :xs="24">
+      <el-col :span="12" :lg="12" :sm="24" :xs="24">
         <el-card
           class="topCard"
           shadow="none"
@@ -116,15 +118,13 @@
     <el-row :gutter="gutter">
       <el-col
         :span="8"
+        :lg="8"
+        :sm="12"
         :xs="24"
         v-for="(detail, idx) in data.part3Body"
         :key="idx"
       >
-        <el-card
-          shadow="none"
-          :style="detail.icon | cardStyle"
-          class="card closer"
-        >
+        <el-card shadow="none" :style="detail.icon | cardStyle" class="card">
           <div class="card-body">
             <div class="card-title">
               <h3>{{ detail.title }}</h3>
@@ -160,6 +160,9 @@
     <el-row :gutter="gutter" class="footer-row">
       <el-col
         :span="6"
+        :lg="6"
+        :md="8"
+        :sm="12"
         :xs="24"
         v-for="(detail, idx) in data.part4Body"
         :key="idx"

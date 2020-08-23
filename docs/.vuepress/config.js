@@ -219,14 +219,6 @@ module.exports = {
                   collapsable: true,
                   children: ["/developer/core-api/api"]
                 },
-
-                // {
-                //   title: "Core REST API",
-                //   path: "/developer/pharos/api",
-                //   sidebarDepth: 0,
-                //   collapsable: true,
-                //   children: ["/developer/pharos/api"]
-                // },
                 {
                   title: "GraphQL API",
                   path: "/developer/graphql/analytics",
@@ -291,13 +283,7 @@ module.exports = {
       }
     ],
     ["link", { rel: "icon", href: `/img/favicon.png` }],
-    ["link", { rel: "manifest", href: "/manifest.json" }],
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
-    ],
+    // ["link", { rel: "manifest", href: "/manifest.json" }],
     [
       "link",
       { rel: "apple-touch-icon", href: `/icons/apple-touch-icon-152x152.png` }
@@ -309,6 +295,12 @@ module.exports = {
         href: "/icons/safari-pinned-tab.svg",
         color: "#3eaf7c"
       }
+    ],
+    ["meta", { name: "theme-color", content: "#3eaf7c" }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" }
     ],
     [
       "meta",

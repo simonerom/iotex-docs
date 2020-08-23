@@ -50,7 +50,7 @@ Get inspired by browsing the IoTeX [Ecosystem Portal]() for projects related to 
 
 ## Contribute to translations
 
-Interested in becoming a translator? Join our [Telegram Group](http://t,ms/iotexgroup) and ask an Admin to be added as a contributor to one of the following projects:
+Interested in becoming a translator? Join our [Telegram Group](http://t.me/iotexgroup) and ask an Admin to be added as a contributor to one of the following projects:
 
 - [IoTeX explorer](https://lokalise.co/public/903185115c91ceff0cb2a0.70666943/)
 - [IoTeX Voting website](https://lokalise.co/public/659860825c9c87468b0f33.67864697/)

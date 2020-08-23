@@ -10,4 +10,6 @@ In your Golang project root, use `go dep` or `go mod`.
 go get -u github.com/iotexproject/iotex-antenna-go
 ```
 
-See [Code Examples]() section for the most common SDK use cases.
+:::tip
+See [Code Examples](account-create.md#golang) section for most common SDK use case in Go.
+:::

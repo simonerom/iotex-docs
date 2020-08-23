@@ -19,3 +19,8 @@ title: Antenna-Java SDK
 ```java
 implementation 'com.github.iotexproject:iotex-antenna-java:0.5.8'
 ```
+
+:::tip
+
+- See [Code Examples](account-create.md#java) section for most common SDK use case in Java.
+  :::

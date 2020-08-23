@@ -16,4 +16,9 @@ or add the following line to your html.
 <script src="https://cdn.jsdelivr.net/npm/iotex-antenna@0.29.1/lib/iotex-antenna.browser.min.js"></script>
 ```
 
-Find the reference documentation on [iotex-antenna GitHub repository.](https://iotexproject.github.io/iotex-antenna/)
+:::tip
+
+- See [Code Examples](account-create.md#js) section for most common SDK use case in Javascript.
+
+- Find the reference documentation on [iotex-antenna GitHub repository.](https://iotexproject.github.io/iotex-antenna/)
+  :::

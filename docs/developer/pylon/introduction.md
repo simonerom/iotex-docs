@@ -23,7 +23,7 @@ git clone git@github.com:iotexproject/pylon.git my-awesome-project
 
 ## Run your project
 
-This is intended for \*nix users. If you use Windows, go to [Run on Windows](/pylon/guides.html#run-on-windows). Let’s first prepare the environment.
+This is intended for \*nix users. If you use Windows, go to [Run on Windows](/developer/pylon/guides.html#run-on-windows). Let’s first prepare the environment.
 
 ```bash
 cd my-awesome-project
@@ -67,7 +67,7 @@ NODE_ENV=production npm run start
 
 We use prettier, tslint, and editorconfig to enforce consistent styles across the whole project, so that we will not bikeshed on coding styles in the code review.
 
-However, please visit our [Contributing Code](/pylon/code-review-checklist.html) before submitting your code.
+However, please visit our [Contributing Code](/developer/pylon/code-review-checklist.html) before submitting your code.
 
 ## Architecture
 

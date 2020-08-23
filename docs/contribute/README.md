@@ -44,7 +44,7 @@ Submit your project to the HALO community grants Program: [https://halo.iotex.io
 
 Check out the full documentation at [docs.iotex.io](/) to learne the basics of IoTeX and start building your first "Powered by IoTeX" Device or dApp!
 
-Try out [IoTeX Studio](https://ide.iotex.io) to test and deploy your smart contracts ([IoPay Desktop](iopay.iotex.io) is required to deploy to the public Mainnet or Testnet).
+Try out [IoTeX Studio](https://ide.iotex.io) to test and deploy your smart contracts ([IoPay Desktop](https://iopay.iotex.io) is required to deploy to the public Mainnet or Testnet).
 
 Get inspired by browsing the IoTeX [Ecosystem Portal]() for projects related to your area of expertise: you can also ask for contributing to some of those community projects!
 

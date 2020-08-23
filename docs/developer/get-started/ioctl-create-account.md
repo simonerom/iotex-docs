@@ -4,7 +4,7 @@ title: Create a IoTeX Account
 
 # Create a IoTeX Account
 
-Let's begin with creating a new IoTeX [account](introduction/account-concept): similarly to any blockchain wallet app where you can _create a new wallet_, this operation [consists of generating a random IoTeX private key](/introduction/account-concept.md#owned-accounts) and storing it in an encrypted file, protected by a password of your choice. It also allows you to set an _alias_ for the newly created account (we will use the alias _dev-acc_ in the following sections) which can be used instead of the account address in subsequent ioctl commands:
+Let's begin with creating a new IoTeX [account](/introduction/account-concept): similarly to any blockchain wallet app where you can _create a new wallet_, this operation [consists of generating a random IoTeX private key](/introduction/account-concept.md#owned-accounts) and storing it in an encrypted file, protected by a password of your choice. It also allows you to set an _alias_ for the newly created account (we will use the alias _dev-acc_ in the following sections) which can be used instead of the account address in subsequent ioctl commands:
 
 Create and save a IoTeX account with:
 

@@ -39,7 +39,7 @@ part2TopCard:
   title: "ioctl Command Line Client"
   content: "ioctl is the IoTeX command line client to interact with a IoTeX Gateway Node. With ioctl you can send and query actions to the blockchain, manage accounts, transfer XRC20 tokens, deploy smart contracts, create a decentralized identity, and much more! "
   image: "/img/ioctl.png"
-  link: "/developer/get-started/ioctl-install.html"
+  link: "/developer/get-started/ioctl-install"
 
 part2Title: "Explore Developer Tools"
 part2Body:
@@ -60,7 +60,7 @@ part2Body:
     icon: "/img/icon_sdk.svg"
   - title: "Core API"
     content: "See all available gRPC API calls to interact with a IoTeX blockchain node."
-    link: "developer/core-api/api.html"
+    link: "/developer/core-api/api"
     sublinks:
       - text: "gRPC proto files"
         url: "https://github.com/iotexproject/iotex-proto"

@@ -22,7 +22,7 @@ With these items above, we can then compose a message like
 const msg = `Login with ${account.address} and the nonce of ${nonce}`;
 ```
 
-The `account.address` is from [Integrate with ioPay Desktop](https://docs.iotex.io/docs/libraries-and-tools.html#integrate-with-iopay-desktop). And the `nonce` is from the server. We use cookie session to store the nonce temporarily but you can choose whatever storage you like.
+The `account.address` is from [Integrate with ioPay Desktop](iopay-integrate). And the `nonce` is from the server. We use cookie session to store the nonce temporarily but you can choose whatever storage you like.
 
 ```ts
 server.post("/api/sign-in/create-nonce", async ctx => {

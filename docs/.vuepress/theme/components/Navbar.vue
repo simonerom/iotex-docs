@@ -2,7 +2,7 @@
   <header class="navbar">
     <div class="banner">
       <div class="banner-text">
-        <a href="https://halo.iotex.io">
+        <a href="https://halo.iotex.io" target="_blank">
           <div class="subtitle can-hide">Get your next project funded »</div>
           <b>Halo Grants Program is now</b>
           <div class="neon">open</div>

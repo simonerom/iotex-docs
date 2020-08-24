@@ -7,6 +7,15 @@ tagline: null
 
 part1Title: "Build your IoTeX Integration"
 part1Body:
+  - title: "Smart Contracts"
+    content: "Exchange any asset or implement any logic in a transparent, decentralized fashion with IoTeX smart contracts."
+    link: "/developer/sdk/smart-contracts"
+    sublinks:
+      - url: "https://ide.iotex.io"
+        text: "IoTeX Studio"
+      - text: "Faucet"
+        url: "https://faucet.iotex.io"
+    icon: "/img/icon_project_dapp.svg"
   - title: "Decentralized Identity"
     content: "Give your users the ability to create and control their identity. IoTeX DID applies to individuals, enterprises and devices!"
     link: "/developer/did/overview"
@@ -15,16 +24,7 @@ part1Body:
       - url: "/developer/did/overview"
         text: "Overview"
       - url: "/developer/ioctl/did"
-        text: "command line reference"
-  - title: "Smart Contracts"
-    content: "Exchange any asset or implement any logic in a transparent, decentralized fashion, at a lightning speed with IoTeX smart contracts."
-    link: "/developer/sdk/smart-contracts"
-    sublinks:
-      - url: "https://ide.iotex.io"
-        text: "IoTeX Studio"
-      - text: "Faucet"
-        url: "https://faucet.iotex.io"
-    icon: "/img/icon_project_dapp.svg"
+        text: "ioctl commands"
   - title: "Exchanges & Wallets"
     content: "Integrate your software with Payments, Deposits & Withdraws of IOTX coins and XRC20 tokens."
     link: "/developer/integrations/guide"

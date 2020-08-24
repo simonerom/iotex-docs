@@ -10,7 +10,7 @@
     <el-row :gutter="gutter">
       <el-col
         :span="12"
-        :lg="8"
+        :lg="12"
         :sm="24"
         :xs="24"
         v-for="(detail, idx) in data.part1Body"

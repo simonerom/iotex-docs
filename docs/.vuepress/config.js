@@ -47,8 +47,8 @@ module.exports = {
         collapsable: false,
         nav: [
           { text: "Home", link: "/" },
-          { text: "Developers", link: "/developer/" },
           { text: "Core concepts", link: "/introduction/whatisiotex" },
+          { text: "Documentation", link: "/developer/" },
           { text: "Get Involved", link: "/contribute/" },
           { text: "Dev Chat", link: "https://t.me/iotexdev" }
         ],

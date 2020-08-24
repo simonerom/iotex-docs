@@ -75,14 +75,14 @@ part2Body:
 part3Title: "Join the community"
 part3Body:
   - title: "News"
-    icon: "/img/icon_analytics.svg"
+    icon: "/img/icon_news.svg"
     sublinks:
       - url: "#/"
         text: "Developer Newsletter"
       - url: "https://medium.com/iotex/tech/home"
         text: "Tech Blog"
   - title: "Social"
-    icon: "/img/icon_analytics.svg"
+    icon: "/img/icon_social.svg"
     sublinks:
       - url: "https://t.me/iotexdev"
         text: "Developer Chat"

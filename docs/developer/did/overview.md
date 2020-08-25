@@ -4,6 +4,9 @@ title: Overview
 
 ## IoTeX Decentralized Identity Overview
 
+::: warning
+This document is a work in progress draft. **Last updated at 5 Aug 2020**.
+:::
 Self-sovereign identity is user- and device-centric where an individual or organization or device is able to own its own identity attributes without relying on third-party service providers. Decentralized Identifiers (DIDs) are a new type of identifier for verifiable 'self-sovereign' digital identity for individuals, organizations and things. DIDs have the following important properties:
 
 - **Decentralized**: DIDs are designed to function without a central registration authority. DIDs are registered in blockchain or other decentralized network.

@@ -77,7 +77,7 @@ part3Body:
   - title: "News"
     icon: "/img/icon_news.svg"
     sublinks:
-      - url: "#/"
+      - url: "/developer/#subscribe"
         text: "Developer Newsletter"
       - url: "https://medium.com/iotex/tech/home"
         text: "Tech Blog"
@@ -146,3 +146,4 @@ part4Body:
 ---
 
 <DeveloperHomeV2 />
+<Subscribe />

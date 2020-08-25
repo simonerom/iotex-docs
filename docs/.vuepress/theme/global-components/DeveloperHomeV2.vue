@@ -49,7 +49,7 @@
     <!-- Second section: Dev Tools -->
     <el-row>
       <el-col>
-        <h1>{{ data.part2Title }}</h1>
+        <h1 id="part2">{{ data.part2Title }}</h1>
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
@@ -112,7 +112,7 @@
     <!-- Third section: Community -->
     <el-row>
       <el-col>
-        <h1>{{ data.part3Title }}</h1>
+        <h1 id="part3">{{ data.part3Title }}</h1>
       </el-col>
     </el-row>
     <el-row :gutter="gutter">
@@ -174,7 +174,7 @@
         >
           <div class="card-body no-icon">
             <div class="card-title">
-              <h4>{{ detail.title }}</h4>
+              <h4 id="part4">{{ detail.title }}</h4>
             </div>
             <div
               v-if="detail.sublinks && detail.sublinks.length"

@@ -12,7 +12,7 @@ You'll need to deploy a few full nodes, for reading from and writing to the netw
 
 Please follow [this guide](https://github.com/iotexproject/iotex-bootstrap#iotex-delegate-manual) to setup a full node running with the `gateway` plugin enabled.
 
-Optionally, please follow [this guide](TBD) to setup the dashboard for monitoring.
+Optionally, please follow [this guide - coming soon] to setup the dashboard for monitoring.
 
 ## Interact with IoTeX Full Nodes
 
@@ -85,6 +85,10 @@ One can retrieve action log that contain the target transfers by using `/APIServ
 ::: warning
 If you get an "**unimplemented**" error code, with a message like "**feature not supported**" when calling an action log APIs, please resync your node from 0, or download our latest snapshot with index data. Check out the [Gateway node setup and snapshot download guides](https://github.com/iotexproject/iotex-bootstrap#mainnet) for more instructions.
 :::
+
+## Rosetta API support
+
+One can deploy a rosetta gateway along with a IoTeX mainnet node and use the rosetta API instead. For more about Rosetta support see the [Rosetta Integration document](rosetta).
 
 ## Testing
 

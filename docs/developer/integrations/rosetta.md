@@ -5,7 +5,8 @@ title: Rosetta API
 # IoTeX Rosetta Gateway
 
 IoTeX provides an implementation of the [Rosetta API](https://github.com/coinbase/rosetta-sdk-go) Gateway from [Coinbase](https://coinbase.com).
-Rosetta is an open standard and a set of tools designed to simplify blockchain deployment and interaction. For more informations about Rosetta see the [project website](https://www.rosetta-api.org/).
+Rosetta is an open standard and a set of tools designed to simplify blockchain deployment and interaction. For more informations about Rosetta see the [project website](https://www.rosetta-api.org/). IoTeX currently support Data API, while Construction API is
+**coming very soon**.
 
 ## Deploy Rosetta Gateway
 

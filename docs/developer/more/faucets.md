@@ -4,14 +4,18 @@ title: IOTX Faucets
 
 # IOTX Faucets
 
-Need some IOTX to test your projects? Check out available faucets below!
+Need some IOTX tokens to test your dApps? Check out available faucets below!
 
-# IoTeX Web Faucet (Testnet)
+[[toc]]
 
-This is a web faucet provided by IoTeX. The faucet allows you to request IOTX (Testnet) coins from the account `io10t7juxazfteqzjsd6qjk7tkgmngj2tm7n4fvrd.`
+## IoTeX Web Faucet
 
-1. You need a Google account to make the request
-2. Any Google account can make the request only once.
-3. This faucet only offers IOTX coins on testnet.
+- **Link**: [https://faucet.iotex.io/](https://faucet.iotex.io/)
+- **Network**: Testnet
+- **Amount**: 10 IOTX
+- **Sender address**: `io10t7juxazfteqzjsd6qjk7tkgmngj2tm7n4fvrd`
+- **Requirements**:
+  - Login with Google Account
+  - Request only once
 
-If you like our project, please star [iotex-core on Github](https://github.com/iotexproject/iotex-core).
+This faucet is provided by the IoTeX team: if you like our project, please star [iotex-core on Github](https://github.com/iotexproject/iotex-core).

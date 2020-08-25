@@ -13,8 +13,8 @@ part1Body:
     sublinks:
       - url: "https://ide.iotex.io"
         text: "IoTeX Studio"
-      - text: "Faucet"
-        url: "https://faucet.iotex.io"
+      - text: "Faucets"
+        url: "more/faucets"
     icon: "/img/icon_project_dapp.svg"
   - title: "Decentralized Identity"
     content: "Give your users the ability to create and control their identity. IoTeX DID applies to individuals, enterprises and devices!"

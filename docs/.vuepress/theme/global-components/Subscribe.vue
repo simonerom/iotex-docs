@@ -15,7 +15,7 @@
           <el-form-item>
             <el-input
               v-model="formData.email"
-              placeholder="Email"
+              placeholder="coming soon..."
               disabled
             ></el-input>
           </el-form-item>

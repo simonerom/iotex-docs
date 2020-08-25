@@ -12,7 +12,11 @@ You'll need to deploy a few full nodes, for reading from and writing to the netw
 
 Please follow [this guide](https://github.com/iotexproject/iotex-bootstrap#iotex-delegate-manual) to setup a full node running with the `gateway` plugin enabled.
 
-Optionally, please follow [this guide - coming soon] to setup the dashboard for monitoring.
+Optionally, please follow [this guide](https://github.com/iotexproject/iotex-bootstrap/tree/master/infra/monitoring) to configure a dashboard for node monitoring. Alternatively, if you used the [one-line upgrader](https://github.com/iotexproject/iotex-bootstrap#upgrade) to install the full node, you can just answer "Yes" to the following installer question:
+
+```
+Do you want to monitor the status of the node [Y/N] (Default: N)?) to setup the dashboard for monitoring.
+```
 
 ## Interact with IoTeX Full Nodes
 

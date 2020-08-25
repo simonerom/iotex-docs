@@ -80,8 +80,10 @@ module.exports = {
                   path: "/introduction/account-concept",
                   children: [
                     "introduction/account-concept",
+                    "introduction/private-key-concept",
                     "introduction/node-concept",
-                    "introduction/action-concept"
+                    "introduction/action-concept",
+                    "introduction/wallet-concept"
                   ]
                 }
               ]

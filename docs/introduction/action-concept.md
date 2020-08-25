@@ -1,6 +1,6 @@
 ---
 id: guides
-title: Actions
+title: Blockchain Actions
 ---
 
 # IoTeX Actions

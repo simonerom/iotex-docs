@@ -1,6 +1,6 @@
 ---
 id: guides
-title: Nodes
+title: Blockchain Nodes
 ---
 
 # Blockchain Nodes
